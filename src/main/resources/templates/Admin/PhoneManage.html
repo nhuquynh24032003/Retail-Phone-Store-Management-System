@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="AdminManage/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="AdminManage/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="AdminManage/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="AdminManage/css/style.css">
+
+    <title>Manage Phone</title>
+</head>
+<body>
+<div class="header_top_section">
+    <div class="container">
+        <div class="header_main">
+            <div class="location_text"><img src="indexAdmin/images/map-icon.png"><span class="padding_left_10"><a
+                    href="#">Mobile</a></span></div>
+            <div class="location_text center"><img src="indexAdmin/images/call-icon.png"><span class="padding_left_10"><a href="#">Call
+              01 1234567890</a></span></div>
+            <div class="location_text right"><img src="indexAdmin/images/mail-icon.png"><span class="padding_left_10"><a
+                    href="#">demo@gmail.com</a></span></div>
+        </div>
+    </div>
+</div>
+<div class="header_section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="/Admin"><img src="indexAdmin/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/UserManage">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ProductManage">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/OrderManage">Order</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="search_icon"><a href="#"><img src="indexAdmin/images/search-icon.png"></a></div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+
+        <div class="container">
+            <form th:action="@{/PhoneManage}">
+                <div style="font-size: larger; color: white; font-family: Arial, sans-serif;">Search:
+                    <input type="text" name="keyword" id="keyword" size="30" th:value="${keyword}" style="background-color: #39343b; color: white" />
+                    &nbsp;
+                    <input type="image" src="/indexAdmin/images/search-icon.png" alt="Submit" />
+                </div>
+            </form>
+            <h2 class="mb-5">MANAGE PHONE</h2>
+            <a th:href="@{/addPhone}">Add Phone</a>
+
+            <div class="table-responsive">
+
+                <table class="table table-striped custom-table">
+                    <thead>
+                    <tr>
+
+
+                        <th scope="col">Name Phone</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Battery Life</th>
+                        <th scope="col">Camera</th>
+                        <th scope="col">CPU</th>
+                        <th scope="col">Connection</th>
+                        <th scope="col">Display</th>
+                        <th scope="col">OS</th>
+                        <th scope="col">RAM</th>
+                        <th scope="col">Capacity</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Date Create</th>
+                        <th scope="col">Date Update</th>
+                        <th scope="col">Section</th>
+                        <th scope="col">Section</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr scope="row" th:each="phone : ${listPhoneDetail}">
+
+
+                        <td th:text="${phone.getPhone().getName()}"></td>
+                        <td th:text="${phone.getPhone().getDescription()}"></td>
+                        <td th:text="${phone.getPhone().getBrand().getName()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getBatteryLife()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getCamera()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getCpu()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getConnection()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getDisplay()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getOs()}"></td>
+                        <td th:text="${phone.getPhone().getSpec().getRam()}"></td>
+                        <td th:text="${phone.getCapacity().getSizeInGB()}"></td>
+                        <td th:text="${phone.getColor().name}"></td>
+                        <td th:text="${phone.getImg()}"></td>
+                        <td th:text="${phone.getPrice()}"></td>
+                        <td th:text="${phone.getQuantity()}"></td>
+                        <td th:text="${phone.getCreatedAt()}"></td>
+                        <td th:text="${phone.getUpdatedAt()}"></td>
+                        <td>
+                            <a th:href="@{PhoneManage/deletePhoneDetail(phoneId=${phone.getPhone().getId()}, colorId=${phone.getColor().getId()}, capacityId=${phone.getCapacity().getId()})}">Delete</a>
+                        </td>
+                        <td>
+                            <a th:href="@{updatePhoneDetail(phoneId=${phone.getPhone().getId()}, colorId=${phone.getColor().getId()}, capacityId=${phone.getCapacity().getId()})}">Update</a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="ProductManage/js/jquery.min.js"></script>
+    <script src="ProductManage/js/popper.js"></script>
+    <script src="ProductManage/js/bootstrap.min.js"></script>
+    <script src="ProductManage/js/main.js"></script>
+</div>
+</body>
+</html>

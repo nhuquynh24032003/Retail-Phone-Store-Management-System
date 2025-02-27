@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="https://wd-smart.myharavan.com/collections/flash-sale" />
+    <link rel="dns-prefetch" href="//file.hstatic.net/" />
+    <link rel="shortcut icon" type="image/x-icon"  th:href="@{/images/favicon.png}">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="revisit-after" content="1 day" />
+    <title>Flash sale - Spring Mobile</title>
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://wd-smart.myharavan.com/collections/flash-sale" />
+    <meta name="robots" content="index,follow,noodp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Flash sale" />
+    <meta property="og:image" content="http:" />
+    <meta property="og:image:secure_url" content="https:" />
+    <meta property="og:description" content="" />
+    <meta property="og:image:alt" content="Flash sale" />
+    <meta property="og:url" content="https://wd-smart.myharavan.com/collections/flash-sale" />
+    <meta property="og:site_name" content="Spring Mobile" />
+    <link rel="preload" as="image"
+          href="https://file.hstatic.net/200000713019/file/logo-wd-while_fc8ab801a468414da5fff56a005c96cb.png"
+          type="image/png" />
+    <style>
+        :root {
+            --bgheader: #1877f2;
+            --color_header: #ffffff;
+            --color_menu: #000000;
+            --bgshop: #000000;
+            --bg_button: #1877f2;
+            --color_button: #ffffff;
+            --colorshop: #000000;
+            --colorshophover: #288ad6;
+            --bgfooter: #202020;
+            --colorfooter: #ffffff;
+            --colorbgmenumb: #111111;
+            --colortextmenumb: #ffffff;
+            --bgflashsale: #1877f2;
+            --bg_button_add_to_cart: #e90707;
+            --bgprefooter: #202020;
+            --height-head: 60px;
+            --imgselect: url(https://file.hstatic.net/200000525917/file/ico-select_c577a364ec074c9b9cd07a446e6a1a2c.svg);
+            --imgsort: url(https://file.hstatic.net/200000525917/file/sort-az_ce83a7d22f214b68bc6aa586b6ac3d34.svg);
+            --bg-filter: url("https://file.hstatic.net/200000525917/file/filter_415f49821dc841d3add47c3d0abed6b8.svg");
+            --typeimageproduct: contain;
+            --bgsubcribe: url("https://file.hstatic.net/200000713019/file/one-14-pro-166184670586013738040_199db9dbd4654e5d9fe60557f046fc41.webp");
+            --iframe_1: url("https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png");
+            --iframe_2: url("https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png");
+            --nav-height: 344px;
+            --col-menu: 3;
+        }
+    </style>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=fallback"
+            as="style" type="text/css" rel="preload stylesheet" />
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/plugin-style.css?v=1496" rel="preload stylesheet"
+          as="style" type="text/css" />
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/styles-new.scss.css?v=1496" rel="preload stylesheet"
+          as="style" type="text/css" />
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/style-collection.scss.css?v=1496"
+          rel="preload stylesheet" as="style" type="text/css" />
+    <link href="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"
+          rel="preload prefetch" as="script" type="text/javascript" />
+    <script type="text/javascript"
+            src="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"></script>
+    <!-- Tất cả biến khởi tạo, check sử dụng-->
+    <script>
+        var _0x4ad6 = [
+            "\x43\x68\x72\x6F\x6D\x65",
+            "\x69\x6E\x64\x65\x78\x4F\x66",
+            "\x75\x73\x65\x72\x41\x67\x65\x6E\x74",
+            "\x6C\x65\x6E\x67\x74\x68",
+            "\x62\x72\x61\x6E\x64\x73",
+            "\x75\x73\x65\x72\x41\x67\x65\x6E\x74\x44\x61\x74\x61",
+            "\x62\x72\x61\x6E\x64",
+            "\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65",
+            "\x69\x6E\x63\x6C\x75\x64\x65\x73",
+        ];
+        let checklh = false;
+        if (navigator[_0x4ad6[2]][_0x4ad6[1]](_0x4ad6[0]) != -1) {
+            for (
+                let i = 0;
+                i < navigator[_0x4ad6[5]][_0x4ad6[4]][_0x4ad6[3]];
+                i++
+            ) {
+                let vl = navigator[_0x4ad6[5]][_0x4ad6[4]][i][_0x4ad6[6]];
+                if (vl[_0x4ad6[8]](_0x4ad6[7])) {
+                    checklh = true;
+                    break;
+                }
+            }
+        }
+        localStorage.setItem("shop_id", "200000713019/1001049223");
+        window.wd = {
+            template: "collection",
+            formatmoney: "{{amount}}₫",
+            plugin: [
+                "//theme.hstatic.net/200000713019/1001049223/14/plugin-script.js?v=1496",
+                "https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js",
+            ],
+            navLeftText:
+                '<button type="button" class="slick-prev slick-arrow custom-style" aria-label="Previous"><span class="arrow-custom arrow-left"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            navRightText:
+                '<button type="button" class="slick-next slick-arrow custom-style" aria-label="Next"><span class="arrow-custom arrow-right"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            recaptchajs:
+                "https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-",
+            getScriptCcd: (url, callback) => {
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    success: callback,
+                    dataType: "script",
+                    cache: true,
+                });
+            },
+            getdatasite: (
+                url,
+                selector,
+                slider,
+                callbackreview,
+                callbackcustom
+            ) => {
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    success: function (data) {
+                        selector.html(data);
+                    },
+                }).done(() => {
+                    if (slider == "true") {
+                        selector.addClass("slick-callback");
+                        window.wd.scofield.slidercallback();
+                    }
+                    callbackreview == "true" ? window.wd.reviewloopinit() : "";
+                    if (typeof callbackcustom == "function") callbackcustom();
+                });
+            },
+            stylerender: [
+                "//theme.hstatic.net/200000713019/1001049223/14/render-style.css?v=1496",
+                "//theme.hstatic.net/200000713019/1001049223/14/render-style-other.scss.css?v=1496",
+            ],
+            handle_product: "",
+            windowsize: window.outerWidth,
+            modalsubcribe: { check: true, time_show: 6000 },
+            sgnotify: "true",
+            productjson: { error: "json not allowed for this object" },
+            jsonmap:
+                "https://file.hstatic.net/200000397757/file/hethongcuahang_f1ee212eddc04706b09d43518b50a964.json",
+            recaptchacallback: () => {
+                setTimeout(() => {
+                    if ($("input[name='g-recaptcha-response']").length > 0) {
+                        $("input[name='g-recaptcha-response']").each(function () {
+                            let a = $(this);
+                            grecaptcha.ready(function () {
+                                grecaptcha
+                                    .execute("6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-", {
+                                        action: "submit",
+                                    })
+                                    .then(function (b) {
+                                        a.val(b);
+                                    });
+                            });
+                        });
+                    }
+                }, 1e3);
+            },
+            placeholderText: ["Iphone", "Sam Sung", "Xiaomi", "Thay pin iphone"],
+            use_countdown: true,
+            type_countdown: "everyday",
+            countdown: "Sep 10, 2022 23:59:59",
+            type_sold: "random",
+            list_col_pro: [],
+            max_stock: 40,
+            min_stock: 10,
+            collection: {
+                template: "two",
+                url: "/collections/flash-sale",
+                currentpage: "1",
+                totalpage: "1",
+                collectioncount: "16",
+                limit: "30",
+                id: "1003613880",
+                typepaginate: "click_loadmore",
+                sortbydefault: "title-ascending",
+            },
+            appdefault: "appcombo",
+            typerelated: "collection",
+            checklocation: "true",
+            checkproductrelated: "true",
+            checkproductseen: "true",
+            vendorurl: "/collections/vendors?q=&view=related-product",
+            typeurl: "/collections/types?q=&view=related-product",
+            collectionurl: "/collections/?view=related-product",
+            recommendurl: "/products/?view=recommend",
+            reviewtype: "bigpen_review",
+            reviewloopinit: () => {
+                if (typeof ProductReviews == "object") {
+                    $(".review-loop .hrv-product-reviews-star").raty({
+                        starType: "i",
+                        number: function () {
+                            return jQuery(this).attr("data-number");
+                        },
+                        score: function () {
+                            return jQuery(this).attr("data-score");
+                        },
+                        readOnly: !0,
+                    });
+                    $(".review-loop .hrv-product-reviews-star i").css(
+                        "color",
+                        "#ECBA55"
+                    );
+                }
+            },
+        };
+        if (
+            navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 &&
+            checklh == false
+        ) {
+            for (let i = 0; i < window.wd.stylerender.length; i++) {
+                const css = document.createElement("link");
+                css.setAttribute("type", "text/css");
+                css.setAttribute("rel", "stylesheet");
+                css.setAttribute("href", window.wd.stylerender[i]);
+                document.getElementsByTagName("head")[0].appendChild(css);
+            }
+            for (let i = 0; i < window.wd.plugin.length; i++) {
+                const plugin = document.createElement("script");
+                plugin.setAttribute("type", "text/javascript");
+                plugin.setAttribute("src", window.wd.plugin[i]);
+                document.getElementsByTagName("head")[0].appendChild(plugin);
+            }
+            $(window).load(() => {
+                setTimeout(() => {
+                    window.wd.getScriptCcd(
+                        window.wd.recaptchajs,
+                        window.wd.recaptchacallback()
+                    );
+                }, 1000);
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            let jsquery = document.querySelectorAll("script[data-src]");
+            if (
+                navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 &&
+                jsquery.length > 0 &&
+                checklh == false
+            ) {
+                for (let i = 0; i < jsquery.length; i++) {
+                    let src_ = jsquery[i].getAttribute("data-src");
+                    jsquery[i].setAttribute("src", src_);
+                }
+            }
+        });
+    </script>
+    <script>
+        function getcss(filename) {
+            jQuery("head").append(
+                `<link href='${getcdn(
+                    filename
+                )}' rel='stylesheet' type='text/css'  media='all'  />`
+            );
+        }
+        var getcdn = function (filename) {
+            var url = "https://theme.hstatic.net/1000271639/1000347388/14/",
+                version = Math.floor(Math.random() * 999999999 + 999999);
+            sessionStorage.version != undefined
+                ? (version = sessionStorage.version)
+                : (sessionStorage.version = version);
+            return url + filename + "?v=" + version;
+        };
+    </script>
+    <!--    <script type="text/javascript">-->
+    <!--        if (-->
+    <!--            !navigator.userAgent.includes("Chrome-Lighthouse") &&-->
+    <!--            checklh == false-->
+    <!--        ) {-->
+    <!--            if (typeof Haravan === "undefined") {-->
+    <!--                Haravan = {};-->
+    <!--            }-->
+    <!--            Haravan.culture = "vi-VN";-->
+    <!--            Haravan.shop = "wd-smart.myharavan.com";-->
+    <!--            Haravan.theme = { name: "Spring Mobile", id: 1001049223, role: "main" };-->
+    <!--            Haravan.domain = "wd-smart.myharavan.com";-->
+    <!--        }-->
+    <!--    </script>-->
+    <!--    <script>-->
+    <!--        if (-->
+    <!--            !navigator.userAgent.includes("Chrome-Lighthouse") &&-->
+    <!--            checklh == false-->
+    <!--        ) {-->
+    <!--            (function () {-->
+    <!--                function asyncLoad() {-->
+    <!--                    var urls = [-->
+    <!--                        "",-->
+    <!--                        "https://app.hstatic.net/socialloginplus/200000713019/script-tag.js?v=1687509496081",-->
+    <!--                    ];-->
+    <!--                    for (var i = 0; i < urls.length; i++) {-->
+    <!--                        var s = document.createElement("script");-->
+    <!--                        s.type = "text/javascript";-->
+    <!--                        s.async = true;-->
+    <!--                        s.src = urls[i];-->
+    <!--                        var x = document.getElementsByTagName("script")[0];-->
+    <!--                        x.parentNode.insertBefore(s, x);-->
+    <!--                    }-->
+    <!--                }-->
+    <!--                window.attachEvent-->
+    <!--                    ? window.attachEvent("onload", asyncLoad)-->
+    <!--                    : window.addEventListener("load", asyncLoad, false);-->
+    <!--            })();-->
+    <!--        }-->
+    <!--    </script>-->
+    <!--    <script defer data-src="https://stats.hstatic.net/beacon.min.js" hrv-beacon-t="200000713019"></script>-->
+    <!--    <style>-->
+    <!--        .grecaptcha-badge {-->
+    <!--            visibility: hidden;-->
+    <!--        }-->
+    <!--    </style>-->
+    <!--    <script type="text/javascript">-->
+    <!--        window.HaravanAnalytics = window.HaravanAnalytics || {};-->
+    <!--        window.HaravanAnalytics.meta = window.HaravanAnalytics.meta || {};-->
+    <!--        window.HaravanAnalytics.meta.currency = "VND";-->
+    <!--        var meta = {-->
+    <!--            page: {-->
+    <!--                pageType: "collection",-->
+    <!--                resourceType: "collection",-->
+    <!--                resourceId: 1003613880,-->
+    <!--            },-->
+    <!--        };-->
+    <!--        for (var attr in meta) {-->
+    <!--            window.HaravanAnalytics.meta[attr] = meta[attr];-->
+    <!--        }-->
+    <!--        window.HaravanAnalytics.AutoTrack = true;-->
+    <!--    </script>-->
+
+    <!--    <script type="application/ld+json">-->
+    <!--        {-->
+    <!--            "@context": "http://schema.org",-->
+    <!--            "@type": "WebSite",-->
+    <!--            "name": "wd-smart.myharavan.com",-->
+    <!--            "url": "https://wd-smart.myharavan.com",-->
+    <!--            "potentialAction": {-->
+    <!--                "@type": "SearchAction",-->
+    <!--                "target": "https://wd-smart.myharavan.com/search?&q={search_term_string}",-->
+    <!--                "query-input": "required name=search_term_string"-->
+    <!--            }-->
+    <!--        }-->
+    <!--    </script>-->
+
+    <!--    <script type="application/ld+json">-->
+    <!--        {-->
+    <!--            "@context": "http://schema.org",-->
+    <!--            "@type": "BreadcrumbList",-->
+    <!--            "itemListElement": [-->
+    <!--                {-->
+    <!--                    "@type": "ListItem",-->
+    <!--                    "position": 1,-->
+    <!--                    "item": {-->
+    <!--                        "@id": "https:https://wd-smart.myharavan.com",-->
+    <!--                        "name": "Trang chủ"-->
+    <!--                    }-->
+    <!--                },-->
+
+    <!--                {-->
+    <!--                    "@type": "ListItem",-->
+    <!--                    "position": 2,-->
+    <!--                    "item": {-->
+    <!--                        "@id": "https:https://wd-smart.myharavan.com/flash-sale",-->
+    <!--                        "name": "Flash sale"-->
+    <!--                    }-->
+    <!--                }-->
+    <!--            ]-->
+    <!--        }-->
+    <!--    </script>-->
+</head>
+
+<body id="wd-shoes-scofiled" class="template-collection position-cart-loop-right" data-template="collection">
+<th:block th:replace="~{fragments/header :: header}"></th:block>
+<main>
+    <section id="collection-template" class="collection-page layout-two">
+        <div class="collection-body">
+            <div class="container">
+                <div class="row d-flex">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 main-colection">
+
+                        <div class="bg-color-while">
+                            <style>
+                                form {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 20px;
+                                }
+
+                                label {
+                                    font-weight: bold;
+                                }
+
+                                select,
+                                input[type="submit"] {
+                                    padding: 8px 12px;
+                                    border: none;
+                                    border-radius: 4px;
+                                    background-color: #f5f5f5;
+                                    color: #333333;
+                                    font-size: 14px;
+                                    transition: background-color 0.3s ease;
+                                }
+
+                                select:focus,
+                                input[type="submit"]:focus {
+                                    outline: none;
+                                    background-color: #eaeaea;
+                                }
+
+                                input[type="submit"] {
+                                    background-color: #4176ee;
+                                    color: white;
+                                    cursor: pointer;
+                                }
+
+                                input[type="submit"]:hover {
+                                    background-color: #45a049;
+                                }
+
+                                @media (max-width: 600px) {
+                                    form {
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                    }
+                                }
+                            </style>
+                            <form action="/phone/filter" method="post">
+                                <label for="brand">Thương hiệu:</label>
+                                <select id="brand" name="brand">
+                                    <option value="">Thương hiệu</option>
+                                    <option th:each="phone: ${phonesByBrand}" th:value="${phone.getKey().getName()}"
+                                            th:text="${phone.getKey().getName()}"></option>
+                                </select>
+
+                                <label for="priceRange">Giá cả:</label>
+                                <select id="priceRange" name="priceRange">
+                                    <option value="0">Tất cả</option>
+                                    <option value="1"> < 1 000 000 VND </option>
+                                    <option value="2">1 000 000 - 10 000 000 VND</option>
+                                    <option value="3"> > 10 000 000 VND</option>
+                                </select>
+
+                                <label for="color">Màu sắc:</label>
+                                <select id="color" name="color">
+                                    <option value="">Tất cả</option>
+                                    <option value="Black">Black</option>
+                                    <option value="White">White</option>
+                                    <option value="White">Red</option>
+                                    <option value="White">Green</option>
+                                    <option value="White">Yellow</option>
+                                    <option value="Pink">Yellow</option>
+                                    <!-- Add more color options as needed -->
+                                </select>
+
+                                <input type="submit" value="Lọc">
+                            </form>
+                            <div class="content-product-list product-list filter d-flex row-left-list"
+                            >
+                                <style>
+                                    .product-img {
+                                        position: relative;
+                                        width: 200px;
+                                        height: 200px;
+                                    }
+
+                                    .product-img img:nth-child(2) {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        opacity: 0;
+                                        transition: opacity 0.3s ease;
+                                    }
+
+                                    .product-img:hover img:nth-child(2) {
+                                        opacity: 1;
+                                    }
+                                </style>
+                                <div
+                                        class="d-flex-column mg-bottom-15 mg-bottom-10-mb col-lg-1 col-md-3 col-sm-4 col-xs-6 pd-right-0"
+                                        th:each="phoneDetail: ${phoneList}">
+                                    <a th:href="'/phone/' + ${phoneDetail.getId()}">
+                                        <div class="product-block item loop-border">
+                                            <div class="product-img" data-frame="frame1" th:title="${phoneDetail.getName()}">
+                                                <!--                <a th:href="/products/${phone.getPhone().getId()}"-->
+                                                <!--                                                <div class="product-sale"><span>-11%</span></div>-->
+                                                <img class="dt-width-100 img-first" width="260"
+                                                     height="260"
+                                                     th:src="${phoneDetail.getPhoneDetails().get(0).getImg()}"
+                                                     th:alt="${phoneDetail.getName()}" />
+                                                <img class="dt-width-100 img-hover" width="260"
+                                                     height="260"
+                                                     th:src="${phoneDetail.getPhoneDetails().get(1).getImg()}"
+                                                     th:alt="${phoneDetail.getName()}" />
+                                                <!--                </a>-->
+                                                <div class="button-loop-pro hidden-xs hidden-sm">
+
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="pro-name" th:title="${phoneDetail.getName()}" th:text="${phoneDetail.getName()}">
+                                                    <!--                    <a th:href="/products/${phone.getPhone().getId()}"-->
+                                                    <!--                    </a>-->
+                                                </h3>
+                                                <div class="d-flex js-between d-flex-center">
+                                                    <ul class="list-variants d-flex d-flex-wrap image">
+                                                        <li th:each="phone : ${phoneDetail.getPhoneDetails()}" th:text="${phone.getColor().getName() + ' • '}"></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box-pro-prices">
+                                                    <p class="pro-price">
+                                                        <span th:text="${phoneDetail.getPhoneDetails().get(0).getPrice()} + ' VND'">  </span>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <div class="sortpagibar pagi not-filter text-center hidden"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <style>
+        .pagination {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .page-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .page-list li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .page-list li a {
+            display: inline-block;
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            color: #333;
+        }
+
+        .page-list li.active a {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+    <div class="pagination">
+        <ul class="page-list">
+            <li th:each="pageNumber : ${pageNumbers}" th:class="${pageNumber == pageNumber ? 'active' : ''}">
+                <a th:href="'/phone/page/' + ${pageNumber}" th:text="${pageNumber} + 1"></a>
+            </li>
+        </ul>
+    </div>
+</main>
+<div class="prefooter-customer mg-top-30">
+    <div class="container">
+        <div class="bg-prefooter">
+            <div class="d-flex row d-flex-center">
+                <div class="col-md-7 col-sm-7 col-xs-12 d-flex d-flex-center js-between">
+                    <p class="title-regis">Đăng kí nhận tin</p>
+                    <div class="form-ft-wanda">
+                        <form accept-charset="UTF-8" action="/account/contact" class="contact-form" method="post">
+                            <input name="form_type" type="hidden" value="customer" />
+                            <input name="utf8" type="hidden" value="✓" />
+                            <div class="form-group mb-0 icon-email">
+                                <input type="hidden" id="contact_tags" name="contact[tags]"
+                                       value="khách hàng tiềm năng-https://wd-smart.myharavan.com/collections/flash-sale" />
+                                <input type="email" required="required" autocomplete="on" name="contact[email]"
+                                       id="contact_email_ft" placeholder="Email" />
+                            </div>
+                            <button class="btn" type="submit">
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Đăng
+                                ký
+                            </button>
+
+                            <input id="ef24888ebf19463b8413050335f17e78" name="g-recaptcha-response"
+                                   type="hidden" /><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('ef24888ebf19463b8413050335f17e78').value = token;});});</script>-->
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <ul class="social-footer d-flex d-flex-center">
+                        <li class="zalo">
+                            <a href="1" rel="nofollow"><img width="30" height="30" class="lazyload"
+                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                            data-src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                                                            alt="Liên hệ với chúng tôi qua Zalo" /></a>
+                        </li>
+                        <li class="tiktok">
+                            <a href="1" rel="nofollow"><img width="18" height="18" class="lazyload"
+                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                            data-src="https://file.hstatic.net/200000525917/file/tik-tok_e914ba6238604946935723c6839cc211.svg"
+                                                            alt="Liên hệ với chúng tôi qua Tiktok" /></a>
+                        </li>
+                        <li class="twitter">
+                            <a href="1" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="youtube">
+                            <a href="1" rel="nofollow"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="instagram">
+                            <a href="1" rel="nofollow"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="facebook">
+                            <a href="1" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="mg-0 pd-bt-50-mb">
+    <div class="top-ft-wanda">
+        <div class="container">
+            <div class="d-flex row">
+                <div class="col-md-3 col-sm-6 col-xs-12 infomation mg-bottom-15">
+                    <div class="title-footer">
+                        <a href="/">
+                            <img class="dt-width-auto logo-ft" height="50" width="200"
+                                 th:src="@{images/SpringMobile.png}" alt="Spring Mobile" />
+                        </a>
+                    </div>
+                    <div class="infomation-wanda">
+                        <p>Spring Mobile - Điện Thoại Siêu Rẻ, Trao Trọn Yên Tâm.</p>
+                        <ul>
+                            <li>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> 19 Nguyễn Hữu Thọ, Phường Tân Phong, Quận 7,TP. HCM
+                            </li>
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a rel="nofollow" href="tel:0967671065">0967671065</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <a rel="nofollow" href="mailto:nguyenhuutin124@gmail.com">nguyenhuutin124@gmail.com</a>
+                            </li>
+                            <li class="bocongthuong">
+                                <a rel="nofollow" href=""><img class="lazyload" width="120" height="45"
+                                                               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                               data-src="https://file.hstatic.net/200000397757/file/dathongbao_48067cd02fae41b68bf0294777c39c94_compact.png"
+                                                               alt="Bộ công thương" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 tablink mg-bottom-15">
+                    <div class="title-footer">
+                        <div class="h4">Chính sách</div>
+                    </div>
+                    <div class="footer-link-wanda">
+                        <ul>
+                            <li><a href="/">Chính sách bảo hành</a></li>
+                            <li><a href="/">Tra cứu bảo hành</a></li>
+                            <li><a href="/">Trả góp online</a></li>
+                            <li>
+                                <a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a>
+                            </li>
+                            <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 tablink mg-bottom-15">
+                    <div class="title-footer">
+                        <div class="h4">Hướng dẫn</div>
+                    </div>
+                    <div class="footer-link-wanda">
+                        <ul>
+                            <li><a href="/">Chính sách bảo hành</a></li>
+                            <li><a href="/">Tra cứu bảo hành</a></li>
+                            <li><a href="/">Trả góp online</a></li>
+                            <li>
+                                <a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a>
+                            </li>
+                            <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="title-footer">
+                        <div class="h4">Tổng đài hỗ trợ</div>
+                    </div>
+                    <ul class="footer-support">
+                        <li>
+                            <span>Gọi mua hàng:</span>
+                            <a href="tel:0967671065">0967671065</a>
+                            <span>(8h30-21h)</span>
+                        </li>
+                        <li>
+                            <span>Gọi bảo hành:</span>
+                            <a href="tel:0967671065">0967671065</a>
+                            <span>(8h30-21h)</span>
+                        </li>
+                        <li>
+                            <span>Gọi khiếu nại:</span>
+                            <a href="tel:0967671065">0967671065</a>
+                            <span>(8h30-21h)</span>
+                        </li>
+                    </ul>
+                    <div class="title-footer">
+                        <div class="h4">Phương thức thanh toán</div>
+                    </div>
+                    <div>
+                        <img width="246" height="24"
+                             src="https://theme.hstatic.net/1000379792/1000977285/14/footer_trustbadge.jpg?v=338"
+                             alt="Phương thức thanh toán" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wanda">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="text-copyright mb-0">
+                            <span>© Copyright 2023 By
+                                <a href="/" target="_blank" class="underline_hover link">
+                                    Spring Mobile.</a><a target="_blank" rel="nofollow"
+                                                         href="https://www.haravan.com?ref=wanda">
+                                    Powered by Haravan</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="pro-qv-wanda"></div>
+<div id="pro-quickview-mobile"></div>
+<div class="fixed-action-btn">
+    <ul>
+        <li class="facebook">
+            <a class="btn-secondary btn-floating" href="tel:https://www.facebook.com/masichanh/" rel="nofollow"
+               data-toggle="tooltip" data-original-title="Liên hệ với chúng tôi qua Facebook"><img width="45"
+                                                                                                   height="45" class="dt-width-auto" alt="Messenger"
+                                                                                                   src="https://file.hstatic.net/200000525917/file/messenger-fb_8fcc524fbaad4b1195a150dc5e0575d7.png" /></a>
+        </li>
+        <li class="zalo">
+            <a class="btn-secondary btn-floating" href="/" rel="nofollow" data-toggle="tooltip"
+               data-original-title="Liên hệ với chúng tôi qua Zalo"><img width="45" height="45"
+                                                                         class="dt-width-auto"
+                                                                         src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                                                                         alt="Liên hệ với chúng tôi qua Zalo" /></a>
+        </li>
+    </ul>
+</div>
+<div class="modal" id="modal-subscribe">
+    <div class="modal-wp-ct">
+        <div class="tt-md-ct">Đăng ký nhận khuyến mãi</div>
+        <div class="message-md-ct">
+            <div class="content-md-ct">
+                Chúng tôi sẽ cập nhật các chương trình khuyến mãi mới nhất đến bạn.
+            </div>
+            <ul class="list-md-contact">
+                <li>Giảm giá sản phẩm</li>
+                <li>Mã coupon chỉ dành riêng cho bạn</li>
+                <li>Ưu đãi tặng sản phẩm đi kèm</li>
+            </ul>
+        </div>
+        <form accept-charset="UTF-8" action="/account/contact" class="contact-form" method="post">
+            <input name="form_type" type="hidden" value="customer" />
+            <input name="utf8" type="hidden" value="✓" />
+            <div class="form-group mb-0">
+                <input type="hidden" id="contact_tags" name="contact[tags]"
+                       value="khách hàng tiềm năng-https://wd-smart.myharavan.com/collections/flash-sale" />
+                <input type="email" required="required" name="contact[email]" id="contact_email"
+                       placeholder="Email" />
+            </div>
+            <button class="btn" type="submit">Đăng ký</button>
+
+            <input id="aefee71976924c038b02710819d2ef83" name="g-recaptcha-response"
+                   type="hidden" /><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('aefee71976924c038b02710819d2ef83').value = token;});});</script>-->
+        </form>
+    </div>
+</div>
+<div class="modal" id="success-subcribe-wanda">
+    <div class="row">
+        <div class="modal-content">
+            <div class="modal-icon sweet-alert">
+                <div class="sa-icon sa-success animate">
+                    <span class="sa-line sa-tip animateSuccessTip"></span>
+                    <span class="sa-line sa-long animateSuccessLong"></span>
+                    <div class="sa-placeholder"></div>
+                    <div class="sa-fix"></div>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <p class="modal-title">
+                    Đăng ký thành công.<br />Thông báo sẽ tự động tắt sau 2 giây
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="success-add-cart-mobile">
+    <div class="head-group">
+        <div class="modal-title d-flex d-flex-center">
+            <img alt="Success" width="16" height="16"
+                 src="https://file.hstatic.net/200000525917/file/check_fed1ae0ce277470eb827c4d6f3ac8ddf.png" />
+            <span>Thêm vào giỏ hàng thành công</span>
+        </div>
+        <button type="button" class="close-success"><span>×</span></button>
+    </div>
+    <div class="row">
+        <div id="form-ss" class="d-flex col-xs-12 col-sm-12">
+            <div class="top-body"></div>
+            <div class="ft-body col-xs-12">
+                <div class="d-flex js-between total-cart-mb">
+                    <a href="/cart"> Giỏ hàng:</a>
+                    <div class="text-right">
+                        <span class="price"></span>
+                        <div class="count">
+                            (<span class="cart-popup-count"></span>) sản phẩm
+                        </div>
+                    </div>
+                </div>
+                <div class="action-btn d-flex js-between">
+                    <a href="/cart" class="btn btn-cart">Xem giỏ hàng</a>
+                    <a href="/checkout" class="btn btn-checkout">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="back-to-top" type="button">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+         xml:space="preserve">
+            <g>
+                <polyline fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10"
+                          points="15,40 32,23 49,40 	" />
+            </g>
+        </svg>
+    back to top
+</button>
+<div class="modal-backdrop fade js-backdrop"></div>
+<div class="suggest-notify anislideOutDown sales_animated"></div>
+<!-- Đây là suggest sale popup -->
+<div class="navigation-mobile visible-xs visible-sm">
+    <ul class="d-flex">
+        <li class="item">
+            <a class="d-flex item-link" href="/">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/home_027cdf38e9384ddb81f453ba516c2500.png"
+                             alt="Trang chủ" />
+                        <img class="after-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/home-active_7501f572b3324f58afa2f885c97b8701.png"
+                             alt="Trang chủ" />
+                    </span>
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        <li class="item navigation-event">
+            <a class="d-flex" href="javascript:void(0)">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/category_074fc86572ed4d389692f7bc5fb8d32f.png"
+                             alt="Danh mục" />
+                        <img class="after-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/category-active_3573358a277b44f0ae626afddf4633f0.png"
+                             alt="Danh mục" />
+                    </span>
+                <span>Danh mục</span>
+            </a>
+        </li>
+        <li class="item open-filter">
+            <a class="d-flex item-link" href="javascript:void(0)">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/filter-gray_5443ecb9e46a43ae9b10d15e15fa8520_icon.png"
+                             alt="Bộ lọc" />
+                        <img class="after-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/filter-red_648847cd37784d0da0cfe47431f75097_icon.png"
+                             alt="Bộ lọc" />
+                    </span>
+                <span>Bộ lọc</span>
+            </a>
+        </li>
+        <li class="item">
+            <a class="d-flex item-link" href="/pages/he-thong-cua-hang">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/location_7e8df8606c6647e9a0da6b893875d98e.png"
+                             alt="Cửa hàng" />
+                        <img class="after-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/location-acitve_71d06ddc84ea4e4c92843319f186ab63.png"
+                             alt="Cửa hàng" />
+                    </span>
+                <span>Cửa hàng</span>
+            </a>
+        </li>
+        <li class="item">
+            <a class="d-flex item-link" href="tel:0967671065">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/phone-call_f39d577fa5d249269096ffa4ae42aea3.png"
+                             alt="Hotline" />
+                        <img class="after-change" width="24" height="24"
+                             src="https://file.hstatic.net/200000713019/file/phone-call-active_eba163bb67564d139050bfd7ea6578c5.png"
+                             alt="Hotline" />
+                    </span>
+                <span>Hotline</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="navigation-mobile" class="visible-xs visible-sm">
+    <nav class="category-mobie"></nav>
+</div>
+<script type="text/javascript" src="//theme.hstatic.net/200000713019/1001049223/14/pluginscript.js?v=1496"
+        defer></script>
+<script type="text/javascript" src="//theme.hstatic.net/200000713019/1001049223/14/main-scripts.js?v=1496"
+        defer></script>
+<script type="text/javascript" defer
+        src="//theme.hstatic.net/200000713019/1001049223/14/main-collection.js?v=1496"></script>
+<script type="text/javascript" defer
+        src="//theme.hstatic.net/200000713019/1001049223/14/combo-app.js?v=1496"></script>
+<script defer>
+    const asyncload = {
+        init: function () {
+            this.loadasyncdefer();
+        },
+        loadasyncdefer: () => {
+            try {
+                !(function (a, c, d) {
+                    var b,
+                        e = a.getElementsByTagName(c)[0];
+                    a.getElementById(d) ||
+                    (((b = a.createElement(c)).id = d),
+                        (b.src =
+                            "//connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.0"),
+                        e.parentNode.insertBefore(b, e));
+                })(document, "script", "facebook-jssdk");
+            } catch (err) {
+                console.log(err);
+            }
+        },
+    };
+    $(window).on("load", function () {
+        if (
+            navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 &&
+            checklh == false
+        ) {
+            setTimeout(() => {
+                asyncload.init();
+            }, 1500);
+        }
+    });
+</script>
+</body>
+
+</html>

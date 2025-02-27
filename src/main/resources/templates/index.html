@@ -1,0 +1,1644 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="https://wd-smart.myharavan.com/" />
+    <link rel="dns-prefetch" href="//file.hstatic.net/" />
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.png}">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="revisit-after" content="1 day" />
+    <title>Spring Mobile</title>
+    <meta name="description" content="Spring Mobile - Điện Thoại Si&#234;u Rẻ, Trao Trọn Y&#234;n T&#226;m." />
+    <link rel="canonical" href="https://wd-smart.myharavan.com/" />
+    <meta name="robots" content="index,follow,noodp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Spring Mobile" />
+    <meta property="og:image" content="http:" />
+    <meta property="og:image" content="https:" />
+    <meta property="og:image:secure_url" content="https:" />
+    <meta property="og:image:secure_url" content="http:" />
+    <meta property="og:description" content="Spring Mobile - Điện Thoại Si&#234;u Rẻ, Trao Trọn Y&#234;n T&#226;m." />
+    <meta property="og:image:alt" content="Spring Mobile" />
+    <meta property="og:url" content="https://wd-smart.myharavan.com/" />
+    <meta property="og:site_name" content="Spring Mobile" />
+    <link rel="preload" as="image"
+        href="https://file.hstatic.net/200000713019/file/logo-wd-while_fc8ab801a468414da5fff56a005c96cb.png"
+        type="image/png" />
+    <style>
+        :root {
+            --bgheader: #1877f2;
+            --color_header: #ffffff;
+            --color_menu: #000000;
+            --bgshop: #000000;
+            --bg_button: #1877f2;
+            --color_button: #ffffff;
+            --colorshop: #000000;
+            --colorshophover: #288ad6;
+            --bgfooter: #202020;
+            --colorfooter: #ffffff;
+            --colorbgmenumb: #111111;
+            --colortextmenumb: #ffffff;
+            --bgflashsale: #1877f2;
+            --bg_button_add_to_cart: #e90707;
+            --bgprefooter: #202020;
+            --height-head: 60px;
+            --imgselect: url(https://file.hstatic.net/200000525917/file/ico-select_c577a364ec074c9b9cd07a446e6a1a2c.svg);
+            --imgsort: url(https://file.hstatic.net/200000525917/file/sort-az_ce83a7d22f214b68bc6aa586b6ac3d34.svg);
+            --bg-filter: url("https://file.hstatic.net/200000525917/file/filter_415f49821dc841d3add47c3d0abed6b8.svg");
+            --typeimageproduct: contain;
+            --bgsubcribe: url("https://file.hstatic.net/200000713019/file/one-14-pro-166184670586013738040_199db9dbd4654e5d9fe60557f046fc41.webp");
+            --iframe_1: url("https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png");
+            --iframe_2: url("https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png");
+            --nav-height: 344px;
+            --col-menu: 3;
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=fallback"
+        as="style" type="text/css" rel="preload stylesheet" />
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/plugin-style.css?v=1496" rel="preload stylesheet"
+        as="style" type="text/css" />
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/styles-new.scss.css?v=1496" rel="preload stylesheet"
+        as="style" type="text/css" />
+    <link rel="preload" as="image" type="image/jpg"
+        href="//file.hstatic.net/200000525917/file/slider-1-mobile_c31dda4cb9b74b658479583882bb3244_grande.jpg"
+        media="(max-width: 480px)" />
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/styles-index.scss.css?v=1496" rel="preload stylesheet"
+        as="style" type="text/css" />
+    <link href="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"
+        rel="preload prefetch" as="script" type="text/javascript" />
+    <script type="text/javascript"
+        src="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"></script>
+    <!-- Tất cả biến khởi tạo, check sử dụng-->
+    <script>
+        var _0x4ad6 = [
+            "\x43\x68\x72\x6F\x6D\x65",
+            "\x69\x6E\x64\x65\x78\x4F\x66",
+            "\x75\x73\x65\x72\x41\x67\x65\x6E\x74",
+            "\x6C\x65\x6E\x67\x74\x68",
+            "\x62\x72\x61\x6E\x64\x73",
+            "\x75\x73\x65\x72\x41\x67\x65\x6E\x74\x44\x61\x74\x61",
+            "\x62\x72\x61\x6E\x64",
+            "\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65",
+            "\x69\x6E\x63\x6C\x75\x64\x65\x73",
+        ];
+        let checklh = false;
+        if (navigator[_0x4ad6[2]][_0x4ad6[1]](_0x4ad6[0]) != -1) {
+            for (
+                let i = 0;
+                i < navigator[_0x4ad6[5]][_0x4ad6[4]][_0x4ad6[3]];
+                i++
+            ) {
+                let vl = navigator[_0x4ad6[5]][_0x4ad6[4]][i][_0x4ad6[6]];
+                if (vl[_0x4ad6[8]](_0x4ad6[7])) {
+                    checklh = true;
+                    break;
+                }
+            }
+        }
+        localStorage.setItem("shop_id", "200000713019/1001049223");
+        window.wd = {
+            template: "index",
+            formatmoney: "{{amount}}₫",
+            plugin: [
+                "//theme.hstatic.net/200000713019/1001049223/14/plugin-script.js?v=1496",
+                "https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js",
+            ],
+            navLeftText:
+                '<button type="button" class="slick-prev slick-arrow custom-style" aria-label="Previous"><span class="arrow-custom arrow-left"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            navRightText:
+                '<button type="button" class="slick-next slick-arrow custom-style" aria-label="Next"><span class="arrow-custom arrow-right"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            recaptchajs:
+                "https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-",
+            getScriptCcd: (url, callback) => {
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    success: callback,
+                    dataType: "script",
+                    cache: true,
+                });
+            },
+            getdatasite: (
+                url,
+                selector,
+                slider,
+                callbackreview,
+                callbackcustom
+            ) => {
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    success: function (data) {
+                        selector.html(data);
+                    },
+                }).done(() => {
+                    if (slider == "true") {
+                        selector.addClass("slick-callback");
+                        window.wd.scofield.slidercallback();
+                    }
+                    callbackreview == "true" ? window.wd.reviewloopinit() : "";
+                    if (typeof callbackcustom == "function") callbackcustom();
+                });
+            },
+            stylerender: [
+                "//theme.hstatic.net/200000713019/1001049223/14/render-style.css?v=1496",
+                "//theme.hstatic.net/200000713019/1001049223/14/render-style-other.scss.css?v=1496",
+            ],
+            handle_product: "",
+            windowsize: window.outerWidth,
+            modalsubcribe: { check: true, time_show: 6000 },
+            sgnotify: "true",
+            productjson: { error: "json not allowed for this object" },
+            jsonmap:
+                "https://file.hstatic.net/200000397757/file/hethongcuahang_f1ee212eddc04706b09d43518b50a964.json",
+            recaptchacallback: () => {
+                setTimeout(() => {
+                    if ($("input[name='g-recaptcha-response']").length > 0) {
+                        $("input[name='g-recaptcha-response']").each(function () {
+                            let a = $(this);
+                            grecaptcha.ready(function () {
+                                grecaptcha
+                                    .execute("6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-", {
+                                        action: "submit",
+                                    })
+                                    .then(function (b) {
+                                        a.val(b);
+                                    });
+                            });
+                        });
+                    }
+                }, 1e3);
+            },
+            placeholderText: ["Iphone", "Sam Sung", "Xiaomi", "Thay pin iphone"],
+            use_countdown: true,
+            type_countdown: "everyday",
+            countdown: "Sep 10, 2022 23:59:59",
+            type_sold: "random",
+            list_col_pro: [],
+            max_stock: 40,
+            min_stock: 10,
+            collection: {
+                template: "two",
+                url: "",
+                currentpage: "",
+                totalpage: "",
+                collectioncount: "",
+                limit: "30",
+                id: "",
+                typepaginate: "click_loadmore",
+                sortbydefault: "",
+            },
+            appdefault: "appcombo",
+            typerelated: "collection",
+            checklocation: "true",
+            checkproductrelated: "true",
+            checkproductseen: "true",
+            vendorurl: "/collections/vendors?q=&view=related-product",
+            typeurl: "/collections/types?q=&view=related-product",
+            collectionurl: "/collections/?view=related-product",
+            recommendurl: "/products/?view=recommend",
+            reviewtype: "bigpen_review",
+            reviewloopinit: () => {
+                if (typeof ProductReviews == "object") {
+                    $(".review-loop .hrv-product-reviews-star").raty({
+                        starType: "i",
+                        number: function () {
+                            return jQuery(this).attr("data-number");
+                        },
+                        score: function () {
+                            return jQuery(this).attr("data-score");
+                        },
+                        readOnly: !0,
+                    });
+                    $(".review-loop .hrv-product-reviews-star i").css(
+                        "color",
+                        "#ECBA55"
+                    );
+                }
+            },
+        };
+        if (
+            navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 &&
+            checklh == false
+        ) {
+            for (let i = 0; i < window.wd.stylerender.length; i++) {
+                const css = document.createElement("link");
+                css.setAttribute("type", "text/css");
+                css.setAttribute("rel", "stylesheet");
+                css.setAttribute("href", window.wd.stylerender[i]);
+                document.getElementsByTagName("head")[0].appendChild(css);
+            }
+            for (let i = 0; i < window.wd.plugin.length; i++) {
+                const plugin = document.createElement("script");
+                plugin.setAttribute("type", "text/javascript");
+                plugin.setAttribute("src", window.wd.plugin[i]);
+                document.getElementsByTagName("head")[0].appendChild(plugin);
+            }
+            $(window).load(() => {
+                setTimeout(() => {
+                    window.wd.getScriptCcd(
+                        window.wd.recaptchajs,
+                        window.wd.recaptchacallback()
+                    );
+                }, 1000);
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            let jsquery = document.querySelectorAll("script[data-src]");
+            if (
+                navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 &&
+                jsquery.length > 0 &&
+                checklh == false
+            ) {
+                for (let i = 0; i < jsquery.length; i++) {
+                    let src_ = jsquery[i].getAttribute("data-src");
+                    jsquery[i].setAttribute("src", src_);
+                }
+            }
+        });
+    </script>
+    <script>
+        function getcss(filename) {
+            jQuery("head").append(
+                `<link href='${getcdn(
+                    filename
+                )}' rel='stylesheet' type='text/css'  media='all'  />`
+            );
+        }
+        var getcdn = function (filename) {
+            var url = "https://theme.hstatic.net/1000271639/1000347388/14/",
+                version = Math.floor(Math.random() * 999999999 + 999999);
+            sessionStorage.version != undefined
+                ? (version = sessionStorage.version)
+                : (sessionStorage.version = version);
+            return url + filename + "?v=" + version;
+        };
+    </script>
+    <script type="text/javascript">
+        if (
+            !navigator.userAgent.includes("Chrome-Lighthouse") &&
+            checklh == false
+        ) {
+            if (typeof Haravan === "undefined") {
+                Haravan = {};
+            }
+            Haravan.culture = "vi-VN";
+            Haravan.shop = "wd-smart.myharavan.com";
+            Haravan.theme = { name: "Spring Mobile", id: 1001049223, role: "main" };
+            Haravan.domain = "wd-smart.myharavan.com";
+        }
+    </script>
+    <script>
+        if (
+            !navigator.userAgent.includes("Chrome-Lighthouse") &&
+            checklh == false
+        ) {
+            (function () {
+                function asyncLoad() {
+                    var urls = [
+                        "",
+                        "https://app.hstatic.net/socialloginplus/200000713019/script-tag.js?v=1687509496081",
+                    ];
+                    for (var i = 0; i < urls.length; i++) {
+                        var s = document.createElement("script");
+                        s.type = "text/javascript";
+                        s.async = true;
+                        s.src = urls[i];
+                        var x = document.getElementsByTagName("script")[0];
+                        x.parentNode.insertBefore(s, x);
+                    }
+                }
+                window.attachEvent
+                    ? window.attachEvent("onload", asyncLoad)
+                    : window.addEventListener("load", asyncLoad, false);
+            })();
+        }
+    </script>
+    <script defer data-src="https://stats.hstatic.net/beacon.min.js" hrv-beacon-t="200000713019"></script>
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        window.HaravanAnalytics = window.HaravanAnalytics || {};
+        window.HaravanAnalytics.meta = window.HaravanAnalytics.meta || {};
+        window.HaravanAnalytics.meta.currency = "VND";
+        var meta = { page: { pageType: "home" } };
+        for (var attr in meta) {
+            window.HaravanAnalytics.meta[attr] = meta[attr];
+        }
+        window.HaravanAnalytics.AutoTrack = true;
+    </script>
+    <script type="text/javascript" th:src="@{/phones.js}"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "wd-smart.myharavan.com",
+            "url": "https://wd-smart.myharavan.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://wd-smart.myharavan.com/search?&q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+</head>
+
+<body id="wd-shoes-scofiled" class="template-index position-cart-loop-right" data-template="index">
+    <header id="header" class="site-header">
+        <div id="site-header-center" class="header-top">
+            <div class="container">
+                <div class="row-left-list d-flex d-flex-center row-mb">
+                    <div class="logo col-md-3 col-xs-3 col-sm-3 pd-right-0">
+                        <a href="/">
+                            <img class="dt-width-auto logo-shop" height="50" width="200"
+                                th:src="@{images/SpringMobile.png}" alt="Spring Mobile" />
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-7 col-sm-6 pd-right-0">
+                        <div class="site_search search-desktop">
+                            <form action="/search" class="wanda-mxm-search">
+                                <div class="search-inner">
+                                    <input name="q" autocomplete="off" class="searchinput input-search search-input"
+                                        type="text" size="20" placeholder="Bạn đang tìm gì..." aria-label="Search" />
+                                </div>
+                                <button type="submit" class="btn-search" aria-label="Tìm kiếm">
+                                    <img width="24" height="24"
+                                        src="//theme.hstatic.net/200000713019/1001049223/14/search-icon.svg?v=1496"
+                                        alt="Tìm kiếm"
+                                />
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+                <div
+                        class="col-md-5 group-icon-header col-xs-2 col-sm-3 pd-right-0 pd-0-mb"
+                >
+                    <div class="cart-login-search align-items-center">
+                        <ul
+                                class="list-inline list-unstyled mb-0 d-flex header-group-icon d-flex-center"
+                        >
+                            <li
+                                    class="list-inline-item mr-0 hidden-xs hidden-sm header-hotline"
+                            >
+                                <a
+                                        class="group-icon-item d-flex d-flex-center"
+                                        href="tel:0967671065"
+                                >
+                      <span class="box-icon">
+                        <img
+                                width="24"
+                                height="24"
+                                src="https://file.hstatic.net/200000713019/file/phone-call_e079526c31434e4bb169132325cc2600.png"
+                                alt="Hotline"
+                        />
+                      </span>
+                                    <span class="box-text">
+                        Hotline <span class="small-text">0967671065</span>
+                      </span>
+                                </a>
+                            </li>
+                            <li
+                                    class="list-inline-item mr-0 hidden-xs hidden-sm header-store"
+                            >
+                                <div class="list-inline-item-text">
+                                    <button class="group-icon-item d-flex d-flex-center">
+                        <span class="box-icon">
+                          <img
+                                  width="24"
+                                  height="24"
+                                  src="//theme.hstatic.net/200000713019/1001049223/14/location.svg?v=1496"
+                                  alt="Hệ thống cửa hàng"
+                          />
+                        </span>
+                                        <span class="box-text">
+                          Hệ thống
+                          <span class="small-text"
+                          >cửa hàng<i
+                                  class="fa fa-angle-down"
+                                  aria-hidden="true"
+                          ></i
+                          ></span>
+                        </span>
+                                        <span class="box-arrow">
+                          <svg viewBox="0 0 20 9" role="presentation">
+                            <path
+                                    d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                    fill="#ffffff"
+                            ></path>
+                          </svg>
+                        </span>
+                                    </button>
+                                    <div class="header-action_dropdown bg-grey-opacity">
+                                        <div class="header-dropdown_content">
+                                            <div class="overflow-hidden relative-position">
+                                                <div class="account_header text-center">
+                                                    <div class="account_title heading h2">
+                                                        Tìm cửa hàng gần bạn
+                                                    </div>
+                                                </div>
+                                                <div class="group-store-header mg-top-15">
+                                                    <div class="d-flex header-select-store">
+                                                        <div class="form-group">
+                                                            <select
+                                                                    name="change-tinh"
+                                                                    class="change-tinh"
+                                                            >
+                                                                <option value="all" selected>
+                                                                    Chọn tỉnh/thành phố
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select
+                                                                    name="select-quan"
+                                                                    class="select-quan"
+                                                            >
+                                                                <option value="all">Chọn Quận/huyện</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="address-count mg-top-15">
+                                                        <div class="address-detail">
+                                                            <ul class="address-link"></ul>
+                                                            <p class="no-store hidden">
+                                                                Hiện chưa có cửa hàng
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item mr-0 header-account">
+                                <div class="list-inline-item-text">
+                                    <button class="group-icon-item d-flex d-flex-center">
+                        <span class="box-icon">
+                          <img
+                                  width="24"
+                                  height="24"
+                                  src="//theme.hstatic.net/200000713019/1001049223/14/user-account.svg?v=1496"
+                                  alt="Tài khoản"
+                          />
+                        </span>
+                                        <span
+                                                th:if="${user != null}"
+                                                class="box-text hidden-xs"
+                                        >
+                          Tài khoản<span class="small-text"
+                                        >của bạn<i
+                                                class="fa fa-angle-down"
+                                                aria-hidden="true"
+                                        ></i
+                                        ></span>
+                        </span>
+                                        <span
+                                                th:unless="${user != null}"
+                                                class="box-text hidden-xs"
+                                        >
+                          Đăng nhập
+                          <span class="small-text"
+                          >Đăng ký<i
+                                  class="fa fa-angle-down"
+                                  aria-hidden="true"
+                          ></i
+                          ></span>
+                        </span>
+                                        <span class="box-arrow">
+                          <svg viewBox="0 0 20 9" role="presentation">
+                            <path
+                                    d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                    fill="#ffffff"
+                            ></path>
+                          </svg>
+                        </span>
+                                    </button>
+                                    <div class="header-action_dropdown">
+                                        <div class="header-dropdown_content">
+                                            <div
+                                                    th:if="${user != null}"
+                                                    class="overflow-hidden relative-position"
+                                            >
+                                                <div
+                                                        id="header-login-toggle-1"
+                                                        class="site_account_modal translate-left active"
+                                                >
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title heading h2">
+                                                            Thông tin tài khoản
+                                                        </div>
+                                                        <p class="account_legend mg-0">
+                                                            <label>Tên: </label
+                                                            ><strong th:text="${user.name}"></strong>
+                                                        </p>
+                                                        <p class="account_legend mg-0">
+                                                            <label>Email: </label
+                                                            ><strong th:text="${user.email}"></strong>
+                                                        </p>
+                                                        <p class="account_legend mg-0">
+                                                            <label>Số điện thoại: </label
+                                                            ><strong th:text="${user.phone}"></strong>
+                                                        </p>
+                                                        <p class="account_legend mg-0"></p>
+                                                        <div class="account-bottom d-flex" style="justify-content: center">
+                                                            <div class="item" style="margin-bottom: 2px">
+                                                                <a href="/account/see_detail">Xem chi tiết</a>
+                                                            </div>
+                                                            <div class="item" style="margin-bottom: 2px">
+                                                                <a href="/account/logout">Đăng xuất</a>
+                                                            </div>
+                                                            <div th:if="${admin != null}" class="item" style="margin-bottom: 2px">
+                                                                <a href="/Admin">Admin</a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                    th:unless="${user != null}"
+                                                    class="overflow-hidden relative-position"
+                                            >
+                                                <div
+                                                        id="header-login-toggle"
+                                                        class="site_account_modal translate-left active"
+                                                >
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title heading h2">
+                                                            Đăng nhập tài khoản
+                                                        </div>
+                                                        <p class="account_legend">
+                                                            Nhập email và mật khẩu của bạn:
+                                                        </p>
+                                                    </div>
+                                                    <div class="site_account_container">
+                                                        <form
+                                                                accept-charset="UTF-8"
+                                                                action="/account/login"
+                                                                id="customer_login"
+                                                                method="post"
+                                                        >
+                                                            <input
+                                                                    name="form_type"
+                                                                    type="hidden"
+                                                                    value="customer_login"
+                                                            />
+                                                            <input name="utf8" type="hidden" value="✓" />
+                                                            <div class="form-control">
+                                                                <input
+                                                                        type="email"
+                                                                        placeholder="Email"
+                                                                        name="customer[email]"
+                                                                        autocomplete="on"
+                                                                        required="required"
+                                                                />
+                                                            </div>
+                                                            <div class="form-control">
+                                                                <input
+                                                                        type="password"
+                                                                        placeholder="Mật khẩu"
+                                                                        name="customer[password]"
+                                                                        autocomplete="on"
+                                                                        required="required"
+                                                                />
+                                                            </div>
+                                                            <div class="form-control">
+                                                                <button
+                                                                        type="submit"
+                                                                        class="btn-submit"
+                                                                        id="form_submit-login"
+                                                                >
+                                                                    Đăng nhập
+                                                                </button>
+                                                            </div>
+
+                                                                <input id="e5a8d1f349964c7eb3dc0e27d86bff80"
+                                                                    name="g-recaptcha-response" type="hidden"
+                                                                    value="03AAYGu2SLK1nzfx7T9OJnVKj7xeWRmqQvYwVOa6dnDHe5NIIvFbd2HjcOxmrT_qhRtCW9ZqvTBcJxr470EvYtnVupkzSkvvQrdlI70WBM1WDrS33eVc8PAugG-iMjjOn2uXRh9Q0u41r3o3hS0JCtsrrDOgsozBesCLkU0ZJ9XkL-qyHFiSqD38V7I8h5Cb4uiTumctTisuiME-to7_RtcZpoDW-i4v8bTukZIge_0uAVaGyTQP1wRZwFpyEctvKdxPt1n71s0z3pVuC5845NeSj8H6SrczXT7ezesp6sjKlP7lpCHNn_NwvqHeQBtSQJQufCV9RFk3d5ies0YEKiKbIK8qVlwW-KO6tv_fZbgEhfBrf9ZKoQjeE-0mUP5fS79lHYllCYE59LcLaFXGz_89CBMuAFrhCiMCKGF16ZjVatflQEAFSsxuICC44vMsluPuf_MjgFYNTvO0CN6f5-_728899SXyHL4Lki8TZQkgw0dDogUyNqdAYw20Vwi-2gynp9Mp25pg70TqKzN0MzUMcN4LzNGmLlbQ" /><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('e5a8d1f349964c7eb3dc0e27d86bff80').value = token;});});</script>-->
+                                                            </form>
+                                                            <div class="site_account_secondary-action">
+                                                                <p>
+                                                                    Khách hàng mới?
+                                                                    <a class="link" href="/account/register">Tạo tài
+                                                                        khoản</a>
+                                                                </p>
+                                                                <p>
+                                                                    Quên mật khẩu?
+                                                                    <button aria-controls="header-recover-panel"
+                                                                        class="js-link link">
+                                                                        Khôi phục mật khẩu
+                                                                    </button>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="header-recovery-toggle"
+                                                        class="site_account_modal translate-right">
+                                                        <div class="account_header text-center">
+                                                            <div class="account_title heading h2">
+                                                                Khôi phục mật khẩu
+                                                            </div>
+                                                            <p class="account_legend">
+                                                                Nhập email của bạn:
+                                                            </p>
+                                                        </div>
+                                                        <div class="site_account_inner">
+                                                            <form accept-charset="UTF-8" action="/account/recover" method="get">
+                                                                <input name="form_type" type="hidden"
+                                                                    value="recover_customer_password" />
+                                                                <input name="utf8" type="hidden" value="✓" />
+                                                                <div class="form-control">
+                                                                    <input type="email" placeholder="Email" name="email"
+                                                                        autocomplete="on" required="required" />
+                                                                </div>
+                                                                <div class="form-control">
+                                                                    <button type="submit" class="btn-submit"
+                                                                        id="form_submit-recover">
+                                                                        Đổi mật khẩu
+                                                                    </button>
+                                                                </div>
+                                                            </form>
+                                                            <div class="site_account_secondary-action">
+                                                                <button aria-controls="header-login-panel"
+                                                                    class="js-link link">
+                                                                    <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+                                                                    Trở về đăng nhập
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item mr-0 header-cart">
+                                    <div class="list-inline-item-text">
+                                        <button class="group-icon-item d-flex d-flex-center">
+                                            <span class="box-icon">
+                                                <img width="24" height="24"
+                                                    src="//theme.hstatic.net/200000713019/1001049223/14/shopping-cart.svg?v=1496"
+                                                    alt="Hệ thống cửa hàng" />
+                                                <span class="js-number-cart number-cart">0</span>
+                                            </span>
+                                            <span class="box-text visible-lg"> Giỏ hàng </span>
+                                            <span class="box-arrow">
+                                                <svg viewBox="0 0 20 9" role="presentation">
+                                                    <path
+                                                        d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                                        fill="#ffffff"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="header-action_dropdown">
+                                            <div class="header-dropdown_content">
+                                                <div class="overflow-hidden relative-position">
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title h2 heading">
+                                                            Giỏ hàng
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-content" id="cart-mini-wanda">
+                                                        <div class="cart-view clearfix">
+                                                            <div class="cart-scroll">
+                                                                <table id="cart-view">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="mini_cart_header text-center"
+                                                                                style="padding-right: 0">
+                                                                                <img src="https://file.hstatic.net/200000525917/file/no-cart_c1e41f3edf5c45b18eb6c64306d881c8_small.png"
+                                                                                    width="60" height="60" />
+                                                                                <p>Hiện chưa có sản phẩm</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <span class="line"></span>
+                                                            <table class="table-total">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-left title-total">
+                                                                            TỔNG TIỀN:
+                                                                        </td>
+                                                                        <td class="text-right" id="total-view-cart">
+                                                                            0₫
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="/cart"
+                                                                                class="wanda-cart-url btn">Xem giỏ
+                                                                                hàng</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="/checkout"
+                                                                                class="wanda-checkout-url btn">Thanh
+                                                                                toán</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="hidden">Spring Mobile</h1>
+        <section id="home-slider" class="mg-0-mb">
+            <div class="container pd-0-mb">
+                <div class="d-flex row-left-list">
+                    <div class="col-md-12 col-xs-12 col-sm-12 mg-top-15 pd-right-0 mg-top-5-mb">
+                        <div id="slick-slider-home" class="slick-callback d-flex-slick" data-allin="1"
+                            data-slides-md="1" data-slides-tablet="1" data-slides-xs="1" data-slides-md-scroll="1"
+                            data-slides-tablet-scroll="1" data-slides-xs-scroll="1" data-dots="true"
+                            data-autoplay="true" data-infinite="true" data-custom-arrows="true" data-fade="true">
+                            <div class="item item-owl">
+                                <a href="/" title="slider 1">
+                                    <img class="dt-width-100 lazyload" width="1920" height="550" alt="slider 1"
+                                        src="//file.hstatic.net/200000713019/file/banner-slider-1_f3403e9808b6498da3665d93c7cf734f_large.jpg"
+                                        data-src="//file.hstatic.net/200000713019/file/banner-slider-1_f3403e9808b6498da3665d93c7cf734f_1024x1024.jpg"
+                                        data-mobile="//file.hstatic.net/200000713019/file/banner-slider-1_f3403e9808b6498da3665d93c7cf734f_large.jpg" />
+                                </a>
+                            </div>
+                            <div class="item item-owl">
+                                <a href="/" title="1">
+                                    <img class="dt-width-100 lazyload" width="1920" height="550" alt="1"
+                                        src="//file.hstatic.net/200000713019/file/slider-2_6a18a4f60f714fce97173e73e2f9c6a8_large.jpg"
+                                        data-src="//file.hstatic.net/200000713019/file/slider-2_6a18a4f60f714fce97173e73e2f9c6a8_1024x1024.jpg"
+                                        data-mobile="//file.hstatic.net/200000713019/file/slider-2_6a18a4f60f714fce97173e73e2f9c6a8_large.jpg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-include="section-banner-group" class="pd-top-15" id="section-banner-group">
+            <div class="container">
+                <div class="bg-color-while">
+                    <div class="d-flex row-left-list scroll-x-mb">
+                        <div class="item-banner">
+                            <a href="/">
+                                <img class="dt-width-100 lazyload" width="400" height="200"
+                                    src="//file.hstatic.net/200000713019/file/ip13-230505022603_9954c95d9d7e4401bb7556ead3b7e957_compact.jpg"
+                                    data-src="https://file.hstatic.net/200000713019/file/ip13-230505022603_9954c95d9d7e4401bb7556ead3b7e957.jpg"
+                                    alt="1" />
+                            </a>
+                        </div>
+                        <div class="item-banner">
+                            <a href="/">
+                                <img class="dt-width-100 lazyload" width="400" height="200"
+                                    src="//file.hstatic.net/200000713019/file/mb-230408120158_59659842f4394044b7806d3f03cd00ef_compact.jpg"
+                                    data-src="https://file.hstatic.net/200000713019/file/mb-230408120158_59659842f4394044b7806d3f03cd00ef.jpg"
+                                    alt="1" />
+                            </a>
+                        </div>
+                        <div class="item-banner">
+                            <a href="/">
+                                <img class="dt-width-100 lazyload" width="400" height="200"
+                                    src="//file.hstatic.net/200000713019/file/s23-230505044245_25fb814d578245358dfce34a5650bf38_compact.jpg"
+                                    data-src="https://file.hstatic.net/200000713019/file/s23-230505044245_25fb814d578245358dfce34a5650bf38.jpg"
+                                    alt="1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section th:each="phoneList : ${phonesByBrand}" class="section_collection_group pd-top-30">
+            <div class="container">
+                <div class="bg-color-while">
+                    <div class="wd-top-title d-flex d-flex-center js-between">
+                        <h2 class="title-section" th:text="${phoneList.getKey().getName()}"></h2>
+                    </div>
+                    <style>
+                        .product-img {
+                            position: relative;
+                            width: 200px;
+                            height: 200px;
+                        }
+
+                        .product-img img:nth-child(2) {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                        }
+
+                    .product-img:hover img:nth-child(2) {
+                        opacity: 1;
+                    }
+                </style>
+                <div class="d-flex d-flex-wrap row-left-list">
+                    <div class="d-flex-column mg-bottom-15 mg-bottom-10-mb col-lg-1 col-md-3 col-sm-4 col-xs-6 pd-right-0"
+                         th:each="phone : ${phoneList.getValue()}">
+                        <a th:href="'/phone/' + ${phone.getId()}">
+                            <div class="product-block item loop-border" >
+                                <div class="product-img" data-frame="frame1">
+                                    <th:block th:each="phoneDetail: ${phone.getPhoneDetails()}">
+                                        <img class="dt-width-100 img-first" width="260" height="260"
+                                             th:src="${phoneDetail.getImg()}" th:alt="${phone.getName()}" />
+                                    </th:block>
+                                </div>
+                                <div class="product-detail">
+                                    <h3 class="pro-name" th:title="${phone.getName()}" th:text="${phone.getName()}">
+                                        <!--                                    <a th:href="/product/${phone.getPhone().getId()}" th:title="${phone.getPhone().getName()}">-->
+                                        <!--                                    </a>-->
+                                    </h3>
+                                    <div class="d-flex js-between d-flex-center">
+                                        <ul class="list-variants d-flex d-flex-wrap image">
+                                            <li th:each="phon : ${phone.getPhoneDetails()}" th:text="${phon.getColor().getName() +  ' • '}"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price">
+                                            <th:block >
+
+                                            </th:block>
+                                            <span th:text="${phone.getPhoneDetails().isEmpty()} ? '' : ${#numbers.formatInteger(phone.getPhoneDetails().get(0).getPrice(), 3,'COMMA') + ' VND'}"></span>
+
+                                            <!-- <del class="compare-price">27,950,000₫</del> -->
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        </div>
+                    </div>
+                    <div class="text-center btn-view-all-tab">
+                        <a class="btn btn-all-tab" href="/phone">
+                            Xem tất cả »
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="section-home-blog" class="pd-top-30" data-include="section-home-blog">
+            <div class="container">
+                <div class="group-blog-index d-flex row-10">
+                    <div class="item-block col-xs-12 col-md-8 col-sm-12">
+                        <div class="bg-color">
+                            <div class="top-head d-flex">
+                                <h2>Tin tức mới</h2>
+                                <a href="/"> Xem tất cả » </a>
+                            </div>
+                            <div class="body-col d-flex group-1 row-10">
+                                <div class="item-left">
+                                    <div class="artile-item-large">
+                                        <div class="blog-post">
+                                            <div class="blog-post-image">
+                                                <a href="/">
+                                                    <img class="lazyload dt-width-100" height="217" width="388"
+                                                        src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                        data-src="//file.hstatic.net/200000713019/article/so-sanh-thiet-ke-apple-watch-8-v_382ad5795e0041aaabccfdb1ac761ff7_large.jpg"
+                                                        alt="So sánh Apple Watch Ultra vs Watch Series 8: Đâu là lựa chọn tốt nhất?" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h3 class="blog-title">
+                                                    <a href="/">So sánh Apple Watch Ultra vs Watch Series 8: Đâu
+                                                        là lựa chọn tốt nhất?</a>
+                                                </h3>
+                                                <p class="blog-desc">
+                                                    Apple Watch Ultra vs Watch Series 8 có gì khác
+                                                    biệtApple Watch Ultra&nbsp;và Watch Series 8 là 2
+                                                    mẫu đồng hồ thông mi...
+                                                </p>
+                                                <div class="d-flex artible-loop-footer">
+                                                    <div class="blog-publish">
+                                                        <span class="date-time"><i
+                                                                class="fa fa-calendar"></i>11/05/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-right">
+                                    <div class="artile-item-small">
+                                        <div class="blog-post d-flex">
+                                            <div class="blog-post-image">
+                                                <a href="">
+                                                    <img class="lazyload dt-width-100" height="75" width="130"
+                                                        src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                        data-src="//file.hstatic.net/200000713019/article/12.6_3d8a720a99b343308a3d0e1fbe9_426a4630315e4c31ad95741a1d04102f_medium.jpg"
+                                                        alt="Tin tức: Realme GT Neo 5 ra mắt với chip Snapdragon đầu 8, sạc nhanh 240W" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h3 class="blog-title">
+                                                    <a href="/">Tin tức: Realme GT Neo 5 ra mắt với chip
+                                                        Snapdragon đầu 8, sạc nhanh 240W</a>
+                                                </h3>
+                                                <div class="d-flex artible-loop-footer">
+                                                    <div class="blog-publish">
+                                                        <span class="date-time"><i
+                                                                class="fa fa-calendar"></i>11/05/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="artile-item-small">
+                                        <div class="blog-post d-flex">
+                                            <div class="blog-post-image">
+                                                <a href="/">
+                                                    <img class="lazyload dt-width-100" height="75" width="130"
+                                                        src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                        data-src="//file.hstatic.net/200000713019/article/s23ultra_b0d17dc7dbce44bdb160339_28ef8e37be2b466388025fa5ffc2fc4a_medium.jpg"
+                                                        alt="Rò rỉ ảnh chụp thực tế của camera Samsung Galaxy S23 Ultra" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h3 class="blog-title">
+                                                    <a href="/">Rò rỉ ảnh chụp thực tế của camera Samsung Galaxy
+                                                        S23 Ultra</a>
+                                                </h3>
+                                                <div class="d-flex artible-loop-footer">
+                                                    <div class="blog-publish">
+                                                        <span class="date-time"><i
+                                                                class="fa fa-calendar"></i>11/05/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="artile-item-small">
+                                        <div class="blog-post d-flex">
+                                            <div class="blog-post-image">
+                                                <a href="/">
+                                                    <img class="lazyload dt-width-100" height="75" width="130"
+                                                        src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                        data-src="//file.hstatic.net/200000713019/article/macbook-air-2023-chinh-hang_9d62_8e64a18339ca473fba8fbcfe7cc0735a_medium.jpg"
+                                                        alt="MacBook Air 2023 sẽ mang đến những tính năng mới nào khi ra mắt?" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h3 class="blog-title">
+                                                    <a href="/">MacBook Air 2023 sẽ mang đến những tính năng mới
+                                                        nào khi ra mắt?</a>
+                                                </h3>
+                                                <div class="d-flex artible-loop-footer">
+                                                    <div class="blog-publish">
+                                                        <span class="date-time"><i
+                                                                class="fa fa-calendar"></i>11/05/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="artile-item-small">
+                                        <div class="blog-post d-flex">
+                                            <div class="blog-post-image">
+                                                <a href="/">
+                                                    <img class="lazyload dt-width-100" height="75" width="130"
+                                                        src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                        data-src="//file.hstatic.net/200000713019/article/note-12-turbo-china_e9d370828bf7_14b91f11a1fd415f8a5346e7a91a3715_medium.jpg"
+                                                        alt="Redmi Note 12 Turbo thiết bị bán chạy nhất trong tháng đầu tiên bán ra!" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h3 class="blog-title">
+                                                    <a href="/">Redmi Note 12 Turbo thiết bị bán chạy nhất trong
+                                                        tháng đầu tiên bán ra!</a>
+                                                </h3>
+                                                <div class="d-flex artible-loop-footer">
+                                                    <div class="blog-publish">
+                                                        <span class="date-time"><i
+                                                                class="fa fa-calendar"></i>11/05/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-block col-xs-12 col-md-4 col-sm-12 block-2">
+                        <div class="bg-color">
+                            <div class="top-head d-flex">
+                                <h2>Tin tức công nghệ</h2>
+                                <a href="/"> Xem tất cả » </a>
+                            </div>
+                            <div class="body-col d-flex">
+                                <div class="artile-item-small">
+                                    <div class="blog-post d-flex">
+                                        <div class="blog-post-image">
+                                            <a href="/">
+                                                <img class="lazyload dt-width-100" height="75" width="130"
+                                                    src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                    data-src="//file.hstatic.net/200000713019/article/so-sanh-thiet-ke-apple-watch-8-v_382ad5795e0041aaabccfdb1ac761ff7_medium.jpg"
+                                                    alt="So sánh Apple Watch Ultra vs Watch Series 8: Đâu là lựa chọn tốt nhất?" />
+                                            </a>
+                                        </div>
+                                        <div class="blog-post-content">
+                                            <h3 class="blog-title">
+                                                <a href="/">So sánh Apple Watch Ultra vs Watch Series 8: Đâu là
+                                                    lựa chọn tốt nhất?</a>
+                                            </h3>
+                                            <div class="d-flex artible-loop-footer">
+                                                <div class="blog-publish">
+                                                    <span class="date-time"><i
+                                                            class="fa fa-calendar"></i>11/05/2023</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artile-item-small">
+                                    <div class="blog-post d-flex">
+                                        <div class="blog-post-image">
+                                            <a href="/">
+                                                <img class="lazyload dt-width-100" height="75" width="130"
+                                                    src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                    data-src="//file.hstatic.net/200000713019/article/12.6_3d8a720a99b343308a3d0e1fbe9_426a4630315e4c31ad95741a1d04102f_medium.jpg"
+                                                    alt="Tin tức: Realme GT Neo 5 ra mắt với chip Snapdragon đầu 8, sạc nhanh 240W" />
+                                            </a>
+                                        </div>
+                                        <div class="blog-post-content">
+                                            <h3 class="blog-title">
+                                                <a href="/">Tin tức: Realme GT Neo 5 ra mắt với chip Snapdragon
+                                                    đầu 8, sạc nhanh 240W</a>
+                                            </h3>
+                                            <div class="d-flex artible-loop-footer">
+                                                <div class="blog-publish">
+                                                    <span class="date-time"><i
+                                                            class="fa fa-calendar"></i>11/05/2023</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artile-item-small">
+                                    <div class="blog-post d-flex">
+                                        <div class="blog-post-image">
+                                            <a href="/">
+                                                <img class="lazyload dt-width-100" height="75" width="130"
+                                                    src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                    data-src="//file.hstatic.net/200000713019/article/s23ultra_b0d17dc7dbce44bdb160339_28ef8e37be2b466388025fa5ffc2fc4a_medium.jpg"
+                                                    alt="Rò rỉ ảnh chụp thực tế của camera Samsung Galaxy S23 Ultra" />
+                                            </a>
+                                        </div>
+                                        <div class="blog-post-content">
+                                            <h3 class="blog-title">
+                                                <a href="/">Rò rỉ ảnh chụp thực tế của camera Samsung Galaxy
+                                                    S23 Ultra</a>
+                                            </h3>
+                                            <div class="d-flex artible-loop-footer">
+                                                <div class="blog-publish">
+                                                    <span class="date-time"><i
+                                                            class="fa fa-calendar"></i>11/05/2023</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artile-item-small">
+                                    <div class="blog-post d-flex">
+                                        <div class="blog-post-image">
+                                            <a href="/">
+                                                <img class="lazyload dt-width-100" height="75" width="130"
+                                                    src="https://file.hstatic.net/200000525917/file/blog_no_image_09a5cea4088f4ebc88_0ff2eccacdf346b5b59fe87fc1c89423_medium.jpg"
+                                                    data-src="//file.hstatic.net/200000713019/article/macbook-air-2023-chinh-hang_9d62_8e64a18339ca473fba8fbcfe7cc0735a_medium.jpg"
+                                                    alt="MacBook Air 2023 sẽ mang đến những tính năng mới nào khi ra mắt?" />
+                                            </a>
+                                        </div>
+                                        <div class="blog-post-content">
+                                            <h3 class="blog-title">
+                                                <a href="/">MacBook Air 2023 sẽ mang đến những tính năng mới
+                                                    nào khi ra mắt?</a>
+                                            </h3>
+                                            <div class="d-flex artible-loop-footer">
+                                                <div class="blog-publish">
+                                                    <span class="date-time"><i
+                                                            class="fa fa-calendar"></i>11/05/2023</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="prefooter-customer mg-top-30">
+        <div class="container">
+            <div class="bg-prefooter">
+                <div class="d-flex row d-flex-center">
+                    <div class="col-md-7 col-sm-7 col-xs-12 d-flex d-flex-center js-between">
+                        <p class="title-regis">Đăng kí nhận tin</p>
+                        <div class="form-ft-wanda">
+                            <form accept-charset="UTF-8" action="/account/contact" class="contact-form" method="post">
+                                <input name="form_type" type="hidden" value="customer" />
+                                <input name="utf8" type="hidden" value="✓" />
+                                <div class="form-group mb-0 icon-email">
+                                    <input type="hidden" id="contact_tags-1" name="contact[tags]"
+                                        value="khách hàng tiềm năng-https://wd-smart.myharavan.com/" />
+                                    <input type="email" required="required" autocomplete="on" name="contact[email]"
+                                        id="contact_email_ft" placeholder="Email" />
+                                </div>
+                                <button class="btn" type="submit">
+                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Đăng
+                                    ký
+                                </button>
+
+                                <input id="6cbc58dbf2b346a2abef23cca8c4f67d" name="g-recaptcha-response"
+                                    type="hidden" /><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('6cbc58dbf2b346a2abef23cca8c4f67d').value = token;});});</script>-->
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <ul class="social-footer d-flex d-flex-center">
+                            <li class="zalo">
+                                <a href="1" rel="nofollow"><img width="30" height="30" class="lazyload"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        data-src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                                        alt="Liên hệ với chúng tôi qua Zalo" /></a>
+                            </li>
+                            <li class="tiktok">
+                                <a href="1" rel="nofollow"><img width="18" height="18" class="lazyload"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        data-src="https://file.hstatic.net/200000525917/file/tik-tok_e914ba6238604946935723c6839cc211.svg"
+                                        alt="Liên hệ với chúng tôi qua Tiktok" /></a>
+                            </li>
+                            <li class="twitter">
+                                <a href="1" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="youtube">
+                                <a href="1" rel="nofollow"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="1" rel="nofollow"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="facebook">
+                                <a href="1" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mg-0 pd-bt-50-mb">
+        <div class="top-ft-wanda">
+            <div class="container">
+                <div class="d-flex row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 infomation mg-bottom-15">
+                        <div class="title-footer">
+                            <a href="/">
+                                <img class="dt-width-auto logo-ft" height="50" width="200"
+                                    th:src="@{images/SpringMobile.png}" alt="Spring Mobile" />
+                            </a>
+                        </div>
+                        <div class="infomation-wanda">
+                            <p>Spring Mobile - Điện Thoại Siêu Rẻ, Trao Trọn Yên Tâm.</p>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i> 19
+                                    Nguyễn Hữu Thọ, Phường Tân Phong, Quận 7,TP. HCM
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <a rel="nofollow" href="tel:0967671065">0967671065</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <a rel="nofollow"
+                                        href="mailto:nguyenhuutin124@gmail.com">nguyenhuutin124@gmail.com</a>
+                                </li>
+                                <li class="bocongthuong">
+                                    <a rel="nofollow" href=""><img class="lazyload" width="120" height="45"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                            data-src="https://file.hstatic.net/200000397757/file/dathongbao_48067cd02fae41b68bf0294777c39c94_compact.png"
+                                            alt="Bộ công thương" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 tablink mg-bottom-15">
+                        <div class="title-footer">
+                            <div class="h4">Chính sách</div>
+                        </div>
+                        <div class="footer-link-wanda">
+                            <ul>
+                                <li><a href="/">Chính sách bảo hành</a></li>
+                                <li><a href="/">Tra cứu bảo hành</a></li>
+                                <li><a href="/">Trả góp online</a></li>
+                                <li>
+                                    <a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a>
+                                </li>
+                                <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 tablink mg-bottom-15">
+                        <div class="title-footer">
+                            <div class="h4">Hướng dẫn</div>
+                        </div>
+                        <div class="footer-link-wanda">
+                            <ul>
+                                <li><a href="/">Chính sách bảo hành</a></li>
+                                <li><a href="/">Tra cứu bảo hành</a></li>
+                                <li><a href="/">Trả góp online</a></li>
+                                <li>
+                                    <a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a>
+                                </li>
+                                <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="title-footer">
+                            <div class="h4">Tổng đài hỗ trợ</div>
+                        </div>
+                        <ul class="footer-support">
+                            <li>
+                                <span>Gọi mua hàng:</span>
+                                <a href="tel:0967671065">0967671065</a>
+                                <span>(8h30-21h)</span>
+                            </li>
+                            <li>
+                                <span>Gọi bảo hành:</span>
+                                <a href="tel:0967671065">0967671065</a>
+                                <span>(8h30-21h)</span>
+                            </li>
+                            <li>
+                                <span>Gọi khiếu nại:</span>
+                                <a href="tel:0967671065">0967671065</a>
+                                <span>(8h30-21h)</span>
+                            </li>
+                        </ul>
+                        <div class="title-footer">
+                            <div class="h4">Phương thức thanh toán</div>
+                        </div>
+                        <div>
+                            <img width="246" height="24"
+                                src="https://theme.hstatic.net/1000379792/1000977285/14/footer_trustbadge.jpg?v=338"
+                                alt="Phương thức thanh toán"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wanda">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="text-copyright mb-0">
+                <span
+                >© Copyright 2023 By
+                  <a href="/" target="_blank" class="underline_hover link">
+                    Spring Mobile.</a
+                  ><a
+                            target="_blank"
+                            rel="nofollow"
+                            href="https://www.haravan.com?ref=wanda"
+                    >
+                    Powered by Haravan</a
+                    ></span
+                >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="pro-qv-wanda"></div>
+<div id="pro-quickview-mobile"></div>
+<div class="fixed-action-btn">
+    <ul>
+        <li class="facebook">
+            <a
+                    class="btn-secondary btn-floating"
+                    href="tel:https://www.facebook.com/masichanh/"
+                    rel="nofollow"
+                    data-toggle="tooltip"
+                    data-original-title="Liên hệ với chúng tôi qua Facebook"
+            ><img
+                    width="45"
+                    height="45"
+                    class="dt-width-auto"
+                    alt="Messenger"
+                    src="https://file.hstatic.net/200000525917/file/messenger-fb_8fcc524fbaad4b1195a150dc5e0575d7.png"
+            /></a>
+        </li>
+        <li class="zalo">
+            <a
+                    class="btn-secondary btn-floating"
+                    href="/"
+                    rel="nofollow"
+                    data-toggle="tooltip"
+                    data-original-title="Liên hệ với chúng tôi qua Zalo"
+            ><img
+                    width="45"
+                    height="45"
+                    class="dt-width-auto"
+                    src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                    alt="Liên hệ với chúng tôi qua Zalo"
+            /></a>
+        </li>
+    </ul>
+</div>
+<div class="modal" id="modal-subscribe">
+    <div class="modal-wp-ct">
+        <div class="tt-md-ct">Đăng ký nhận khuyến mãi</div>
+        <div class="message-md-ct">
+            <div class="content-md-ct">
+                Chúng tôi sẽ cập nhật các chương trình khuyến mãi mới nhất đến bạn.
+            </div>
+            <ul class="list-md-contact">
+                <li>Giảm giá sản phẩm</li>
+                <li>Mã coupon chỉ dành riêng cho bạn</li>
+                <li>Ưu đãi tặng sản phẩm đi kèm</li>
+            </ul>
+        </div>
+        <form
+                accept-charset="UTF-8"
+                action="/account/contact"
+                class="contact-form"
+                method="post"
+        >
+            <input name="form_type" type="hidden" value="customer" />
+            <input name="utf8" type="hidden" value="✓" />
+            <div class="form-group mb-0">
+                <input
+                        type="hidden"
+                        id="contact_tags-2"
+                        name="contact[tags]"
+                        value="khách hàng tiềm năng-https://wd-smart.myharavan.com/"
+                />
+                <input
+                        type="email"
+                        required="required"
+                        name="contact[email]"
+                        id="contact_email"
+                        placeholder="Email"
+                />
+            </div>
+            <button class="btn" type="submit">Đăng ký</button>
+
+            <input
+                    id="be576d2195794e23be0dddbf752b4b14"
+                    name="g-recaptcha-response"
+                    type="hidden"
+            /><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('be576d2195794e23be0dddbf752b4b14').value = token;});});</script>-->
+        </form>
+    </div>
+</div>
+<div class="modal" id="success-subcribe-wanda">
+    <div class="row">
+        <div class="modal-content">
+            <div class="modal-icon sweet-alert">
+                <div class="sa-icon sa-success animate">
+                    <span class="sa-line sa-tip animateSuccessTip"></span>
+                    <span class="sa-line sa-long animateSuccessLong"></span>
+                    <div class="sa-placeholder"></div>
+                    <div class="sa-fix"></div>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <p class="modal-title">
+                    Đăng ký thành công.<br />Thông báo sẽ tự động tắt sau 2 giây
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="success-add-cart-mobile">
+    <div class="head-group">
+        <div class="modal-title d-flex d-flex-center">
+            <img
+                    alt="Success"
+                    width="16"
+                    height="16"
+                    src="https://file.hstatic.net/200000525917/file/check_fed1ae0ce277470eb827c4d6f3ac8ddf.png"
+            />
+            <span>Thêm vào giỏ hàng thành công</span>
+        </div>
+        <button type="button" class="close-success"><span>×</span></button>
+    </div>
+    <div class="row">
+        <div id="form-ss" class="d-flex col-xs-12 col-sm-12">
+            <div class="top-body"></div>
+            <div class="ft-body col-xs-12">
+                <div class="d-flex js-between total-cart-mb">
+                    <a href="/cart"> Giỏ hàng:</a>
+                    <div class="text-right">
+                        <span class="price"></span>
+                        <div class="count">
+                            (<span class="cart-popup-count"></span>) sản phẩm
+                        </div>
+                    </div>
+                </div>
+                <div class="action-btn d-flex js-between">
+                    <a href="/cart" class="btn btn-cart">Xem giỏ hàng</a>
+                    <a href="/checkout" class="btn btn-checkout">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="back-to-top" type="button">
+    <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="64px"
+            height="64px"
+            viewBox="0 0 64 64"
+            enable-background="new 0 0 64 64"
+            xml:space="preserve"
+    >
+        <g>
+          <polyline
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linejoin="bevel"
+                  stroke-miterlimit="10"
+                  points="15,40 32,23 49,40 	"
+          />
+        </g>
+      </svg>
+    back to top
+</button>
+<div class="modal-backdrop fade js-backdrop"></div>
+<div class="suggest-notify anislideOutDown sales_animated"></div>
+<!-- Đây là suggest sale popup -->
+<div class="navigation-mobile visible-xs visible-sm">
+    <ul class="d-flex">
+        <li class="item">
+            <a class="d-flex item-link active" href="/">
+            <span>
+              <img
+                      class="first-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/home_027cdf38e9384ddb81f453ba516c2500.png"
+                      alt="Trang chủ"
+              />
+              <img
+                      class="after-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/home-active_7501f572b3324f58afa2f885c97b8701.png"
+                      alt="Trang chủ"
+              />
+            </span>
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        <li class="item navigation-event">
+            <a class="d-flex" href="javascript:void(0)">
+            <span>
+              <img
+                      class="first-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/category_074fc86572ed4d389692f7bc5fb8d32f.png"
+                      alt="Danh mục"
+              />
+              <img
+                      class="after-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/category-active_3573358a277b44f0ae626afddf4633f0.png"
+                      alt="Danh mục"
+              />
+            </span>
+                <span>Danh mục</span>
+            </a>
+        </li>
+        <li class="item">
+            <a class="d-flex item-link" href="/pages/he-thong-cua-hang">
+            <span>
+              <img
+                      class="first-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/location_7e8df8606c6647e9a0da6b893875d98e.png"
+                      alt="Cửa hàng"
+              />
+              <img
+                      class="after-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/location-acitve_71d06ddc84ea4e4c92843319f186ab63.png"
+                      alt="Cửa hàng"
+              />
+            </span>
+                <span>Cửa hàng</span>
+            </a>
+        </li>
+        <li class="item">
+            <a class="d-flex item-link" href="tel:0967671065">
+            <span>
+              <img
+                      class="first-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/phone-call_f39d577fa5d249269096ffa4ae42aea3.png"
+                      alt="Hotline"
+              />
+              <img
+                      class="after-change"
+                      width="24"
+                      height="24"
+                      src="https://file.hstatic.net/200000713019/file/phone-call-active_eba163bb67564d139050bfd7ea6578c5.png"
+                      alt="Hotline"
+              />
+            </span>
+                <span>Hotline</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script
+        type="text/javascript"
+        src="//theme.hstatic.net/200000713019/1001049223/14/pluginscript.js?v=1496"
+        defer
+></script>
+<script
+        type="text/javascript"
+        src="//theme.hstatic.net/200000713019/1001049223/14/main-scripts.js?v=1496"
+        defer
+></script>
+<script
+        type="text/javascript"
+        defer
+        src="//theme.hstatic.net/200000713019/1001049223/14/combo-app.js?v=1496"
+></script>
+<script defer>
+    const asyncload = {
+        init: function () {
+            this.loadasyncdefer();
+        },
+        loadasyncdefer: () => {
+            try {
+                !(function (a, c, d) {
+                    var b,
+                        e = a.getElementsByTagName(c)[0];
+                    a.getElementById(d) ||
+                    (((b = a.createElement(c)).id = d),
+                        (b.src =
+                            "//connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.0"),
+                        e.parentNode.insertBefore(b, e));
+                })(document, "script", "facebook-jssdk");
+            } catch (err) {
+                console.log(err);
+            }
+        },
+    };
+    $(window).on("load", function () {
+        if (
+            navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 &&
+            checklh == false
+        ) {
+            setTimeout(() => {
+                asyncload.init();
+            }, 1500);
+        }
+    });
+</script>
+</body>
+
+</html>

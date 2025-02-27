@@ -1,0 +1,1772 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <link rel="dns-prefetch" th:href="'phone/' + ${phoneDetail.getId()}">
+    <link href="//file.hstatic.net/" rel="dns-prefetch">
+    <link rel="shortcut icon" th:href="@{images/favicon.png}" type="image/x-icon">
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="1 day" name="revisit-after"/>
+    <title th:text="${phoneDetail.getName()}"></title>
+    <meta name="description"
+          th:content="${phoneDetail.getDescription()}"/>
+    <link rel="canonical" th:href="'/phone/' + ${phoneDetail.getId()}"/>
+    <meta content="index,follow,noodp" name="robots">
+    <meta content="product" property="og:type"/>
+    <meta property="og:title" th:content="${phoneDetail.getName()}"/>
+    <meta property="og:image:secure_url"
+          th:content="${phoneDetail.getPhoneDetails().get(0).getImg()}"/>
+    <meta property="og:price:amount" th:content="${#numbers.formatInteger(phoneDetail.getPhoneDetails().get(0).getPrice(), 3,'COMMA')}"/>
+    <meta content="VND" property="og:price:currency"/>
+    <meta property="og:image"
+          th:content="${phoneDetail.getPhoneDetails().get(0).getImg()}"/>
+    <meta content="1046681664" property="product:retailer_item_id">
+    <meta property="og:description"
+          th:content="${phoneDetail.getDescription()}"/>
+    <meta property="og:image:alt" th:content="${phoneDetail.getName()}"/>
+    <meta property="og:url" th:content="'/phone/' + ${phoneDetail.getId()}"/>
+    <meta content="Spring Mobile" property="og:site_name"/>
+    <link as="image" href="https://file.hstatic.net/200000713019/file/logo-wd-while_fc8ab801a468414da5fff56a005c96cb.png"
+          rel="preload"
+          type="image/png">
+    <style>
+        :root {
+            --bgheader: #1877f2;
+            --color_header: #ffffff;
+            --color_menu: #000000;
+            --bgshop: #000000;
+            --bg_button: #1877f2;
+            --color_button: #ffffff;
+            --colorshop: #000000;
+            --colorshophover: #288ad6;
+            --bgfooter: #202020;
+            --colorfooter: #ffffff;
+            --colorbgmenumb: #111111;
+            --colortextmenumb: #ffffff;
+            --bgflashsale: #1877f2;
+            --bg_button_add_to_cart: #e90707;
+            --bgprefooter: #202020;
+            --height-head: 60px;
+            --imgselect: url(https://file.hstatic.net/200000525917/file/ico-select_c577a364ec074c9b9cd07a446e6a1a2c.svg);
+            --imgsort: url(https://file.hstatic.net/200000525917/file/sort-az_ce83a7d22f214b68bc6aa586b6ac3d34.svg);
+            --bg-filter: url('https://file.hstatic.net/200000525917/file/filter_415f49821dc841d3add47c3d0abed6b8.svg');
+            --typeimageproduct: contain;
+            --bgsubcribe: url('https://file.hstatic.net/200000713019/file/one-14-pro-166184670586013738040_199db9dbd4654e5d9fe60557f046fc41.webp');
+            --iframe_1: url('https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png');
+            --iframe_2: url('https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png');
+            --nav-height: 344px;
+            --col-menu: 3;
+        }
+    </style>
+    <link
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=fallback" rel="preload stylesheet" type="text/css">
+    <link as="style" href="//theme.hstatic.net/200000713019/1001049223/14/plugin-style.css?v=1496"
+          rel="preload stylesheet" type="text/css">
+    <link as="style" href="//theme.hstatic.net/200000713019/1001049223/14/styles-new.scss.css?v=1496"
+          rel="preload stylesheet" type="text/css">
+    <link as="image" href="//product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-2_4a8cc6bd6dd34798a6810fad786122a0_492f8fe7858045c1bb8b6335f96927f9_grande.jpg"
+          rel="preload">
+    <link as="style" href="//theme.hstatic.net/200000713019/1001049223/14/style-product.scss.css?v=1496"
+          rel="preload stylesheet" type="text/css">
+    <link as="script"
+          href="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js" rel="preload prefetch" type="text/javascript">
+    <script src="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"
+            type="text/javascript"></script>
+    <!-- Tất cả biến khởi tạo, check sử dụng-->
+    <script>
+        var _0x4ad6 = ["\x43\x68\x72\x6F\x6D\x65", "\x69\x6E\x64\x65\x78\x4F\x66", "\x75\x73\x65\x72\x41\x67\x65\x6E\x74", "\x6C\x65\x6E\x67\x74\x68", "\x62\x72\x61\x6E\x64\x73", "\x75\x73\x65\x72\x41\x67\x65\x6E\x74\x44\x61\x74\x61", "\x62\x72\x61\x6E\x64", "\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65", "\x69\x6E\x63\x6C\x75\x64\x65\x73"];
+        let checklh = false;
+        if (navigator[_0x4ad6[2]][_0x4ad6[1]](_0x4ad6[0]) != -1) {
+            for (let i = 0; i < navigator[_0x4ad6[5]][_0x4ad6[4]][_0x4ad6[3]]; i++) {
+                let vl = navigator[_0x4ad6[5]][_0x4ad6[4]][i][_0x4ad6[6]];
+                if (vl[_0x4ad6[8]](_0x4ad6[7])) {
+                    checklh = true;
+                    break
+                }
+            }
+        }
+        localStorage.setItem('shop_id', '200000713019/1001049223');
+        window.wd = {
+            template: 'product',
+            formatmoney: '{{amount}}₫',
+            plugin: ["//theme.hstatic.net/200000713019/1001049223/14/plugin-script.js?v=1496", "https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js", "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"],
+            navLeftText: '<button type="button" class="slick-prev slick-arrow custom-style" aria-label="Previous"><span class="arrow-custom arrow-left"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            navRightText: '<button type="button" class="slick-next slick-arrow custom-style" aria-label="Next"><span class="arrow-custom arrow-right"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            recaptchajs: 'https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-',
+            getScriptCcd: (url, callback) => {
+                $.ajax({type: "GET", url: url, success: callback, dataType: "script", cache: true});
+            },
+            getdatasite: (url, selector, slider, callbackreview, callbackcustom) => {
+                $.ajax({
+                    type: "GET", url: url, success: function (data) {
+                        selector.html(data)
+                    }
+                }).done(() => {
+                    if (slider == 'true') {
+                        selector.addClass('slick-callback');
+                        window.wd.scofield.slidercallback();
+                    }
+                    callbackreview == 'true' ? window.wd.reviewloopinit() : '';
+                    if (typeof (callbackcustom) == 'function') callbackcustom();
+                });
+            },
+            stylerender: ["//theme.hstatic.net/200000713019/1001049223/14/render-style.css?v=1496", "//theme.hstatic.net/200000713019/1001049223/14/render-style-other.scss.css?v=1496", "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"],
+            handle_product: 'iphone-12-pro-max',
+            windowsize: window.outerWidth,
+            modalsubcribe: {"check": true, "time_show": 6000},
+            sgnotify: "true",
+            productjson: {
+                "available": true,
+                "compare_at_price_max": 1805000000.0,
+                "compare_at_price_min": 1545000000.0,
+                "compare_at_price_varies": false,
+                "compare_at_price": 1725000000.0,
+                "content": null,
+                "description": "<p>&nbsp;</p><p><span style=\"font-size:18px\">####</span></p><p><span style=\"font-size:18px\"><strong>Điện thoại iPhone 12 Pro Max&nbsp;giá rẻ tại Hải Phòng</strong></span></p><p><span style=\"font-size:16px\">Như cái tên gọi thì chắc hẳn các bạn cũng biết được<a href=\"https://msm.vn/products/iphone-12-pro-max-hai-phong\"><strong> iPhone 12 Pro Max</strong></a> chính là mẫu iPhone 12 đắt giá nhất cũng như cao cấp nhất của Apple. Điều này đồng nghĩa với việc chiếc máy này sẽ sở hữu màn hình lớn nhất, công nghệ đỉnh cao nhất, hiện đại nhất mà<strong> <a href=\"https://msm.vn/collections/iphone-hai-phong\">Apple</a></strong> có thể đưa ra.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/camera-iphone-12-pro-max-chinh-hang-hai-phong_cb2be3e8d6da424d8ae6acda15452bb3.jpg\"></span></p><p><span style=\"font-size:18px\"><strong style=\"font-size:15pt\">Cấu hình chi tiết iPhone 12 Pro Max Hải Phòng</strong></span></p><p><span style=\"font-size:16px\">Trong số những mẫu <strong><a href=\"https://msm.vn/products/iphone-12-hai-phong\">iPhone 12</a></strong> đã lộ diện thì <strong><a href=\"https://msm.vn/products/iphone-12-pro-max-hai-phong\">iPhone 12 Pro Max</a></strong> là mẫu có kích thước lớn nhất lên tới 6.7 inches, thậm chí mẫu kế nhiệm là iPhone 11 Pro Max cũng nhỏ hơn một chút là 6.5 inches.</span></p><p><span style=\"font-size:16px\">Cũng chính vì lí do này mà&nbsp;iPhone 12 Pro Max&nbsp;chính là mẫu điện thoại lớn nhất từ trước đến giời mà Apple đã phát hành. Ngoài ra thì mô-đun camera của iPhone 12 Pro Max cũng to và nhiều camera hơn, trong khi hai mẫu đầu chỉ có thiết lập camera kép.</span></p><p><span style=\"font-size:16px\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://file.hstatic.net/1000379792/file/cau-hinh-chi-tiet-iphone-12-pro-max_bcdca4f7a8ce42b889945868bd7fb011_grande.jpg\"></span></p><h2 style=\"text-align: center;\"><span style=\"font-size:16px\"><strong>Cấu hình của iPhone 12 và iPhone 12 Pro Max Hải Phòng</strong></span></h2><p><span style=\"font-size:16px\">Dù có kích thước lớn là vậy nhưng trang Mac Otakara của Nhật cho biết&nbsp;iPhone 12 Pro Max&nbsp;sẽ có độ dày 7.4mm, bằng với iPhone 12 Pro nhỏ hơn và&nbsp;mỏng hơn khá nhiều&nbsp;so với iPhone 11 Pro Max dày 8.1 mm.&nbsp;</span></p><h3><span style=\"font-size:18px\"><strong>Thiết kế cụm bốn camera trên chiếc iPhone 12 Pro Max</strong></span></h3><p><span style=\"font-size:16px\">Có thể bạn không để ý nhưng những mẫu iPad Pro vài năm gần đây đã chuyển sang thiết kế cạnh phẳng giống như iPhone 4 và iPhone 5 thời xưa, và đây cũng chính là ngôn ngữ thiết kế sẽ áp dụng cho iPhone 12 Pro Max sắp tới.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/cau-hinh-chi-tiet-iphone-12-pro-max_802f2e58fd114de2959e1be506a5c082.jpg\"></span></p><h3 style=\"text-align: center;\"><span style=\"font-size:16px\"><strong>Trả góp iPhone 12 Pro Max Hải Phòng</strong></span></h3><p><span style=\"font-size:16px\">Tuy giống là vậy nhưng cách hoàn thiện sẽ cao cấp hơn, bộ khung sử dụng vật liệu thép không gỉ chuyên dụng trong ngành hàng không, quy trình đúc và ép phun kiểu mới cho độ bền cứng cáp, bền bỉ qua những va chạm vật lý không đáng có.</span></p><h3><span style=\"font-size:18px\"><strong>Dưới đây là một vài điểm chú ý trong thiết kế iPhone 12 Pro Max:</strong></span></h3><p><span style=\"font-size:16px\">Ống kính camera&nbsp;lớn hơn một chút<br>Các dải&nbsp;ăng-ten dày hơn ở bên cạnh bên để hỗ trợ&nbsp;cho&nbsp;5G<br>Khay SIM được chuyển sang cạnh&nbsp;trái&nbsp;<br>Có một Smart Connector ở cạnh phải (có thể đóng vai trò như một antena)&nbsp;<br>Nút nguồn thấp hơn một chút</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/tra-gop-iphone-12-pro-max-likenew-cu-0_-hai-phong_3d29ff8df5b54efdbc04bae40334bb35.jpg\"></span></p><h2 style=\"text-align: center;\"><span style=\"font-size:16px\"><strong>iPhone 12 Pro Max giá rẻ&nbsp;tại Hải Phòng</strong></span></h2><p><span style=\"font-size:16px\">Các hình ảnh rò rỉ được cho là mô tả&nbsp;hình ảnh iPhone 12&nbsp;với một notch nhỏ hơn khoảng 1/3 so với notch hiện tại. Việc loại bỏ Notch hoàn toàn vẫn còn quá khó nên Apple sẽ tiếp tục công cuộc \"thu gọn\" lại nhỏ nhất có thể mà vẫn giữ được vẻ đẹp cho iPhone 12 Pro Max. Để làm được điều này thì hãng sẽ tích hợp loa thoại vào phần viền trên, cảm biến ánh sáng và cảm biến tiệm cận được di chuyển vào gần trung tâm hệ thống camera TrueDepth.</span></p><h3><span style=\"font-size:18px\"><strong>Màn hình OLED 120Hz trên iPhone 12 Pro Max có gì khác biệt</strong></span></h3><p><span style=\"font-size:16px\">Apple có ba đối tác chính trong việc cung cấp&nbsp;màn hình iPhone 12&nbsp;Series nói chung và iPhone 12 Pro Max nói riêng là Samsung Display, LG Display và BOE Display. Trong đó, lô hàng màn hình OLED 120Hz đã được BOE sản xuất và thử nghiệm, tuy nhiên lại không vượt qua&nbsp;trong các bài thử nghiệm của Apple. Do đó, LG Display sẽ thay thế để cung cấp lô màn hình đầu tiên cho iPhone 12 Pro Max.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/gia-ban-iphone-12-pro-max-128gb-likenew-hai-phong_2b87617b604244eabb01f2c7a87860e6.jpg\"></span></p><p><span style=\"font-size:16px\">Một thông tin mới&nbsp;vừa xuất hiện hôm nay cho biết rằng iPhone 12 Pro Max sẽ không thể có màn hình 120Hz được do lỗi cung ứng và sản xuất, tuy nhiên vẫn còn khá nhiều thời gian để chúng ta xác nhận lại độ chính xác. Còn về Samsung Display thì có thông số&nbsp;chi tiết hơn, màn hình của iPhone 12 Pro Max sử dụng tấm nền OLED với sự hỗ trợ của công nghệ Y-OCTA và cả XDR. Độ phân giải đạt 2778 x 1284 cùng mật độ điểm ảnh 458 PPI.</span></p><h3><span style=\"font-size:18px\"><strong>Hiệu năng cực mạnh mẽ trên chiếc iPhone 12 Pro Max</strong></span></h3><p><span style=\"font-size:16px\">Có những nâng cấp mà 100% sẽ theo đúng lịch trình và chip A14 Bionic cũng là một trong số đó. Theo những&nbsp;rò rỉ thì A14 Bionic được TSMC&nbsp;sản xuất trên tiến trình 5nm, cho phép tiết kiệm điện năng, cải thiện sức mạnh hơn nhiều lần ở mọi mặt,&nbsp;tập trung nhiều vào việc tăng tốc trí tuệ nhân tạo và&nbsp;các tác vụ AR.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/cau-hinh-iphone-12-pro-max-hai-phong_ecccfd0257a04bf185f0069ef67bb8a9.jpg\"></span></p><h2 style=\"text-align: center;\"><span style=\"font-size:16px\"><strong>Mua Trả góp iPhone 12 Pro Max tại Hải Phòng</strong></span></h2><p><span style=\"font-size:16px\">RAM vẫn sẽ giữ ở nguyên mức 4GB, nhưng là dành cho hai mẫu thấp hơn. Còn iPhone 12 Pro hay 12 Pro Max sẽ nâng lên 6GB để người dùng có được trải nghiệm tốt nhất.</span></p><h3><span style=\"font-size:18px\"><strong>Dung lượng pin trên chiếc iPhone 12 Pro Max</strong></span></h3><p><span style=\"font-size:16px\">Dung lượng pin luôn là bí ẩn với những chiếc iPhone, thậm chí là cả iPhone 11 Series.&nbsp;Apple gần như không bao giờ công bố dung lượng pin iPhone, phải cho đến khi các hệ thống&nbsp;đánh giá can thiệp sâu thì mới có. Và theo những hệ thống mà iPhone 12 Pro Max đã từng phải đi qua cho biết viên&nbsp;pin của máy đạt&nbsp;3.687 mAh, nhỏ hơn khá nhiều của iPhone 11 Pro Max 3.969mAh.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/iphone-12-pro-max-likenew-cu-gia-re-hai-phong_534609d28a8c4b2b97c6c5d94b977347.jpg\"></span></p><p><span style=\"font-size:16px\">Nếu xét theo theo&nbsp;mức dung lượng pin này thì thân máy của iPhone 12 Pro Max&nbsp;sẽ mỏng hơn một chút so với iPhone 11 Pro Max như đề cập ở đầu bài. Trong trường hợp&nbsp;đúng như vậy, Apple hẳn phải cực kì tự tin về khả năng tối ��u giữa chip và phần mềm iOS 14 mới nhất. Thậm chí là mạng 5G và tốc độ làm tươi màn hình 120Hz còn có thể&nbsp;xuất hiện nữa.</span></p><h3><span style=\"font-size:18px\"><strong>Liệu rằng Apple vẫn giữ lại Touch ID trên iPhone 12 Pro Max</strong></span></h3><p><span style=\"font-size:16px\">Đã có quá nhiều tin đồn về việc Touch ID sẽ sớm trở lại với iPhone, nhưng bằng công nghệ nào và thời điểm chính xác thì&nbsp;chưa có xác nhận. Tờ Thời Báo Kinh Tế của Đài Loan cho biết sẽ có ít nhất một mẫu iPhone 2020 sử dụng cảm biến vân tay âm màn do Qualcomm sản xuất, nếu đúng thì iPhone 12 Pro Max sẽ hợp lý nhất.</span></p><h3><span style=\"font-size:18px\"><strong>Dung lượng bộ nhớ trong iPhone 12 Pro Max</strong></span></h3><p><span style=\"font-size:16px\">Vì là mẫu cao cấp và không còn quá nhiều phụ kiện đi kèm, nên bộ nhớ lưu trữ có thể là tính năng mà Apple sẽ bù đắp lại cho người dùng. Dự kiến 128GB sẽ là mức bộ nhớ trong tiêu chuẩn cho iPhone 12 Pro Max và cao nhất là 512GB.</span></p><p><span style=\"font-size:16px\">Ngoài việc cấu hình được nâng cấp thì thì camera cũng vậy, dự kiến iPhone 12 Pro Max sẽ có tới bốn camera ở mặt sau, hoặc vẫn là 3 camera nhưng thêm một cảm biến LiDAR giống như iPad Pro 2020.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/iphone-12-pro-max-5g-hai-phong_a7908ea77b1145bc94b15bb7c4776a13.jpg\"></span></p><p><span style=\"font-size:16px\">Về máy quét LiDAR, chức năng chính của nó là sử dụng ánh sáng phản xạ để đo khoảng cách từ cảm biến đến các vật thể xung quanh cách xa tới 5 mét, thậm chí là có thể lập bản đồ môi trường xung quanh bạn ở cấp photon với tốc độ nano giây. Nhìn chung là sẽ hữu ích cho các tác vụ AR về lâu về dài.</span></p><p><span style=\"font-size:16px\">Một ảnh thực tế mới rò rỉ đã chứng mình điều này là gần như chính xác, một cảm biến mới cứng nằm thế chỗ micro và micro dịch sang bên phải một chút.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/sac-khong-day-iphone-12-pro-max_57fcfb000b7e417d8402572baa050c25.jpg\"></span></p><p><span style=\"font-size:16px\">Một vài tính năng nhiếp ảnh cao cấp khác được cho sẽ xuất hiện như ống kính tele zoom quang 3x, Smart HDR cải thiện chụp thiếu sáng, cảm biến ổn định hình ảnh khi chụp góc siêu rộng và hỗ trợ chống rung quang học cho cảm biến chứ không phải từng ống kính nữa và quay video 4K ở tốc độ 120-240 khung hình / giây</span></p><p><span style=\"font-size:16px\">Ngoài màn hình thì LG cũng sẽ là đối tác cung cấp mô-đun camera cho iPhone 12 Pro Max (cao cấp), hai đối tác khác là Sharp và O-film cung cấp cho hai mẫu cấp thấp còn lại.</span></p><p style=\"text-align: center\"><span style=\"font-size:16px\"><img src=\"//file.hstatic.net/1000379792/file/tra-gop-iphone-12-pro-max-0_-tai-hai-phong_e2dfb737a586472bb55ed5a096492f49.jpg\"></span></p><p><span style=\"font-size:16px\">LG, Sharp và O-film sẽ chia sẻ đơn đặt hàng cho iPhone 12 máy ảnh. LG sẽ sản xuất mô-đun máy ảnh cho iPhone cao cấp hơn, trong khi Sharp và O-film sẽ sản xuất mô-đun máy ảnh cho iPhone cấp thấp hơn.</span></p><p><span style=\"font-size:16px\">####</span></p><table class=\"mce-item-table shop_attributes woocommerce-product-attributes\"><tbody><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_bo-nho-trong\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Bộ nhớ trong</span></th><td style=\"text-align:left; width:229px\"><p><span style=\"font-size:16px\"><strong><a href=\"https://msm.vn/products/iphone-12-pro-max-hai-phong\">64/128/256 GB</a></strong></span></p></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_camera-chinh\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Camera chính</span></th><td style=\"text-align:left; width:229px\"><span style=\"font-size:16px\">Cảm biến LiDAR, Triple 12Mp + 12Mp + 12Mp</span></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_camera-phu\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Camera phụ</span></th><td style=\"text-align:left; width:229px\"><table><tbody><tr><td><span style=\"font-size:16px\">12 MP</span></td></tr></tbody></table></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_cpu\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">CPU</span></th><td style=\"text-align:left; width:229px\"><span style=\"font-size:16px\">Apple A14 Bionic (5nm)</span></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_do-phan-giai-man-hinh\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Hệ điều hành</span></th><td style=\"text-align:left; width:229px\"><p><span style=\"font-size:16px\">iOS 14</span></p></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_dung-luong-pin\"><th style=\"text-align: left; width: 142px;\"><p><span style=\"font-size:16px\">RAM</span></p></th><td style=\"text-align:left; width:229px\"><span style=\"font-size:16px\">6 GB</span></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_he-dieu-hanh\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Kết nối&nbsp;</span></th><td style=\"text-align:left; width:229px\"><p><span style=\"font-size:16px\">1 eSIM &amp; 1 Nano SIM, Hỗ trợ 5G</span></p></td></tr><tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_kich-thuoc-man-hinh\"><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Màn hình</span></th><td style=\"text-align:left; width:229px\"><p><span style=\"font-size:16px\">IPS LCD, Liquid Retina</span></p></td></tr><tr><th style=\"text-align: left; width: 142px;\"><span style=\"font-size:16px\">Dung lượng pin</span></th><td style=\"text-align:left; width:229px\"><span style=\"font-size:16px\">Li-Ion 3687 mAh</span></td></tr></tbody></table><p><span style=\"font-size:18px\">####</span></p><p><span style=\"font-size:18px\">- Sản phẩm nhập cũ chính hãng - Bảo Hành 12 Tháng Tại Cửa hàng</span></p>",
+                "featured_image": "https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-2_4a8cc6bd6dd34798a6810fad786122a0_492f8fe7858045c1bb8b6335f96927f9.jpg",
+                "handle": "iphone-12-pro-max",
+                "id": 1046681664,
+                "images": ["https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-2_4a8cc6bd6dd34798a6810fad786122a0_492f8fe7858045c1bb8b6335f96927f9.jpg", "https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-3_33a30cb6a9454cb48c5a0ef5ccd9d3f4_7a3c9ce92a2b4939872eedf81c6502f9.jpg", "https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-1_1d51bd8f4c6e46178b2b29dfeaf30234_9c00143e61d544d0adce699989ce3efb.jpg", "https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-4_0e4ff7caba9e48b882de4c82ec5462a7_a12f0d2231924a34afd04acbccb13c16.jpg"],
+                "options": ["Màu sắc", "Kích thước", "Tình trạng"],
+                "price": 1375050000.0,
+                "price_max": 1606450000.0,
+                "price_min": 1375050000.0,
+                "price_varies": true,
+                "tags": ["frame1"],
+                "template_suffix": null,
+                "title": "iPhone 12 Pro Max",
+                "type": "iphone",
+                "url": "/products/iphone-12-pro-max",
+                "pagetitle": "iPhone 12 Pro Max - Thu cũ chính hãng",
+                "metadescription": "####Điện thoại iPhone 12 Pro Max giá rẻ tại Hải PhòngNhư cái tên gọi thì chắc hẳn các bạn cũng biết được iPhone 12 Pro Max chính là mẫu iPhone 12 đắt giá nhất cũng như cao cấp nhất của Apple. Điều này đồng nghĩa với việc chiếc máy này sẽ sở hữu màn hình lớn nhất, công nghệ đỉnh cao nhất, hiện đại nhất mà Apple có thể đ",
+                "variants": [{
+                    "id": 1105674278,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1375050000.0,
+                    "sku": null,
+                    "option1": "Đen",
+                    "option2": "128Gb",
+                    "option3": "95%",
+                    "options": ["Đen", "128Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Đen / 128Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1545000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674279,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1401750000.0,
+                    "sku": null,
+                    "option1": "Đen",
+                    "option2": "128Gb",
+                    "option3": "99%",
+                    "options": ["Đen", "128Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Đen / 128Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1575000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674280,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1446250000.0,
+                    "sku": null,
+                    "option1": "Đen",
+                    "option2": "128Gb",
+                    "option3": "Like New",
+                    "options": ["Đen", "128Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Đen / 128Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1625000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674282,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1508550000.0,
+                    "sku": null,
+                    "option1": "Đen",
+                    "option2": "256Gb",
+                    "option3": "99%",
+                    "options": ["Đen", "256Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Đen / 256Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1695000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674283,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1553050000.0,
+                    "sku": null,
+                    "option1": "Đen",
+                    "option2": "256Gb",
+                    "option3": "Like New",
+                    "options": ["Đen", "256Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Đen / 256Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1745000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674284,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1392850000.0,
+                    "sku": null,
+                    "option1": "Trắng",
+                    "option2": "128Gb",
+                    "option3": "95%",
+                    "options": ["Trắng", "128Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Trắng / 128Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1565000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674285,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1419550000.0,
+                    "sku": null,
+                    "option1": "Trắng",
+                    "option2": "128Gb",
+                    "option3": "99%",
+                    "options": ["Trắng", "128Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Trắng / 128Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1595000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674286,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1464050000.0,
+                    "sku": null,
+                    "option1": "Trắng",
+                    "option2": "128Gb",
+                    "option3": "Like New",
+                    "options": ["Trắng", "128Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Trắng / 128Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1645000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674287,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1526350000.0,
+                    "sku": null,
+                    "option1": "Trắng",
+                    "option2": "256Gb",
+                    "option3": "99%",
+                    "options": ["Trắng", "256Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Trắng / 256Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1715000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674288,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1570850000.0,
+                    "sku": null,
+                    "option1": "Trắng",
+                    "option2": "256Gb",
+                    "option3": "Like New",
+                    "options": ["Trắng", "256Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Trắng / 256Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1765000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674289,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1410650000.0,
+                    "sku": null,
+                    "option1": "Vàng",
+                    "option2": "128Gb",
+                    "option3": "95%",
+                    "options": ["Vàng", "128Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Vàng / 128Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1585000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674290,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1437350000.0,
+                    "sku": null,
+                    "option1": "Vàng",
+                    "option2": "128Gb",
+                    "option3": "99%",
+                    "options": ["Vàng", "128Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Vàng / 128Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1615000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674291,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1481850000.0,
+                    "sku": null,
+                    "option1": "Vàng",
+                    "option2": "128Gb",
+                    "option3": "Like New",
+                    "options": ["Vàng", "128Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Vàng / 128Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1665000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674292,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1544150000.0,
+                    "sku": null,
+                    "option1": "Vàng",
+                    "option2": "256Gb",
+                    "option3": "99%",
+                    "options": ["Vàng", "256Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Vàng / 256Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1735000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674293,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1588650000.0,
+                    "sku": null,
+                    "option1": "Vàng",
+                    "option2": "256Gb",
+                    "option3": "Like New",
+                    "options": ["Vàng", "256Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Vàng / 256Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1785000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674294,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1428450000.0,
+                    "sku": null,
+                    "option1": "Xanh",
+                    "option2": "128Gb",
+                    "option3": "95%",
+                    "options": ["Xanh", "128Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Xanh / 128Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1605000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674295,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1455150000.0,
+                    "sku": null,
+                    "option1": "Xanh",
+                    "option2": "128Gb",
+                    "option3": "99%",
+                    "options": ["Xanh", "128Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Xanh / 128Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1635000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674296,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1499650000.0,
+                    "sku": null,
+                    "option1": "Xanh",
+                    "option2": "128Gb",
+                    "option3": "Like New",
+                    "options": ["Xanh", "128Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Xanh / 128Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1685000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674297,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1561950000.0,
+                    "sku": null,
+                    "option1": "Xanh",
+                    "option2": "256Gb",
+                    "option3": "99%",
+                    "options": ["Xanh", "256Gb", "99%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Xanh / 256Gb / 99%",
+                    "weight": 0.0,
+                    "compare_at_price": 1755000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674298,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1606450000.0,
+                    "sku": null,
+                    "option1": "Xanh",
+                    "option2": "256Gb",
+                    "option3": "Like New",
+                    "options": ["Xanh", "256Gb", "Like New"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Xanh / 256Gb / Like New",
+                    "weight": 0.0,
+                    "compare_at_price": 1805000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674299,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1481850000.0,
+                    "sku": null,
+                    "option1": "Đen",
+                    "option2": "256Gb",
+                    "option3": "95%",
+                    "options": ["Đen", "256Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Đen / 256Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1665000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674300,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1499650000.0,
+                    "sku": null,
+                    "option1": "Trắng",
+                    "option2": "256Gb",
+                    "option3": "95%",
+                    "options": ["Trắng", "256Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Trắng / 256Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1685000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674301,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1517450000.0,
+                    "sku": null,
+                    "option1": "Vàng",
+                    "option2": "256Gb",
+                    "option3": "95%",
+                    "options": ["Vàng", "256Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Vàng / 256Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1705000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }, {
+                    "id": 1105674302,
+                    "barcode": null,
+                    "available": true,
+                    "price": 1535250000.0,
+                    "sku": null,
+                    "option1": "Xanh",
+                    "option2": "256Gb",
+                    "option3": "95%",
+                    "options": ["Xanh", "256Gb", "95%"],
+                    "inventory_quantity": 10.0,
+                    "old_inventory_quantity": 10.0,
+                    "title": "Xanh / 256Gb / 95%",
+                    "weight": 0.0,
+                    "compare_at_price": 1725000000.0,
+                    "inventory_management": "haravan",
+                    "inventory_policy": "deny",
+                    "selected": false,
+                    "url": null,
+                    "featured_image": null
+                }],
+                "vendor": "Apple",
+                "published_at": "2023-05-05T05:53:23.755Z",
+                "created_at": "2023-05-05T05:53:27.096Z",
+                "not_allow_promotion": false
+            },
+            jsonmap: "https://file.hstatic.net/200000397757/file/hethongcuahang_f1ee212eddc04706b09d43518b50a964.json",
+            recaptchacallback: () => {
+                setTimeout(() => {
+                    if ($("input[name='g-recaptcha-response']").length > 0) {
+                        $("input[name='g-recaptcha-response']").each(function () {
+                            let a = $(this);
+                            grecaptcha.ready(function () {
+                                grecaptcha.execute("6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-", {action: "submit"}).then(function (b) {
+                                    a.val(b)
+                                })
+                            })
+                        })
+                    }
+                }, 1e3);
+            },
+            placeholderText: ["Iphone", "Sam Sung", "Xiaomi", "Thay pin iphone"],
+            use_countdown: true,
+            type_countdown: "everyday",
+            countdown: "Sep 10, 2022 23:59:59",
+            type_sold: "random",
+            list_col_pro: ["/collections/apple-chinh-hang", "/collections/dien-thoai", "/collections/flash-sale", "/collections/iphone-12-series", "/collections/iphone"],
+            max_stock: 40,
+            min_stock: 10,
+            collection: {
+                "template": "two",
+                "url": "/collections/dien-thoai",
+                "currentpage": "",
+                "totalpage": "",
+                "collectioncount": "176",
+                "limit": "30",
+                "id": "1003614837",
+                "typepaginate": "click_loadmore",
+                "sortbydefault": "manual"
+            },
+            appdefault: "appcombo",
+            typerelated: "collection",
+            checklocation: "true",
+            checkproductrelated: "true",
+            checkproductseen: "true",
+            vendorurl: "/collections/vendors?q=apple&view=related-product",
+            typeurl: "/collections/types?q=iphone&view=related-product",
+            collectionurl: "/collections/apple-chinh-hang?view=related-product",
+            recommendurl: "/products/iphone-12-pro-max?view=recommend",
+            reviewtype: "bigpen_review",
+            reviewloopinit: () => {
+                if (typeof ProductReviews == 'object') {
+                    $(".review-loop .hrv-product-reviews-star").raty({
+                        starType: "i",
+                        number: function () {
+                            return jQuery(this).attr("data-number")
+                        },
+                        score: function () {
+                            return jQuery(this).attr("data-score")
+                        },
+                        readOnly: !0
+                    });
+                    $(".review-loop .hrv-product-reviews-star i").css("color", "#ECBA55")
+                }
+            }
+        }
+        if (navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 && checklh == false) {
+            for (let i = 0; i < window.wd.stylerender.length; i++) {
+                const css = document.createElement("link");
+                css.setAttribute("type", "text/css");
+                css.setAttribute("rel", "stylesheet");
+                css.setAttribute("href", window.wd.stylerender[i]);
+                document.getElementsByTagName("head")[0].appendChild(css);
+            }
+            for (let i = 0; i < window.wd.plugin.length; i++) {
+                const plugin = document.createElement("script");
+                plugin.setAttribute("type", "text/javascript");
+                plugin.setAttribute("src", window.wd.plugin[i]);
+                document.getElementsByTagName("head")[0].appendChild(plugin);
+            }
+            $(window).load(() => {
+                setTimeout(() => {
+                    window.wd.getScriptCcd(window.wd.recaptchajs, window.wd.recaptchacallback());
+                }, 1000);
+            })
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            let jsquery = document.querySelectorAll('script[data-src]');
+            if (navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 && jsquery.length > 0 && checklh == false) {
+                for (let i = 0; i < jsquery.length; i++) {
+                    let src_ = jsquery[i].getAttribute('data-src');
+                    jsquery[i].setAttribute('src', src_)
+                }
+            }
+        });
+    </script>
+    <script>
+        function getcss(filename) {
+            jQuery('head').append(`<link href='${getcdn(filename)}' rel='stylesheet' type='text/css'  media='all'  />`)
+        }
+
+        var getcdn = function (filename) {
+            var url = "https://theme.hstatic.net/1000271639/1000347388/14/",
+                version = Math.floor((Math.random() * 999999999) + 999999);
+            sessionStorage.version != undefined ? version = sessionStorage.version : sessionStorage.version = version;
+            return url + filename + "?v=" + version;
+        }
+    </script>
+    <script type='text/javascript'>
+        if (!navigator.userAgent.includes('Chrome-Lighthouse') && checklh == false) {
+            if ((typeof Haravan) === 'undefined') {
+                Haravan = {};
+            }
+            Haravan.culture = 'vi-VN';
+            Haravan.shop = 'wd-smart.myharavan.com';
+            Haravan.theme = {"name": "Spring Mobile", "id": 1001049223, "role": "main"};
+            Haravan.domain = 'wd-smart.myharavan.com';
+        }
+    </script>
+    <script>
+        if (!navigator.userAgent.includes('Chrome-Lighthouse') && checklh == false) {
+            (function () {
+                function asyncLoad() {
+                    var urls = ["", "https://app.hstatic.net/socialloginplus/200000713019/script-tag.js?v=1687509496081"];
+                    for (var i = 0; i < urls.length; i++) {
+                        var s = document.createElement('script');
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = urls[i];
+                        var x = document.getElementsByTagName('script')[0];
+                        x.parentNode.insertBefore(s, x);
+                    }
+                }
+
+                window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
+            })();
+        }
+    </script>
+    <script data-src='https://stats.hstatic.net/beacon.min.js' defer hrv-beacon-t='200000713019'></script>
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+    </style>
+    <script type='text/javascript'>
+        window.HaravanAnalytics = window.HaravanAnalytics || {};
+        window.HaravanAnalytics.meta = window.HaravanAnalytics.meta || {};
+        window.HaravanAnalytics.meta.currency = 'VND';
+        var meta = {
+            "page": {"pageType": "product", "resourceType": "product", "resourceId": 1046681664},
+            "product": {
+                "id": 1046681664,
+                "type": "iphone",
+                "title": "iPhone 12 Pro Max",
+                "price": 1375050000.0,
+                "selected_or_first_available_variant": {
+                    "id": 1105674278,
+                    "price": 1375050000.0,
+                    "title": "iPhone 12 Pro Max - Đen / 128Gb / 95%",
+                    "variant_title": "Đen / 128Gb / 95%"
+                },
+                "vendor": "Apple",
+                "imageUrl": "https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-2_4a8cc6bd6dd34798a6810fad786122a0_492f8fe7858045c1bb8b6335f96927f9.jpg",
+                "available": true
+            }
+        };
+        for (var attr in meta) {
+            window.HaravanAnalytics.meta[attr] = meta[attr];
+        }
+        window.HaravanAnalytics.AutoTrack = true;
+    </script>
+    <span>
+        <meta content='iPhone 12 Pro Max' itemprop='name'>
+        <meta content='Apple' itemprop='brand'>
+        <meta content='https://product.hstatic.net/200000713019/product/iphone-12-pro-max-hai-phong-2_4a8cc6bd6dd34798a6810fad786122a0_492f8fe7858045c1bb8b6335f96927f9.jpg'
+              itemprop='image'/>
+        <span>
+            <meta content='VND' itemprop='priceCurrency'/>
+            <meta content='13750500' itemprop='price'/>
+            <link href='http://schema.org/NewCondition' itemprop='itemCondition'/>
+            <link href='http://schema.org/InStock' itemprop='availability'/>
+        </span>
+    </span>
+
+    <script
+            type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "wd-smart.myharavan.com",
+        "url": "https://wd-smart.myharavan.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://wd-smart.myharavan.com/search?&q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }</script>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https:https://wd-smart.myharavan.com",
+                        "name": "Trang chủ"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https:https://wd-smart.myharavan.com/iphone-12-pro-max",
+                        "name": "iPhone 12 Pro Max"
+                    }
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body class="template-product  position-cart-loop-right" data-template="product" id="wd-shoes-scofiled">
+<!-- Header Section Begin -->
+<th:block th:replace="~{fragments/header :: header}"></th:block>
+<!-- Header Section End -->
+<main>
+
+    <section class="product-page" id="product-template">
+        <div class="container">
+            <div class="row-left-list d-flex">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 order-mb-3 pd-right-0">
+                    <div class="bg-while height-100">
+                        <div class="d-flex row-left-list">
+                            <div
+                                    class="col-lg-6 col-md-6 col-sm-6 col-xs-12 order-mb-1 gallery-product-template pd-right-0">
+                                <div class="d-flex-wrap d-flex sticky-gallery">
+                                    <div class="product-thumb hidden-xs" data-widththumb="false"
+                                         id="sl-product-thumb">
+                                        <div class="slider-mobile d-flex-slick" data-lg="6" data-md="6"
+                                             data-sm="5" data-vertical="false" id="slider-thumb">
+                                            <div class="item item-owl"
+                                                 th:each="phone : ${phoneDetail.getPhoneDetails()}">
+                                                <a class="product__thumbnail" href="javascript:void(0)">
+                                                    <img class="lazyload-cus dt-width-100"
+                                                         height="100"
+                                                         th:alt="${phone.getPhone().getName()}"
+                                                         th:src="${phone.getImg()}" width="100">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-gallery d-flex-slick" data-allin="1"
+                                         data-widthgallery="false">
+                                        <div class="item item-owl" th:data-image="${phone.getImg()}"
+                                             th:data-pos="${de.index + 1}" th:each="phone, de: ${phoneDetail.getPhoneDetails()}">
+                                            <a class="product__thumbnail"
+                                               data-fancybox="gallery" href="/">
+                                                <img class="product-image-feature dt-width-100 lazyload"
+                                                     height="600"
+                                                     th:alt="${phone.getPhone().getName()}"
+                                                     th:data-src="${phone.getImg()}"
+                                                     th:src="${phone.getImg()}" width="600">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 order-mb-2 pd-right-0">
+                                <div class="product-content-info">
+                                    <div class="pro-content-head clearfix">
+                                        <div class="head-product">
+                                            <h1 th:text="${phoneDetail.getName()}"></h1>
+                                        </div>
+                                        <div class="d-flex product-info">
+                                            <div class="pro-brand"><span>Thương hiệu: </span><a class="title"
+                                                                                                href="" rel="nofollow"
+                                                                                                th:text="${phoneDetail.getBrand().getName()}"></a>
+                                            </div>
+                                        </div>
+                                        <div id="product-price" style="color: red; font-size: 20px;">
+                                            <span class="price-now"
+                                                  th:text="${#numbers.formatInteger(phoneDetail.getPhoneDetails().get(0).getPrice(), 3,'COMMA') + ' VND'}"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="variants clearfix" id="item-form" method="post"
+                                      th:action="'/product/' + ${phoneDetail.getId()}">
+                                    <input name="phoneId" th:value="${phoneDetail.getId()}" type="hidden">
+                                    <div class="select hidden">
+                                        <select id="product-select" name="id">
+                                            <option data-available="true"
+                                                    th:data-variant="${phone.getColor().getName()}" th:each="phone : ${phoneDetail.getPhoneDetails()}"
+                                                    th:text="${phone.getColor().getName()}"
+                                                    th:value="${phone.getPrice()}"></option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <div class="select-swatch clearfix col-xs-12 col-md-12 col-sm-12">
+                                            <div class="swatch clearfix type-image" data-option="option1"
+                                                 data-option-index="0" id="variant-swatch-0">
+                                                <div class="header">Màu sắc: <span class="color-text"></span></div>
+                                                <div class="select-swap">
+                                                    <div th:class="'n-sd swatch-element color ' + ${phone.getColor().getName()}"
+                                                         th:data-value="${phone.getColor().getName()}"
+                                                         th:each="phone: ${phoneDetail.getPhoneDetails()}">
+                                                        <input checked
+                                                               class="variant-0 color-change"
+                                                               name="colorId" th:attr="data-color-id=${phone.getColor().getId()}"
+                                                               th:data-vhandle="${phone.getColor().getName()}"
+                                                               th:id="'swatch-0-' + ${phone.getColor().getName()}" th:value="${phone.getColor().getName()}"
+                                                               type="radio"/>
+                                                        <label th:class="${phone.getColor().getName()}"
+                                                               th:data-price="${phone.getPrice()} + ' VND'"
+                                                               th:for="'swatch-0-' + ${phone.getColor().getName()}">
+                        <span class="variant-img"><img height="30"
+                                                       th:alt="${phone.getColor().getName()}"
+                                                       th:src="${phone.getImg()}" width="30"></span><span
+                                                                th:text="${phone.getColor().getName()}"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="select-swatch clearfix col-xs-12 col-md-12 col-sm-12">
+                                            <div class="swatch clearfix type-image" data-option="option1"
+                                                 data-option-index="0" id="variant-swatch-0">
+                                                <div class="header">Dung lượng: <span class="color-text"></span></div>
+                                                <div class="select-swap">
+                                                    <div th:class="'n-sd swatch-element color ' + ${phone.getCapacity().getSizeInGB()}"
+                                                         th:data-value="${phone.getCapacity().getSizeInGB()}"
+                                                         th:each="phone: ${phoneDetail.getPhoneDetails()}">
+                                                        <input checked
+                                                               class="variant-0 color-change"
+                                                               name="capacityId" th:attr="data-capacity-id=${phone.getCapacity().getId()}"
+                                                               th:data-vhandle="${phone.getCapacity().getSizeInGB()}"
+                                                               th:id="'swatch-0-' + ${phone.getCapacity().getSizeInGB()}"
+                                                               th:value="${phone.getCapacity().getSizeInGB()}"
+                                                               type="radio"/>
+                                                        <label th:class="${phone.getCapacity().getSizeInGB()}"
+                                                               th:data-price="${phone.getPrice()} + ' VND'"
+                                                               th:for="'swatch-0-' + ${phone.getCapacity().getSizeInGB()}">
+                                                            <span
+                                                                    th:text="${phone.getCapacity().getSizeInGB() + ' GB'}">
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <script>
+                                        $(document).ready(function () {
+                                            $('.color-change').click(function () {
+                                                var newPrice = $(this).next('label').data('price');
+                                                $('.price-now').text(newPrice);
+                                            });
+                                        });
+                                    </script>
+                                    <div class="row">
+                                        <div class="col-xs-12 selector-actions d-flex d-flex-center">
+                                            <div class="quantity-area">
+                                                <input class="qty-btn qtyminus" onclick="window.wd.scofield.minusQuantity($(this))"
+                                                       type="button"
+                                                       value="–">
+                                                <input class="quantity-selector" id="quantity" min="1" name="quantity" type="text"
+                                                       value="1">
+                                                <input class="qty-btn qtyplus" onclick="window.wd.scofield.plusQuantity($(this))"
+                                                       type="button"
+                                                       value="+">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 selector-actions d-flex d-flex-center pd-top-10">
+                                            <div class="wrap-addcart">
+                                                <button class="flex-addcart-mb  add-to-cart-style" name="add"
+                                                        onclick="addToCart(this)" type="button">
+                                                    <strong> Thêm vào giỏ </strong>
+                                                    <span>Giao Tận Nơi Hoặc Nhận Tại Cửa Hàng</span>
+                                                </button>
+                                                <button class="flex-addcart-mb mg-top-10  add-to-combo-style hidden" id="buynow-combo"
+                                                        name="add"
+                                                        type="button">
+                                                    <strong>Mua combo</strong>
+                                                    <span>Ưu đãi khi mua kèm các sản phẩm khác</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 location-store pd-top-10"></div>
+
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 order-mb-3 pd-right-0 mg-top-15-sm-xs">
+                    <div class="bg-while height-100">
+                        <div class="service-product">
+                            <div class="head-title">
+                                Cam kết bán hàng
+                            </div>
+                            <ul>
+                                <li class="item">
+                                    <img alt="H&#224;ng ch&#237;nh h&#227;ng. Nguồn gốc r&#245; r&#224;ng" height="25"
+                                         src="https://file.hstatic.net/200000713019/file/policy_header_image_2_cb4464b7e9af47fb83942bf7e20548ec.png"
+                                         width="25">
+                                    <span class="content">Hàng chính hãng. Nguồn gốc rõ ràng</span>
+                                </li>
+                                <li class="item">
+                                    <img alt="Tặng m&#225;y nếu ph&#225;t hiện m&#225;y sửa chữa" height="25"
+                                         src="https://file.hstatic.net/200000713019/file/policy_header_image_3_4d4c94de9c514e37ae4414e4de773c06.png"
+                                         width="25">
+                                    <span class="content">Tặng máy nếu phát hiện máy sửa chữa</span>
+                                </li>
+                                <li class="item">
+                                    <img alt="Giao h&#224;ng ngay (nội th&#224;nh TPHCM)" height="25"
+                                         src="https://file.hstatic.net/200000713019/file/shipped_10ad7e72d69a4ab592eed20122801f83.png"
+                                         width="25">
+                                    <span class="content">Giao hàng ngay (nội thành TPHCM)</span>
+                                </li>
+                                <li class="item">
+                                    <img alt="D&#249;ng thử 7 ng&#224;y miễn ph&#237;" height="25"
+                                         src="https://file.hstatic.net/200000713019/file/instruction_8ea7e6a2f6804d51b724e50d2c97f33b.png"
+                                         width="25">
+                                    <span class="content">Dùng thử 7 ngày miễn phí</span>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="promotion-tab">
+                            <div class="head-title">
+                                Ưu đãi
+                            </div>
+                            <div class="tab-content-promotion">
+                                <ul>
+                                    <li>Giảm th&ecirc;m tới 1% cho th&agrave;nh vi&ecirc;n Smember (&aacute;p dụng
+                                        t&ugrave;y sản phẩm)
+                                    </li>
+                                    <li>Bảo vệ sản phẩm to&agrave;n diện với dịch vụ bảo h&agrave;nh mở rộng</li>
+                                    <li><img data-src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/vp-bank-icon-ssth5.png"
+                                             src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/vp-bank-icon-ssth5.png"
+                                             width="35"/>Ưu
+                                        đ&atilde;i đến 800k khi mở thẻ VP Bank
+                                    </li>
+                                    <li><img alt="Kredivo"
+                                             data-src="https://cdn.cellphones.com.vn/media/wysiwyg/DUMT_ZV0.png"
+                                             src="https://cdn.cellphones.com.vn/media/wysiwyg/DUMT_ZV0.png" title="Kredivo"
+                                             width="40"/>&nbsp;Giảm
+                                        th&ecirc;m 5% tối đa 500.000đ khi thanh to&aacute;n qua Kredivo
+                                    </li>
+                                    <li><img alt="VIB"
+                                             data-src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/logo_vib.png" src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/logo_vib.png"
+                                             width="30"/>Mở
+                                        thẻ t&iacute;n dụng VIB - Nhận voucher 200.000đ mua h&agrave;ng tại
+                                        CellphoneS
+                                    </li>
+                                    <li>Thu cũ đổi mới: Gi&aacute; thu cao - Thủ tục nhanh ch&oacute;ng - Trợ
+                                        gi&aacute; tốt nhất
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 order-mb-3 mg-top-30 mg-top-15-mb pd-right-0">
+                    <div class="bg-while">
+                        <div class="title-head-tab">
+                            Mô tả sản phẩm
+                        </div>
+                        <div class="product-description-tab">
+                            <div class="content-entry add-height-img max-height-ct lazyload-addclass">
+                                <div class="more-description">
+                                    <p th:text="${phoneDetail.getDescription()}"></p>
+                                    <img th:alt="${phoneDetail.getName()}"
+                                         th:src="${phoneDetail.getPhoneDetails().get(0).getImg()}"/>
+                                </div>
+                            </div>
+                            <div class="view-all-btn">
+                                <button>
+                                    <i class="fa fa-plus-circle"></i> Xem thêm
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 order-mb-3 mg-top-30 mg-top-15-mb pd-right-0">
+                    <div class="bg-while">
+                        <div class="title-head-tab">
+                            Thông số kỹ thuật
+                        </div>
+                        <div class="product-parameter">
+                            <div class="content-param max-height-ct">
+                                <div class="more-description">
+                                    </p>
+                                    <table class="mce-item-table shop_attributes woocommerce-product-attributes">
+                                        <tbody>
+                                        <tr
+                                                class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_bo-nho-trong">
+                                            <th style="text-align: left; width: 142px;">
+                                                <p>Dung lượng pin</p>
+                                            </th>
+                                            <td>
+                                                <p th:text="${phoneDetail.getSpec().getBatteryLife()}"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>Camera chính</p>
+                                            </th>
+                                            <td>
+                                                <p th:text="${phoneDetail.getSpec().getCamera()}"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>Cổng kết nối</p>
+                                            </th>
+                                            <td th:text="${phoneDetail.getSpec().getConnection()}"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>CPU</p>
+                                            </th>
+                                            <td>
+                                                <p th:text="${phoneDetail.getSpec().getCpu()}"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>Hệ điều hành</p>
+                                            </th>
+                                            <td>
+                                                <p th:text="${phoneDetail.getSpec().getOs()}"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>RAM</p>
+                                            </th>
+                                            <td>
+                                                <p th:text="${phoneDetail.getSpec().getRam()}"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>Màn hình</p>
+                                            </th>
+                                            <td>
+                                                <p th:text="${phoneDetail.getSpec().getDisplay()}"></p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--                            <div class="view-all-btn">-->
+                            <!--                                <button>-->
+                            <!--                                    <i class="fa fa-plus-circle"></i> Xem thêm-->
+                            <!--                                </button>-->
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 order-mb-4 mg-top-30 mg-top-15-mb pd-right-0" th:if="${phoneDetail.getPhoneDetails().size() > 1}">
+                    <div class="row-10">
+                        <div class="d-flex" id="hrv-product-reviews-sub" style="width:100%;">
+                            <div class="group-post item-group" style="background-color: white;">
+                                <div class="sticky-gallery">
+
+                                    <div class="hrv-product-reviews-form" id="hrv-product-reviews-form"
+                                         style="display: flex;">
+                                        <div style="flex: 1;">
+                                            <style>
+                                                h3 {
+                                                    font-size: 24px;
+                                                    font-weight: bold;
+                                                    color: #333;
+                                                    margin-top: 20px;
+                                                    margin-left: 15px;
+                                                    margin-bottom: 20px;
+                                                    font-family: Arial, sans-serif;
+                                                }
+                                            </style>
+                                            <h3>Đánh giá</h3>
+                                            <div style="border: 1px solid grey; padding: 10px; margin: 15px">
+                                                <div style="width: 500px; height: 400px; border: 1px solid grey; padding: 10px; margin: 15px; display: flex; flex-direction: column; overflow-y: auto">
+                                                    <div th:each="phoneRating: ${phoneRatingList}" style="border: 1px solid grey; border-radius: 5px; padding: 5px; display: flex; justify-content: space-between; margin-bottom: 5px">
+                                                        <div>
+                                                            <h4 th:text="${phoneRating.getUser().getName()}"></h4>
+                                                            <p th:text="${phoneRating.getComment()}"></p>
+                                                        </div>
+                                                        <img th:src="@{${'/upload/' + phoneRating.getImg()}}" width="150px">
+                                                    </div>
+                                                </div>
+                                                <style>
+                                                    .rating-form {
+                                                        margin: 20px;
+                                                        padding: 20px;
+                                                        border: hidden;
+                                                        border-radius: 4px;
+                                                        background-color: white;
+                                                    }
+
+                                                    .rating-form div {
+                                                        margin-bottom: 10px;
+                                                    }
+
+                                                    .rating-form label {
+                                                        display: block;
+                                                        font-weight: bold;
+                                                        font-size: 18px;
+                                                        font-family: Arial, sans-serif;
+                                                    }
+
+                                                    .rating-form input[type="email"],
+                                                    .rating-form input[type="text"],
+                                                    .rating-form input[type="file"] {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        box-sizing: border-box;
+                                                        border: 1px solid #ccc;
+                                                        border-radius: 4px;
+                                                        font-size: 16px;
+                                                        font-family: Arial, sans-serif;
+                                                    }
+
+                                                    .rating-form button[type="submit"] {
+                                                        padding: 12px 24px;
+                                                        background-color: cornflowerblue;
+                                                        color: white;
+                                                        border: none;
+                                                        border-radius: 4px;
+                                                        cursor: pointer;
+                                                        font-size: 18px;
+                                                        font-family: Arial, sans-serif;
+                                                    }
+
+                                                    .rating-form button[type="submit"]:hover {
+                                                        background-color: darkblue;
+                                                    }
+                                                </style>
+                                                <form action="/phone/rating" class="rating-form" enctype="multipart/form-data"
+                                                      method="post">
+                                                    <input name="phoneId" th:value="${phoneDetail.getId()}" type="hidden"/>
+
+                                                    <div>
+                                                        <label for="email">Nhập email:</label>
+                                                        <input id="email" name="email" required type="email">
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="img">Chọn ảnh:</label>
+                                                        <input accept="image/*" id="img" name="img" type="file">
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="comment">Để lại bình luận của bạn ở đây:</label>
+                                                        <input id="comment" name="comment" type="text">
+                                                    </div>
+
+                                                    <!-- Other form fields -->
+
+                                                    <button type="submit">Gửi đánh giá</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div style="flex: 1; text-align: right;padding: 20px;max-width: 100%;
+                                                max-height: 100%;">
+                                            <img alt="Image" th:src="${phoneDetail.getPhoneDetails().get(1).getImg()}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 order-mb-5 mg-top-30 mg-top-15-mb pd-right-0">
+                    <div class="d-none-button-mb" id="section-related">
+                        <div class="bg-while">
+                            <div class="top-title">
+                                <h2 class="title-section">
+                                    <span>Sản phẩm liên quan</span>
+                                </h2>
+                                <p></p>
+                            </div>
+                            <div class="d-flex-slick mg-left--15" data-autoplay="false" data-custom-arrows="true"
+                                 data-dots="true" data-infinite="false" data-md="5" data-slides-md="5" data-slides-md-scroll="5"
+                                 data-slides-tablet="3" data-slides-tablet-scroll="3" data-slides-xs="2"
+                                 data-slides-xs-scroll="2" data-sm="3" data-xs="2"
+                                 id="owl-collection-related">
+
+                                <div class="item-owl d-flex-column mg-bottom-15 col-lg-1 col-md-3 col-sm-4 col-xs-6 pd-right-0"
+                                     th:each="phoneByBrand: ${phonesByBrandExpId}">
+                                    <div class="product-block item">
+                                        <a class="image-resize"
+                                           th:href="'/phone/' + ${phoneByBrand.getId()}"
+                                           th:title="${phoneByBrand.getName()}">
+                                            <div class="product-img">
+
+                                                <img class="dt-width-100" height="260"
+                                                     th:alt="${phoneByBrand.getName()}"
+                                                     th:src="${phoneByBrand.getPhoneDetails().get(0).getImg()}"
+                                                     width="260"/>
+                                            </div>
+                                            <div class="product-detail">
+                                                <div class="product-name"><span class="mh-loop-load"
+                                                                                th:text="${phoneByBrand.getName()}"
+                                                ></span></div>
+                                                <div class="d-flex js-between d-flex-center">
+                                                    <ul class="list-variants d-flex d-flex-wrap image">
+                                                        <li th:each="phone : ${phoneDetail.getPhoneDetails()}"
+                                                            th:text="${phone.getColor().getName() + ' • '}"></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="box-pro-prices">
+                                                    <p class="pro-price">
+                                                        <span th:text="${#numbers.formatInteger(phoneByBrand.getPhoneDetails().get(0).getPrice(), 3,'COMMA')} + ' VND'">
+
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+<div class="prefooter-customer mg-top-30">
+    <div class="container">
+        <div class="bg-prefooter">
+            <div class="d-flex row d-flex-center">
+                <div class="col-md-7 col-sm-7 col-xs-12 d-flex d-flex-center js-between">
+                    <p class="title-regis">
+                        Đăng kí nhận tin
+                    </p>
+                    <div class="form-ft-wanda">
+                        <form accept-charset='UTF-8' action='/account/contact' class='contact-form' method='post'>
+                            <input name='form_type' type='hidden' value='customer'>
+                            <input name='utf8' type='hidden' value='✓'>
+                            <div class="form-group mb-0 icon-email">
+                                <input name="contact[tags]" type="hidden"
+                                       value="khách hàng tiềm năng-https://wd-smart.myharavan.com/products/iphone-12-pro-max"/>
+                                <input autocomplete="on" id="contact_email_ft" name="contact[email]" placeholder="Email"
+                                       required="required" type="email"/>
+                            </div>
+                            <button class="btn" type="submit"><i aria-hidden="true" class="fa fa-paper-plane-o"></i>
+                                Đăng ký
+                            </button>
+
+                            <input id='c74e571114094ced94f70b2b31084481' name='g-recaptcha-response'
+                                   type='hidden'>
+                            <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>-->
+                            <!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('c74e571114094ced94f70b2b31084481').value = token;});});</script>-->
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <ul class="social-footer d-flex d-flex-center">
+                        <li class="zalo"><a href="1" rel="nofollow"><img alt="Liên hệ với chúng tôi qua Zalo" class="lazyload" data-src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                                                                         height="30"
+                                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                                         width="30"></a></li>
+                        <li class="tiktok"><a href="1" rel="nofollow"><img alt="Liên hệ với chúng tôi qua Tiktok" class="lazyload" data-src="https://file.hstatic.net/200000525917/file/tik-tok_e914ba6238604946935723c6839cc211.svg"
+                                                                           height="18"
+                                                                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                                           width="18"></a>
+                        </li>
+                        <li class="twitter"><a href="1" rel="nofollow"><i aria-hidden="true"
+                                                                          class="fa fa-twitter"></i></a></li>
+                        <li class="youtube"><a href="1" rel="nofollow"><i aria-hidden="true"
+                                                                          class="fa fa-youtube"></i></a></li>
+                        <li class="instagram"><a href="1" rel="nofollow"><i aria-hidden="true"
+                                                                            class="fa fa-instagram"></i></a></li>
+                        <li class="facebook"><a href="1" rel="nofollow"><i aria-hidden="true"
+                                                                           class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="mg-0 pd-bt-50-mb">
+    <div class="top-ft-wanda">
+        <div class="container">
+            <div class="d-flex row">
+                <div class="col-md-3 col-sm-6 col-xs-12 infomation mg-bottom-15">
+                    <div class="title-footer">
+                        <a href="/">
+                            <img alt="Spring Mobile" class="dt-width-auto logo-ft" height="50"
+                                 th:src="@{/images/SpringMobile.png}" width="200">
+                        </a>
+                    </div>
+                    <div class="infomation-wanda">
+                        <p>
+                            Spring Mobile - Điện Thoại Siêu Rẻ, Trao Trọn Yên Tâm.
+
+
+                        </p>
+                        <ul>
+                            <li><i aria-hidden="true" class="fa fa-map-marker"></i>19 Nguyễn Hữu Thọ, Phường Tân
+                                Phong, Quận 7,TP. HCM
+                            </li>
+                            <li><i aria-hidden="true" class="fa fa-phone"></i> <a href="tel:0967671065"
+                                                                                  rel="nofollow">0967671065</a>
+                            </li>
+                            <li><i aria-hidden="true" class="fa fa-envelope-o"></i> <a href="mailto:nguyenhuutin124@gmail.com"
+                                                                                       rel="nofollow">nguyenhuutin124@gmail.com</a>
+                            </li>
+                            <li class="bocongthuong"><a href="" rel="nofollow"><img alt="Bộ công thương" class="lazyload"
+                                                                                    data-src="https://file.hstatic.net/200000397757/file/dathongbao_48067cd02fae41b68bf0294777c39c94_compact.png"
+                                                                                    height="45"
+                                                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                                                    width="120"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 tablink mg-bottom-15">
+                    <div class="title-footer">
+                        <div class="h4">
+                            Chính sách
+                        </div>
+                    </div>
+                    <div class="footer-link-wanda">
+                        <ul>
+                            <li><a href="/">Chính sách bảo hành</a></li>
+                            <li><a href="/">Tra cứu bảo hành</a></li>
+                            <li><a href="/">Trả góp online</a></li>
+                            <li><a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a></li>
+                            <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 tablink mg-bottom-15">
+                    <div class="title-footer">
+                        <div class="h4">
+                            Hướng dẫn
+                        </div>
+                    </div>
+                    <div class="footer-link-wanda">
+                        <ul>
+                            <li><a href="/">Chính sách bảo hành</a></li>
+                            <li><a href="/">Tra cứu bảo hành</a></li>
+                            <li><a href="/">Trả góp online</a></li>
+                            <li><a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a></li>
+                            <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="title-footer">
+                        <div class="h4">
+                            Tổng đài hỗ trợ
+                        </div>
+                    </div>
+                    <ul class="footer-support">
+                        <li><span>Gọi mua hàng:</span> <a href="tel:0967671065">0967671065</a>
+                            <span>(8h30-21h)</span>
+                        </li>
+                        <li><span>Gọi bảo hành:</span> <a href="tel:0967671065">0967671065</a>
+                            <span>(8h30-21h)</span>
+                        </li>
+                        <li><span>Gọi khiếu nại:</span> <a href="tel:0967671065">0967671065</a>
+                            <span>(8h30-21h)</span>
+                        </li>
+                    </ul>
+                    <div class="title-footer">
+                        <div class="h4">
+                            Phương thức thanh toán
+                        </div>
+                    </div>
+                    <div>
+                        <img alt="Phương thức thanh toán" height="24"
+                             src="https://theme.hstatic.net/1000379792/1000977285/14/footer_trustbadge.jpg?v=338"
+                             width="246">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wanda">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12 text-center">
+                    <div class="text-copyright mb-0"><span>© Copyright 2023 By <a class="underline_hover link" href="/"
+                                                                                  target="_blank"> Spring Mobile.</a><a
+                            href="https://www.haravan.com?ref=wanda" rel="nofollow"
+                            target="_blank"> Powered by Haravan</a></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="pro-qv-wanda"></div>
+<div id="pro-quickview-mobile"></div>
+<div class="fixed-action-btn">
+    <ul>
+        <li class="facebook"><a class="btn-secondary btn-floating" data-original-title="Liên hệ với chúng tôi qua Facebook"
+                                data-toggle="tooltip" href="tel:https://www.facebook.com/masichanh/"
+                                rel="nofollow"><img
+                alt="Messenger" class="dt-width-auto" height="45" src="https://file.hstatic.net/200000525917/file/messenger-fb_8fcc524fbaad4b1195a150dc5e0575d7.png"
+                width="45"></a>
+        </li>
+        <li class="zalo"><a class="btn-secondary btn-floating" data-original-title="Liên hệ với chúng tôi qua Zalo" data-toggle="tooltip" href="/"
+                            rel="nofollow"><img alt="Liên hệ với chúng tôi qua Zalo" class="dt-width-auto"
+                                                                                      height="45"
+                                                                                      src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                                                                                      width="45"></a>
+        </li>
+    </ul>
+</div>
+<div class="modal" id="modal-subscribe">
+    <div class="modal-wp-ct">
+        <div class="tt-md-ct">Đăng ký nhận khuyến mãi</div>
+        <div class="message-md-ct">
+            <div class="content-md-ct">Chúng tôi sẽ cập nhật các chương trình khuyến mãi mới nhất đến bạn.
+            </div>
+            <ul class="list-md-contact">
+                <li>Giảm giá sản phẩm</li>
+                <li>Mã coupon chỉ dành riêng cho bạn</li>
+                <li>Ưu đãi tặng sản phẩm đi kèm</li>
+            </ul>
+        </div>
+        <form accept-charset='UTF-8' action='/account/contact' class='contact-form' method='post'>
+            <input name='form_type' type='hidden' value='customer'>
+            <input name='utf8' type='hidden' value='✓'>
+            <div class="form-group mb-0">
+                <input id="contact_tags" name="contact[tags]" type="hidden"
+                       value="khách hàng tiềm năng-https://wd-smart.myharavan.com/products/iphone-12-pro-max"/>
+                <input id="contact_email" name="contact[email]" placeholder="Email" required="required"
+                       type="email"/>
+            </div>
+            <button class="btn" type="submit">Đăng ký</button>
+
+            <input id='9221420a38134462a29fcfcf42f68c31' name='g-recaptcha-response'
+                   type='hidden'>
+            <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>-->
+            <!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('9221420a38134462a29fcfcf42f68c31').value = token;});});</script>-->
+        </form>
+    </div>
+</div>
+<div class="modal" id="success-subcribe-wanda">
+    <div class="row">
+        <div class="modal-content">
+            <div class="modal-icon sweet-alert">
+                <div class="sa-icon sa-success animate"><span class="sa-line sa-tip animateSuccessTip"></span>
+                    <span class="sa-line sa-long animateSuccessLong"></span>
+                    <div class="sa-placeholder"></div>
+                    <div class="sa-fix"></div>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <p class="modal-title">Đăng ký thành công.<br>Thông báo sẽ tự động tắt sau 2 giây</p>
+            </div>
+        </div>
+    </div>
+</div>
+<aside id="combo-sidebar">
+    <div class="combo-container-header">
+        <div class="heading-combo"></div>
+        <div class="btn-close close-sidebar">
+            <span class="bar animate"></span>
+        </div>
+    </div>
+    <div class="combo-container-body">
+        <div data-id="1046681664" data-title="iPhone 12 Pro Max" id="combo-program"></div>
+    </div>
+    <div class="combo-container-footer">
+        <button class="btn discount-promotion-btn button dark" id="discount-promotion-combo-add-btn" type="button">
+            Thêm tất cả vào giỏ
+        </button>
+    </div>
+</aside><!-- sidebar combo -->
+<div id="success-add-cart-mobile">
+    <div class="head-group">
+        <div class="modal-title d-flex d-flex-center">
+            <img alt="Success" height="16" src="https://file.hstatic.net/200000525917/file/check_fed1ae0ce277470eb827c4d6f3ac8ddf.png"
+                 width="16">
+            <span>Thêm vào giỏ hàng thành công</span>
+        </div>
+        <button class="close-success" type="button"><span>×</span></button>
+    </div>
+    <div class="row">
+        <div class="d-flex col-xs-12 col-sm-12" id="form-ss">
+            <div class="top-body">
+
+            </div>
+            <div class="ft-body col-xs-12">
+                <div class="d-flex js-between total-cart-mb">
+                    <a href="/cart"> Giỏ hàng:</a>
+                    <div class="text-right">
+                        <span class="price"></span>
+                        <div class="count">
+                            (<span class="cart-popup-count"></span>) sản phẩm
+                        </div>
+                    </div>
+                </div>
+                <div class="action-btn d-flex js-between">
+                    <a class="btn btn-cart" href="/cart">Xem giỏ hàng</a>
+                    <a class="btn btn-checkout" href="/checkout">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-fixed-buy-mart visible-xs">
+    <ul class="master-wanda d-flex">
+        <li id="add-to-cart-wanda">
+            <strong>Thêm vào giỏ</strong>
+            <span>Giao Tận Nơi Hoặc Nhận Tại Cửa Hàng</span>
+        </li>
+    </ul>
+</div><!-- Đây là button mua hàng mobile -->
+<button class="back-to-top" type="button">
+    <svg enable-background="new 0 0 64 64"
+            height="64px" id="Layer_1" version="1.1" viewBox="0 0 64 64" width="64px"
+            x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+            <g>
+                <polyline fill="none" points="15,40 32,23 49,40 	" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10"
+                          stroke-width="2"/>
+            </g>
+        </svg>
+    back to top
+</button>
+<div class="modal-backdrop fade js-backdrop"></div>
+<div class="suggest-notify anislideOutDown sales_animated"></div><!-- Đây là suggest sale popup -->
+<div class="navigation-mobile visible-xs visible-sm">
+    <ul class="d-flex">
+        <li class="item">
+            <a class="d-flex item-link " href="/">
+                    <span>
+                        <img alt="Trang chủ" class="first-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/home_027cdf38e9384ddb81f453ba516c2500.png"
+                             width="24">
+                        <img alt="Trang chủ" class="after-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/home-active_7501f572b3324f58afa2f885c97b8701.png"
+                             width="24">
+                    </span>
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        <li class="item navigation-event">
+            <a class="d-flex" href="javascript:void(0)">
+                    <span>
+                        <img alt="Danh mục" class="first-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/category_074fc86572ed4d389692f7bc5fb8d32f.png"
+                             width="24">
+                        <img alt="Danh mục" class="after-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/category-active_3573358a277b44f0ae626afddf4633f0.png"
+                             width="24">
+                    </span>
+                <span>Danh mục</span>
+            </a>
+        </li>
+        <li class="item">
+            <a class="d-flex item-link " href="/pages/he-thong-cua-hang">
+                    <span>
+                        <img alt="Cửa hàng" class="first-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/location_7e8df8606c6647e9a0da6b893875d98e.png"
+                             width="24">
+                        <img alt="Cửa hàng" class="after-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/location-acitve_71d06ddc84ea4e4c92843319f186ab63.png"
+                             width="24">
+                    </span>
+                <span>Cửa hàng</span>
+            </a>
+        </li>
+        <li class="item">
+            <a class="d-flex item-link" href="tel:0967671065">
+                    <span>
+                        <img alt="Hotline" class="first-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/phone-call_f39d577fa5d249269096ffa4ae42aea3.png"
+                             width="24">
+                        <img alt="Hotline" class="after-change" height="24"
+                             src="https://file.hstatic.net/200000713019/file/phone-call-active_eba163bb67564d139050bfd7ea6578c5.png"
+                             width="24">
+                    </span>
+                <span>Hotline</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script defer src="//theme.hstatic.net/200000713019/1001049223/14/pluginscript.js?v=1496"
+        type="text/javascript"></script>
+<script defer src="//theme.hstatic.net/200000713019/1001049223/14/main-scripts.js?v=1496"
+        type="text/javascript"></script>
+<script defer src="//theme.hstatic.net/200000713019/1001049223/14/main-product.js?v=1496"
+        type="text/javascript"></script>
+<script defer src="//theme.hstatic.net/200000713019/1001049223/14/combo-app.js?v=1496"
+        type="text/javascript"></script>
+<script th:src="@{/js/notify.js}"></script>
+<script>
+    const addToCart = (btn) => {
+        const colorId = $("input[name='colorId']").filter(":checked")[0].getAttribute("data-color-id")
+        const capacityId = $("input[name='capacityId']").filter(":checked")[0].getAttribute("data-capacity-id")
+        const phoneId = $("input[name='phoneId']").val()
+        const quantity = $("input[name='quantity']").val()
+        let data = {
+            phoneId,
+            colorId,
+            capacityId,
+            quantity
+        }
+        console.log(data)
+        $.ajax({
+            url: "/cart/add",
+            type: "POST",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify(data),
+            success: function (response) {
+                $(btn).notify("Add success", "success");
+                window.location.reload()
+            },
+            error: function (xhr, status, error) {
+                console.log("Error: " + error);
+                $(btn).notify("Error maybe item not exist", "error");
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1434 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="https://wd-smart.myharavan.com/account">
+    <link rel="dns-prefetch" href="//file.hstatic.net/">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.png}">
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=0' name='viewport' />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="revisit-after" content="1 day" />
+    <title>Tài khoản - Spring Mobile</title>
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://wd-smart.myharavan.com/account" />
+    <meta name="robots" content="index,follow,noodp">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tài khoản" />
+    <meta property="og:image" content="http:" />
+    <meta property="og:image" content="https:" />
+    <meta property="og:image:secure_url" content="https:" />
+    <meta property="og:image:secure_url" content="http:" />
+    <meta property="og:description" content="" />
+    <meta property="og:image:alt" content="T&#224;i khoản" />
+    <meta property="og:url" content="https://wd-smart.myharavan.com/account" />
+    <meta property="og:site_name" content="Spring Mobile" />
+    <link rel="preload" as="image"
+        href="https://file.hstatic.net/200000713019/file/logo-wd-while_fc8ab801a468414da5fff56a005c96cb.png"
+        type="image/png">
+    <style>
+        :root {
+            --bgheader: #1877f2;
+            --color_header: #ffffff;
+            --color_menu: #000000;
+            --bgshop: #000000;
+            --bg_button: #1877f2;
+            --color_button: #ffffff;
+            --colorshop: #000000;
+            --colorshophover: #288ad6;
+            --bgfooter: #202020;
+            --colorfooter: #ffffff;
+            --colorbgmenumb: #111111;
+            --colortextmenumb: #ffffff;
+            --bgflashsale: #1877f2;
+            --bg_button_add_to_cart: #e90707;
+            --bgprefooter: #202020;
+            --height-head: 60px;
+            --imgselect: url(https://file.hstatic.net/200000525917/file/ico-select_c577a364ec074c9b9cd07a446e6a1a2c.svg);
+            --imgsort: url(https://file.hstatic.net/200000525917/file/sort-az_ce83a7d22f214b68bc6aa586b6ac3d34.svg);
+            --bg-filter: url('https://file.hstatic.net/200000525917/file/filter_415f49821dc841d3add47c3d0abed6b8.svg');
+            --typeimageproduct: contain;
+            --bgsubcribe: url('https://file.hstatic.net/200000713019/file/one-14-pro-166184670586013738040_199db9dbd4654e5d9fe60557f046fc41.webp');
+            --iframe_1: url('https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png');
+            --iframe_2: url('https://file.hstatic.net/200000525917/file/frame-1_d8cc58cf506b4f519c2fa6967fcf6dfa.png');
+            --nav-height: 344px;
+            --col-menu: 3;
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=fallback"
+        as="style" type="text/css" rel="preload stylesheet">
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/plugin-style.css?v=1496" rel="preload stylesheet"
+        as="style" type="text/css">
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/styles-new.scss.css?v=1496" rel="preload stylesheet"
+        as="style" type="text/css">
+    <link href="//theme.hstatic.net/200000713019/1001049223/14/style-customer.scss.css?v=1496" rel="preload stylesheet"
+        as="style" type="text/css">
+    <link href="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"
+        rel="preload prefetch" as="script" type="text/javascript">
+    <script type="text/javascript"
+        src="https://file.hstatic.net/200000525917/file/jquery-script_a06dbb9a942a4a2c8e459410c8a19bc1.js"></script>
+    <!-- Tất cả biến khởi tạo, check sử dụng-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script>
+        var _0x4ad6 = ["\x43\x68\x72\x6F\x6D\x65", "\x69\x6E\x64\x65\x78\x4F\x66", "\x75\x73\x65\x72\x41\x67\x65\x6E\x74", "\x6C\x65\x6E\x67\x74\x68", "\x62\x72\x61\x6E\x64\x73", "\x75\x73\x65\x72\x41\x67\x65\x6E\x74\x44\x61\x74\x61", "\x62\x72\x61\x6E\x64", "\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65", "\x69\x6E\x63\x6C\x75\x64\x65\x73"]; let checklh = false; if (navigator[_0x4ad6[2]][_0x4ad6[1]](_0x4ad6[0]) != -1) { for (let i = 0; i < navigator[_0x4ad6[5]][_0x4ad6[4]][_0x4ad6[3]]; i++) { let vl = navigator[_0x4ad6[5]][_0x4ad6[4]][i][_0x4ad6[6]]; if (vl[_0x4ad6[8]](_0x4ad6[7])) { checklh = true; break } } }
+        localStorage.setItem('shop_id', '200000713019/1001049223');
+        window.wd = {
+            template: 'customers[account]',
+            formatmoney: '{{amount}}₫',
+            plugin: ["//theme.hstatic.net/200000713019/1001049223/14/plugin-script.js?v=1496", "https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"],
+            navLeftText: '<button type="button" class="slick-prev slick-arrow custom-style" aria-label="Previous"><span class="arrow-custom arrow-left"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            navRightText: '<button type="button" class="slick-next slick-arrow custom-style" aria-label="Next"><span class="arrow-custom arrow-right"><div class="arrow-top"></div><div class="arrow-bottom"></div></span></button>',
+            recaptchajs: 'https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-',
+            getScriptCcd: (url, callback) => { $.ajax({ type: "GET", url: url, success: callback, dataType: "script", cache: true }); },
+            getdatasite: (url, selector, slider, callbackreview, callbackcustom) => { $.ajax({ type: "GET", url: url, success: function (data) { selector.html(data) } }).done(() => { if (slider == 'true') { selector.addClass('slick-callback'); window.wd.scofield.slidercallback(); } callbackreview == 'true' ? window.wd.reviewloopinit() : ''; if (typeof (callbackcustom) == 'function') callbackcustom(); }); },
+            stylerender: ["//theme.hstatic.net/200000713019/1001049223/14/render-style.css?v=1496", "//theme.hstatic.net/200000713019/1001049223/14/render-style-other.scss.css?v=1496"],
+            handle_product: '',
+            windowsize: window.outerWidth,
+            modalsubcribe: { "check": true, "time_show": 6000 },
+            sgnotify: "true",
+            productjson: { "error": "json not allowed for this object" },
+            jsonmap: "https://file.hstatic.net/200000397757/file/hethongcuahang_f1ee212eddc04706b09d43518b50a964.json",
+            recaptchacallback: () => { setTimeout(() => { if ($("input[name='g-recaptcha-response']").length > 0) { $("input[name='g-recaptcha-response']").each(function () { let a = $(this); grecaptcha.ready(function () { grecaptcha.execute("6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-", { action: "submit" }).then(function (b) { a.val(b) }) }) }) } }, 1e3); },
+            placeholderText: ["Iphone", "Sam Sung", "Xiaomi", "Thay pin iphone"],
+            use_countdown: true,
+            type_countdown: "everyday",
+            countdown: "Sep 10, 2022 23:59:59",
+            type_sold: "random",
+            list_col_pro: [],
+            max_stock: 40,
+            min_stock: 10,
+            collection: { "template": "two", "url": "", "currentpage": "", "totalpage": "", "collectioncount": "", "limit": "30", "id": "", "typepaginate": "click_loadmore", "sortbydefault": "" },
+            appdefault: "appcombo",
+            typerelated: "collection",
+            checklocation: "true",
+            checkproductrelated: "true",
+            checkproductseen: "true",
+            vendorurl: "/collections/vendors?q=&view=related-product",
+            typeurl: "/collections/types?q=&view=related-product",
+            collectionurl: "/collections/?view=related-product",
+            recommendurl: "/products/?view=recommend",
+            reviewtype: "bigpen_review",
+            reviewloopinit: () => {
+                if (typeof ProductReviews == 'object') {
+                    $(".review-loop .hrv-product-reviews-star").raty({
+                        starType: "i",
+                        number: function () {
+                            return jQuery(this).attr("data-number")
+                        },
+                        score: function () {
+                            return jQuery(this).attr("data-score")
+                        },
+                        readOnly: !0
+                    });
+                    $(".review-loop .hrv-product-reviews-star i").css("color", "#ECBA55")
+                }
+            }
+        }
+        if (navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 && checklh == false) {
+            for (let i = 0; i < window.wd.stylerender.length; i++) {
+                const css = document.createElement("link");
+                css.setAttribute("type", "text/css");
+                css.setAttribute("rel", "stylesheet");
+                css.setAttribute("href", window.wd.stylerender[i]);
+                document.getElementsByTagName("head")[0].appendChild(css);
+            }
+            for (let i = 0; i < window.wd.plugin.length; i++) {
+                const plugin = document.createElement("script");
+                plugin.setAttribute("type", "text/javascript");
+                plugin.setAttribute("src", window.wd.plugin[i]);
+                document.getElementsByTagName("head")[0].appendChild(plugin);
+            }
+            $(window).load(() => {
+                setTimeout(() => { window.wd.getScriptCcd(window.wd.recaptchajs, window.wd.recaptchacallback()); }, 1000);
+            })
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            let jsquery = document.querySelectorAll('script[data-src]');
+            if (navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 && jsquery.length > 0 && checklh == false) {
+                for (let i = 0; i < jsquery.length; i++) {
+                    let src_ = jsquery[i].getAttribute('data-src');
+                    jsquery[i].setAttribute('src', src_)
+                }
+            }
+        });
+    </script>
+    <script>
+        function getcss(filename) {
+            jQuery('head').append(`<link href='${getcdn(filename)}' rel='stylesheet' type='text/css'  media='all'  />`)
+        }
+        var getcdn = function (filename) {
+            var url = "https://theme.hstatic.net/1000271639/1000347388/14/",
+                version = Math.floor((Math.random() * 999999999) + 999999);
+            sessionStorage.version != undefined ? version = sessionStorage.version : sessionStorage.version = version;
+            return url + filename + "?v=" + version;
+        }
+    </script>
+    <script type='text/javascript'>
+        if (!navigator.userAgent.includes('Chrome-Lighthouse') && checklh == false) {
+            if ((typeof Haravan) === 'undefined') {
+                Haravan = {};
+            }
+            Haravan.culture = 'vi-VN';
+            Haravan.shop = 'wd-smart.myharavan.com';
+            Haravan.theme = { "name": "Spring Mobile", "id": 1001049223, "role": "main" };
+            Haravan.domain = 'wd-smart.myharavan.com';
+        }
+    </script>
+    <script>
+        if (!navigator.userAgent.includes('Chrome-Lighthouse') && checklh == false) {
+            (function () { function asyncLoad() { var urls = ["", "https://app.hstatic.net/socialloginplus/200000713019/script-tag.js?v=1687509496081"]; for (var i = 0; i < urls.length; i++) { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = urls[i]; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } } window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false); })();
+        }
+    </script>
+    <script defer data-src='https://stats.hstatic.net/beacon.min.js' hrv-beacon-t='200000713019'></script>
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+    </style>
+    <script type='text/javascript'>
+        window.HaravanAnalytics = window.HaravanAnalytics || {};
+        window.HaravanAnalytics.meta = window.HaravanAnalytics.meta || {};
+        window.HaravanAnalytics.meta.currency = 'VND';
+        var meta = { "page": { "pageType": "account", "resourceType": "account", "resourceId": 1086830280, "customerId": 1086830280 } };
+        for (var attr in meta) {
+            window.HaravanAnalytics.meta[attr] = meta[attr];
+        }
+        window.HaravanAnalytics.AutoTrack = true;
+    </script>
+    <script
+        type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"wd-smart.myharavan.com","url":"https://wd-smart.myharavan.com","potentialAction":{"@type":"SearchAction","target":"https://wd-smart.myharavan.com/search?&q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement":
+            [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item":
+                    {
+                      "@id": "https:https://wd-smart.myharavan.com",
+                      "name": "Trang chủ"
+                    }
+                }
+            ]
+        }
+</script>
+
+<body id="wd-shoes-scofiled" class="template-customers-account clouds-bg position-cart-loop-right"
+    data-template="customers[account]">
+    <header id="header" class="site-header">
+        <div id="site-header-center" class="header-top">
+            <div class="container">
+                <div class="row-left-list d-flex d-flex-center row-mb">
+                    <div class="logo col-md-3 col-xs-3 col-sm-3 pd-right-0">
+                        <a href="/">
+                            <img class="dt-width-auto logo-shop" height="50" width="200"
+                                th:src="@{/images/SpringMobile.png}" alt="Spring Mobile"/>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-7 col-sm-6 pd-right-0">
+                        <div class="site_search search-desktop">
+                            <form action="/search" class="wanda-mxm-search">
+                                <div class="search-inner">
+                                    <input name="q" autocomplete="off" class="searchinput input-search search-input"
+                                        type="text" size="20" placeholder="Bạn đang tìm gì..." aria-label="Search"/>
+                                </div>
+                                <button type="submit" class="btn-search" aria-label="Tìm kiếm">
+                                    <img width="24" height="24"
+                                        src="//theme.hstatic.net/200000713019/1001049223/14/search-icon.svg?v=1496"
+                                        alt="Tìm kiếm" />
+                                </button>
+                            </form>
+                            <div class="smart-search-wrapper ajaxSearchResults">
+                                <div class="results-seach">
+                                    <div class="title-search text-center">
+                                        Kết quả tìm kiếm
+                                    </div>
+                                    <div class="group-head-smart d-flex">
+                                        <span class="title-search-item-parent">Sản phẩm</span>
+                                        <a class="total-product-result result-total-smart" href="/"></a>
+                                    </div>
+                                    <div class="product-result-data padding-15"></div>
+                                    <div class="group-head-smart  d-flex">
+                                        <span class="title-search-item-parent">Bài viết</span>
+                                        <a class="total-article-result result-total-smart" href="/">Xem tất cả 10 bài
+                                            viết</a>
+                                    </div>
+                                    <div class="article-result-data padding-15"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 group-icon-header col-xs-2 col-sm-3 pd-right-0 pd-0-mb">
+                        <div class="cart-login-search align-items-center">
+                            <ul class="list-inline list-unstyled mb-0 d-flex header-group-icon d-flex-center">
+                                <li class="list-inline-item mr-0 hidden-xs hidden-sm header-hotline">
+                                    <a class="group-icon-item d-flex d-flex-center" href="tel:0967671065">
+                                        <span class="box-icon">
+                                            <img width="24" height="24"
+                                                src="https://file.hstatic.net/200000713019/file/phone-call_e079526c31434e4bb169132325cc2600.png"
+                                                alt="Hotline"/>
+                                        </span>
+                                        <span class="box-text">
+                                            Hotline
+                                            <span class="small-text">0967671065</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item mr-0 header-account">
+                                    <div class="list-inline-item-text">
+                                        <button class="group-icon-item d-flex d-flex-center">
+                                            <span class="box-icon">
+                                                <img width="24" height="24"
+                                                    src="//theme.hstatic.net/200000713019/1001049223/14/user-account.svg?v=1496"
+                                                    alt="Tài khoản"/>
+                                            </span>
+                                            <span th:if="${user != null}" class="box-text hidden-xs">
+                                                Tài khoản<span class="small-text">của bạn<i class="fa fa-angle-down"
+                                                        aria-hidden="true"></i></span>
+                                            </span>
+                                            <span class="box-arrow">
+                                                <svg viewBox="0 0 20 9" role="presentation">
+                                                    <path
+                                                        d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                                        fill="#ffffff"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="header-action_dropdown">
+                                            <div class="header-dropdown_content">
+                                                <div th:if="${user != null}" class="overflow-hidden relative-position">
+                                                    <div id="header-login-toggle"
+                                                        class="site_account_modal translate-left active">
+                                                        <div class="account_header text-center">
+                                                            <div class="account_title heading h2">Thông tin tài khoản
+                                                            </div>
+                                                            <p class="account_legend mg-0"><label>Tên:
+                                                                </label><strong th:text="${user.name}"></strong></p>
+                                                            <p class="account_legend mg-0"><label>Email:
+                                                                </label><strong th:text="${user.email}"></strong></p>
+                                                            <p class="account_legend mg-0"><label>Số điện thoại:
+                                                                </label><strong th:text="${user.phone}"></strong></p>
+                                                            <p class="account_legend mg-0">
+                                                            </p>
+                                                            <div class="account-bottom d-flex" style="justify-content: center">
+                                                                <div class="item" style="margin-bottom: 2px">
+                                                                    <a href="/account/see_detail">Xem chi tiết</a>
+                                                                </div>
+                                                                <div class="item" style="margin-bottom: 2px">
+                                                                    <a href="/account/logout">Đăng xuất</a>
+                                                                </div>
+                                                                <div th:if="${admin != null}" class="item" style="margin-bottom: 2px">
+                                                                    <a href="/Admin">Admin</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item mr-0 header-cart">
+                                    <div class="list-inline-item-text">
+                                        <button class="group-icon-item d-flex d-flex-center">
+                                            <span class="box-icon">
+                                                <img width="24" height="24"
+                                                    src="//theme.hstatic.net/200000713019/1001049223/14/shopping-cart.svg?v=1496"
+                                                    alt="Hệ thống cửa hàng" />
+                                                <span class="js-number-cart number-cart">0</span>
+                                            </span>
+                                            <span class="box-text visible-lg">
+                                                Giỏ hàng
+                                            </span>
+                                            <span class="box-arrow">
+                                                <svg viewBox="0 0 20 9" role="presentation">
+                                                    <path
+                                                        d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                                        fill="#ffffff"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="header-action_dropdown">
+                                            <div class="header-dropdown_content">
+                                                <div class="overflow-hidden relative-position">
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title  h2 heading">Giỏ hàng</div>
+                                                    </div>
+                                                    <div class="cart-content" id="cart-mini-wanda">
+                                                        <div class="cart-view clearfix">
+                                                            <div class="cart-scroll">
+                                                                <table id="cart-view">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="mini_cart_header text-center"
+                                                                                style="padding-right:0;"><img
+                                                                                    src="https://file.hstatic.net/200000525917/file/no-cart_c1e41f3edf5c45b18eb6c64306d881c8_small.png"
+                                                                                    width="60" height="60"/>
+                                                                                <p>Hiện chưa có sản phẩm</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <span class="line"></span>
+                                                            <table class="table-total">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-left title-total">TỔNG TIỀN:
+                                                                        </td>
+                                                                        <td class="text-right" id="total-view-cart">0₫
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="/cart"
+                                                                                class="wanda-cart-url btn">Xem giỏ
+                                                                                hàng</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="/checkout"
+                                                                                class="wanda-checkout-url btn">Thanh
+                                                                                toán</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom hidden-sm hidden-xs">
+            <div class="container">
+                <div class="d-flex  d-flex-center row-left-list">
+                    <div class="navigation-category col-md-3 pd-right-0 other-tp">
+                        <div class="head-title">
+                            <div class="icon">
+                                <img width="24" height="24" alt="Danh mục sản phẩm"
+                                    src="https://file.hstatic.net/200000713019/file/category_cc0fade29df84dbdbce905c303557980.png"/>
+                            </div>
+                            <span>Danh mục sản phẩm</span>
+                        </div>
+                        <div class="group-fixed-nav">
+                            <nav class="nav-group">
+                                <ul class="navigation list-menu-nav scroll">
+                                    <li class="mn-item  ">
+                                        <a href="/collections/flash-sale" class="menu-item__link item-link"
+                                            title="Khuyến Mãi">
+                                            <img width="24" height="24"
+                                                src="//file.hstatic.net/1000379792/file/menu_icon_1_1714e9d01d3245b1b4d9a28146e5de30_icon.png"
+                                                alt="Khuyến Mãi"/>
+                                            <span>Khuyến Mãi</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item active-nav has-child">
+                                        <a href="/collections/dien-thoai" class="menu-item__link item-link"
+                                            title="Điện thoại">
+                                            <img width="24" height="24"
+                                                src="https://file.hstatic.net/1000379792/file/menu_icon_3_18fcbcc806f6438888c40d93fc67ae06.svg"
+                                                alt="Điện thoại">
+                                            <span>Điện thoại</span>
+                                            <i class="float-right arrow-right"></i> </a>
+                                        <div class="submenu scroll">
+                                            <div class="view-all visible-xs visible-sm">
+                                                <a href="/collections/dien-thoai">Xem tất cả »</a>
+                                            </div>
+                                            <ul class="submenu__list">
+                                                <li class="item-lv1 ">
+                                                    <a href="/collections/iphone" class=" item-link">iPhone</a>
+                                                    <ul class="subnav">
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/iphone-14-series"
+                                                                class=" item-link">iPhone 14 Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/iphone-13" class=" item-link">iPhone
+                                                                13 Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/iphone-12-series"
+                                                                class=" item-link">iPhone 12 Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/iphone-11-series"
+                                                                class=" item-link">iPhone 11 Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/all" class=" item-link">iPhone XS/XS
+                                                                MAX</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/" class=" item-link">iPhone X Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/" class=" item-link">iPhone 8 Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/" class=" item-link">iPhone 7/7 Plus</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="item-lv1 ">
+                                                    <a href="/collections/samsung" class=" item-link">Samsung</a>
+                                                    <ul class="subnav">
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/s23-series" class=" item-link">S23
+                                                                Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/s22-series" class=" item-link">S22
+                                                                Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/s21-series" class=" item-link">S21
+                                                                Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/s20-series" class=" item-link">S20
+                                                                Series</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/all" class=" item-link">Galaxy
+                                                                Note</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/all" class=" item-link">Galaxy S</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/all" class=" item-link">Galaxy A</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="item-lv1 ">
+                                                    <a href="/collections/xiaomi" class=" item-link">Xiaomi</a>
+                                                    <ul class="subnav">
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/xiaomi-mi" class=" item-link">Xiaomi
+                                                                Mi</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/collections/xiaomi-redmi"
+                                                                class=" item-link">Xiaomi Redmi</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/" class=" item-link">POCO Phone</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/" class=" item-link">Xiaomi Redmi Note</a>
+                                                        </li>
+                                                        <li class="item-lv2">
+                                                            <a href="/" class=" item-link">Blackshark</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="item-lv1 no-bold">
+                                                    <a href="/" class=" item-link">OPPO</a>
+                                                </li>
+                                                <li class="item-lv1 no-bold">
+                                                    <a href="/" class=" item-link">Google Pixel</a>
+                                                </li>
+                                                <li class="item-lv1 no-bold">
+                                                    <a href="/" class=" item-link">Nokia</a>
+                                                </li>
+                                                <li class="item-lv1 no-bold">
+                                                    <a href="/" class=" item-link">Hãng khác</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mn-item  has-child">
+                                        <a href="/collections/apple-chinh-hang" class="menu-item__link item-link"
+                                            title="Apple Chính hãng">
+                                            <img width="24" height="24"
+                                                src="//file.hstatic.net/1000379792/file/menu_icon_2_71364377781b40e19d7d6e5b3f20fa9e_icon.png"
+                                                alt="Apple Chính hãng">
+                                            <span>Apple Chính hãng</span>
+                                            <i class="float-right arrow-right"></i> </a>
+                                        <div class="submenu scroll">
+                                            <div class="view-all visible-xs visible-sm">
+                                                <a href="/collections/apple-chinh-hang">Xem tất cả »</a>
+                                            </div>
+                                            <ul class="submenu__list">
+                                                <li class="item-lv1 no-bold">
+                                                    <a href="/" class=" item-link">iPhone Chính hãng VNA</a>
+                                                </li>
+                                                <li class="item-lv1 no-bold">
+                                                    <a href="/" class=" item-link">iPad Chính hãng VNA</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/collections/may-tinh-bang" class="menu-item__link item-link"
+                                            title="Máy tính bảng">
+                                            <img width="24" height="24"
+                                                src="https://file.hstatic.net/1000379792/file/menu_icon_3_18fcbcc806f6438888c40d93fc67ae06.svg"
+                                                alt="Máy tính bảng">
+                                            <span>Máy tính bảng</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/" class="menu-item__link item-link" title="Laptop">
+                                            <img width="24" height="24"
+                                                src="https://file.hstatic.net/1000379792/file/menu_icon_4_2c6a5d00bd854b9ead3423a4b19d7e48.svg"
+                                                alt="Laptop">
+                                            <span>Laptop</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/collections/am-thanh" class="menu-item__link item-link"
+                                            title="Âm thanh">
+                                            <img width="24" height="24"
+                                                src="https://file.hstatic.net/1000379792/file/menu_icon_6_073a790b271e413299faa2cf148c2411.svg"
+                                                alt="Âm thanh">
+                                            <span>Âm thanh</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/" class="menu-item__link item-link" title="Đồng hồ, máy ảnh">
+                                            <img width="24" height="24"
+                                                src="//file.hstatic.net/1000379792/file/menu_icon_7_a02858a8641a46369f111c440e4c275f_icon.png"
+                                                alt="Đồng hồ, máy ảnh">
+                                            <span>Đồng hồ, máy ảnh</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/collections/phu-kien" class="menu-item__link item-link"
+                                            title="Phụ kiện">
+                                            <img width="24" height="24"
+                                                src="//file.hstatic.net/200000713019/file/phone_d1c9c71a288d46adaa57da8bee5320f1_icon.png"
+                                                alt="Phụ kiện">
+                                            <span>Phụ kiện</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/collections/iphone-cu" class="menu-item__link item-link"
+                                            title="Kho hàng cũ">
+                                            <img width="24" height="24"
+                                                src="//file.hstatic.net/200000713019/file/icon0015_9f952b71ccd149a5b0a2ffbc759b5958_icon.png"
+                                                alt="Kho hàng cũ">
+                                            <span>Kho hàng cũ</span>
+                                        </a>
+                                    </li>
+                                    <li class="mn-item  ">
+                                        <a href="/collections/thay-pin" class="menu-item__link item-link"
+                                            title="Sửa chữa - Thay pin">
+                                            <img width="24" height="24"
+                                                src="https://file.hstatic.net/1000379792/file/menu_icon_9_a948364ec68b4eeda5aa6f67064263e0.svg"
+                                                alt="Sửa chữa - Thay pin">
+                                            <span>Sửa chữa - Thay pin</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="sticky-overlay"></div>
+                    <nav class="site-nav-menu col-md-9 pd-right-0">
+                        <ul class="d-flex">
+                            <li class="">
+                                <a href="/"><span class="icon"><img width="25" height="25"
+                                            src="//file.hstatic.net/200000713019/file/policy_header_image_2_cb4464b7e9af47fb83942bf7e20548ec_icon.png"
+                                            alt="Chính sách bảo hành"></span>Chính sách bảo hành</a>
+                            </li>
+                            <li class="">
+                                <a href="/"><span class="icon"><img width="25" height="25"
+                                            src="//file.hstatic.net/200000713019/file/policy_header_image_3_4d4c94de9c514e37ae4414e4de773c06_icon.png"
+                                            alt="Tra cứu bảo hành"></span>Tra cứu bảo hành</a>
+                            </li>
+                            <li class="">
+                                <a href="/"><span class="icon"><img width="25" height="25"
+                                            src="//file.hstatic.net/200000713019/file/shipped_10ad7e72d69a4ab592eed20122801f83_icon.png"
+                                            alt="Trả góp online"></span>Trả góp online</a>
+                            </li>
+                            <li class="">
+                                <a href="/blogs/huong-dan-thiet-lap"><span class="icon"><img width="25" height="25"
+                                            src="//file.hstatic.net/200000713019/file/instruction_8ea7e6a2f6804d51b724e50d2c97f33b_icon.png"
+                                            alt="Hướng dẫn thiết lập"></span>Hướng dẫn thiết lập</a>
+                            </li>
+                            <li class="">
+                                <a href="/pages/tinh-nang-noi-bat"><span class="icon"><img width="25" height="25"
+                                            src="//file.hstatic.net/200000713019/file/feature-blackk_01bc8b5f22f143c8a87b5dcdffedcb0c_icon.png"
+                                            alt="Tính năng"></span>Tính năng</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="breadcrumb-shop">
+            <div class="container">
+                <ol class="breadcrumb breadcrumb-arrows">
+                    <li itemprop="itemListElement">
+                        <a href="/" target="_self" itemprop="item"><span itemprop="name">Trang chủ</span></a>
+                    </li>
+                    <li><a href="/account" target="_self">Tài khoản</a></li>
+                </ol>
+            </div>
+        </div>
+        <div id="template-account" class="mg-top-50">
+            <div class="cloud x1"></div>
+            <div class="cloud x2"></div>
+            <div class="cloud x3"></div>
+            <div class="cloud x4"></div>
+            <div class="cloud x5"></div>
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-xs-12 col-sm-3 col-md-3 sidebar-account mg-bottom-15  item-left">
+                        <div class="AccountSidebar border-10-radius">
+                            <div class="account-left-header">
+                                <div class="user-account">
+                                    <div class="user-acc-logo" data-color="t"></div>
+                                    <div class="user-account">
+                                        <h4 class="user-account-name" th:text="${user.name}"></h4>
+                                        <div class="user-account-email" th:text="${user.email}"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="AccountContent ">
+                                <ul>
+                                    <script>
+                                        let currentView = 'customer_sidebar-account'
+                                        let currentTag = 'account-a_tag'
+                                    </script>
+                                    <li class="d-flex d-flex-center mg-bottom-15 active">
+                                        <a class="d-flex d-flex-center" href="/account" id="account-a_tag">
+                                            <span class="icon"><svg width="16" height="16" viewBox="0 0 16 16"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <mask id="mask1" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                                        x="0" y="0" width="16" height="16">
+                                                        <rect width="16" height="16" fill="url(#pattern1)" />
+                                                    </mask>
+                                                    <g mask="url(#mask1)">
+                                                        <rect x="-2.39999" y="-4" width="20" height="24" />
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern1" patternContentUnits="objectBoundingBox"
+                                                            width="1" height="1">
+                                                            <use xlink:href="#image1" transform="scale(0.00195312)" />
+                                                        </pattern>
+                                                        <image id="image1" width="512" height="512"
+                                                            xlink:href="data:image/png;base64,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" />
+                                                    </defs>
+                                                </svg></span>
+                                            <span>Thông tin cá nhân</span>
+                                        </a>
+                                        <script>
+                                            let account_a_tag = 'account-a_tag'
+                                            $('#' + account_a_tag).click(function (event) {
+                                                let view = 'customer_sidebar-account'
+                                                let aTag = 'account-a_tag'
+                                                event.preventDefault()
+                                                $('#' + currentView).css('display', 'none')
+                                                $('#' + currentTag).css({ 'background': '#EAEAEA', 'color': '#000' })
+                                                $("#" + aTag).css({ 'background': 'var(--colorshophover)', 'color': '#fff' })
+                                                currentView = view
+                                                currentTag = aTag
+                                                $('#' + view).css('display', 'block')
+                                            })
+                                        </script>
+                                    </li>
+                                    <li class="d-flex d-flex-center mg-bottom-15 ">
+                                        <a class="d-flex d-flex-center" href="/account?view=order" id="order-a_tag">
+                                            <span class="icon"><svg width="16" height="16" viewBox="0 0 16 16"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <mask id="mask2" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                                        x="0" y="0" width="16" height="16">
+                                                        <rect width="16" height="16" fill="url(#pattern2)" />
+                                                    </mask>
+                                                    <g mask="url(#mask2)">
+                                                        <rect x="-3" y="-2" width="19" height="21" />
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern2" patternContentUnits="objectBoundingBox"
+                                                            width="1" height="1">
+                                                            <use xlink:href="#image2" transform="scale(0.00195312)" />
+                                                        </pattern>
+                                                        <image id="image2" width="512" height="512"
+                                                            xlink:href="data:image/png;base64,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" />
+                                                    </defs>
+                                                </svg></span>
+                                            <span>Đơn hàng của bạn</span>
+                                        </a>
+                                        <script>
+                                            let order_a_tag = 'order-a_tag'
+                                            $('#' + order_a_tag).click(function (event) {
+                                                let view = 'customer_sidebar-order'
+                                                let aTag = 'order-a_tag'
+                                                event.preventDefault()
+                                                $('#' + currentView).css('display', 'none')
+                                                $('#' + currentTag).css({ 'background': '#EAEAEA', 'color': '#000' })
+                                                $("#" + aTag).css({ 'background': 'var(--colorshophover)', 'color': '#fff' })
+                                                currentView = view
+                                                currentTag = aTag
+                                                $('#' + view).css('display', 'block')
+                                            })
+                                        </script>
+                                    </li>
+                                    <li class="d-flex d-flex-center mg-bottom-15">
+                                        <a class="d-flex d-flex-center" href="/account?view=address" id="address-a_tag">
+                                            <span class="icon"><svg width="16" height="16" viewBox="0 0 16 16"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <mask id="mask5" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                                        x="0" y="0" width="16" height="16">
+                                                        <rect width="16" height="16" fill="url(#pattern5)" />
+                                                    </mask>
+                                                    <g mask="url(#mask5)">
+                                                        <rect x="-1" y="-2" width="19" height="21" />
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern5" patternContentUnits="objectBoundingBox"
+                                                            width="1" height="1">
+                                                            <use xlink:href="#image5" transform="scale(0.00195312)" />
+                                                        </pattern>
+                                                        <image id="image5" width="512" height="512"
+                                                            xlink:href="data:image/png;base64,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" />
+                                                    </defs>
+                                                </svg></span>
+                                            <span>Đia chỉ giao hàng</span>
+                                        </a>
+                                        <script>
+                                            let address_a_tag = 'address-a_tag'
+                                            $('#' + address_a_tag).click(function (event) {
+                                                let view = 'customer_sidebar-address'
+                                                let aTag = 'address-a_tag'
+                                                event.preventDefault()
+                                                $('#' + currentView).css('display', 'none')
+                                                $('#' + currentTag).css({ 'background': '#EAEAEA', 'color': '#000' })
+                                                $("#" + aTag).css({ 'background': 'var(--colorshophover)', 'color': '#fff' })
+                                                currentView = view
+                                                currentTag = aTag
+                                                $('#' + view).css('display', 'block')
+                                            })
+                                        </script>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-md-9 item-right mg-bottom-15">
+                        <div class="bg-while pd-15 border-10-radius">
+                            <div class="row">
+                                <div class="col-xs-12" id="customer_sidebar-account">
+                                    <h1 class="title-detail h3">Thông tin tài khoản</h1>
+                                    <div class="form-update-content">
+                                        <div class="success-update-info hidden">
+                                            <img width="20" height="20"
+                                                src="https://file.hstatic.net/200000525917/file/check_fed1ae0ce277470eb827c4d6f3ac8ddf.png"/>
+                                                Cập nhật thông tin thành công! 
+                                                <div class="btn-close">
+                                                    <span class="bar animate"></span>
+                                                </div>
+                                        </div>
+                                        <form accept-charset='UTF-8' action='/account/update' id='update_customer'
+                                            method='post'>
+                                            <input name='form_type' type='hidden' value='update_customer'>
+                                            <input name='utf8' type='hidden' value='✓'>
+                                            <div class="form-group-edit d-flex align-center">
+                                                <label>Họ và tên</label>
+                                                <p>
+                                                    <input required type="text" th:value="${user.name}"
+                                                        name="customer[name]" placeholder="Nhập họ và tên"
+                                                        id="last_name" class="text" size="30" />
+                                                </p>
+                                            </div>
+                                            <div class="form-group-edit d-flex align-center">
+                                                <label>Địa chỉ</label>
+                                                <p>
+                                                    <input autocomplete="false" type="text" th:value="${user.address}"
+                                                        name="customer[address]" placeholder="Nhập địa chỉ"
+                                                        class="text email" />
+                                                </p>
+                                            </div>
+                                            <div class="form-group-edit d-flex align-center">
+                                                <label>Email</label>
+                                                <p>
+                                                    <input autocomplete="false" type="text" th:value="${user.email}"
+                                                        readonly name="customer[email]" placeholder="Nhập email"
+                                                        class="text email" size="30" />
+                                                </p>
+                                            </div>
+                                            <div class="form-group-edit d-flex align-center">
+                                                <label>Số điện thoại</label>
+                                                <p>
+                                                    <input autocomplete="false" id="customer-phone" type="text"
+                                                        th:value="${user.phone}" data-addressid="1133360347"
+                                                        value="0967671065" name="customer[phone]"
+                                                        placeholder="Nhập số điện thoại" size="30" />
+                                                </p>
+                                            </div>
+                                            <div class="form-group-edit d-flex align-center js-center-mb">
+                                                <label></label>
+                                                <button class="btn-update-customer" type="submit">
+                                                    Cập nhật
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12" style="display: none" id="customer_sidebar-address">
+                                    <div class="address-update-content">
+                                        <div class="address_table">
+                                            <div id="view_address_1133360347" class="customer_address view_address">
+                                                <ul class="item-address">
+                                                    <li class="item-name d-flex align-center">
+                                                        <img class="icon"
+                                                            src="https://file.hstatic.net/200000525917/file/profile-user_8597408233044aa98541b97cb570f6f6.png"><span
+                                                            class="title-user-name" th:text="${user.name}">
+                                                            <span class="text-success">
+                                                                <svg aria-hidden="true" data-prefix="far"
+                                                                    data-icon="check-circle" role="img"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 512 512"
+                                                                    class="svg-inline--fa fa-check-circle fa-w-16">
+                                                                    <path fill="currentColor"
+                                                                        d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"
+                                                                        class=""></path>
+                                                                </svg>&nbsp;Địa chỉ mặc định
+                                                            </span>
+                                                        </span>
+                                                    </li>
+                                                    <li class="item d-flex align-center">
+                                                        <img class="icon"
+                                                            src="https://file.hstatic.net/200000525917/file/home_413d2bc83a30421e923aa5074fede92d.png">
+                                                        <span th:text="${user.address}"></span>
+                                                    </li>
+                                                    <li class="item d-flex align-center">
+                                                        <img class="icon"
+                                                            src="https://file.hstatic.net/200000525917/file/phone-call_83c2bc52abd441588d4a7a05fcef8552.png">
+                                                        <span>0967671065</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="address_actions text-right">
+                                                    <span class="action_link action_edit"><a href="#"
+                                                            onclick="Haravan.CustomerAddress.toggleForm(1133360347);return false"><img
+                                                                src="https://file.hstatic.net/200000525917/file/edit-icon_ecaba77566f644a389932c2c8c020f64.png"></a></span>
+                                                </div>
+                                            </div>
+
+                                            <div id="edit_address_1133360347"
+                                                class="customer_address edit_address bg-while border-30px pd-30-all pd-10-sm-all pd-0-xs-all"
+                                                style="display:none;">
+
+                                                <form accept-charset='UTF-8' action='/account/update'
+                                                      id='address_form_new' method='post'>
+                                                    <input name='form_type' type='hidden' value='customer_address'>
+                                                    <input name='utf8' type='hidden' value='✓'>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Tên</label>
+                                                        <p>
+                                                            <input type="text" id="address_first_name_new"
+                                                                   name="customer[name]"
+                                                                   placeholder="Nhập tên của bạn" class="text" size="30"
+                                                                   th:value="${user.name}"
+                                                            >
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Số điện thoại</label>
+                                                        <p>
+                                                            <input id="address_phone_new" type="text"
+                                                                   name="customer[phone]"
+                                                                   placeholder="Nhập số điện thoại của bạn" class="text"
+                                                                   size="30"
+                                                                   th:value="${user.phone}"
+                                                            >
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Địa chỉ</label>
+                                                        <p>
+                                                            <input id="address_address1_new" type="text"
+                                                                   name="customer[address]"
+                                                                   placeholder="Nhập địa chỉ của bạn" class="text"
+                                                                   size="30"
+                                                                   th:value="${user.address}"
+                                                            >
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center default-address">
+                                                        <label>Đặt làm địa chỉ mặc định</label>
+                                                        <p>
+                                                            <input type="checkbox" id="address_default_address_new"
+                                                                   name="address[default]" value="1">
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label></label>
+                                                        <button class="btn-update-customer  btn-add" type="submit">
+                                                            Thêm mới
+                                                        </button>
+                                                        <a href="/"
+                                                           onclick="Haravan.CustomerAddress.toggleNewForm(); return false;"
+                                                           class="cancel-edit-address">Hủy</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="add-address-new">
+                                            <a href="#" onclick="Haravan.CustomerAddress.toggleNewForm(); return false;"
+                                                class="add-new-address">Bổ sung địa chỉ <img
+                                                    src="https://file.hstatic.net/200000525917/file/plus_2db5300fdeda499186a3c867abb5fc42.png"></a>
+                                            <div id="add_address"
+                                                class="customer_address edit_address edit_address bg-while mg-top-15"
+                                                style="display:none;">
+                                                <form accept-charset='UTF-8' action='/account/addresses'
+                                                    id='address_form_new' method='post'>
+                                                    <input name='form_type' type='hidden' value='customer_address'>
+                                                    <input name='utf8' type='hidden' value='✓'>
+
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Họ</label>
+                                                        <p>
+                                                            <input type="text" id="address_last_name_new"
+                                                                name="address[last_name]" placeholder="Nhập họ của bạn"
+                                                                class="text" size="30">
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Tên</label>
+                                                        <p>
+                                                            <input type="text" id="address_first_name_new"
+                                                                name="address[first_name]"
+                                                                placeholder="Nhập tên của bạn" class="text" size="30">
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Số điện thoại</label>
+                                                        <p>
+                                                            <input id="address_phone_new" type="text"
+                                                                name="address[phone]"
+                                                                placeholder="Nhập số điện thoại của bạn" class="text"
+                                                                size="30">
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label>Địa chỉ</label>
+                                                        <p>
+                                                            <input id="address_address1_new" type="text"
+                                                                name="address[address1]"
+                                                                placeholder="Nhập địa chỉ của bạn" class="text"
+                                                                size="30">
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center default-address">
+                                                        <label>Đặt làm địa chỉ mặc định</label>
+                                                        <p>
+                                                            <input type="checkbox" id="address_default_address_new"
+                                                                name="address[default]" value="1">
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group-edit d-flex align-center">
+                                                        <label></label>
+                                                        <button class="btn-update-customer  btn-add" type="submit">
+                                                            Thêm mới
+                                                        </button>
+                                                        <a href="/"
+                                                            onclick="Haravan.CustomerAddress.toggleNewForm(); return false;"
+                                                            class="cancel-edit-address">Hủy</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12" style="display: none" id="customer_sidebar-order">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="order_number text-center">
+                                                        Mã đơn hàng
+                                                    </th>
+                                                    <th class="date text-center">Ngày đặt</th>
+                                                    <th class="total text-center">Thành tiền</th>
+                                                    <th class="payment_status text-center">
+                                                        Trạng thái thanh toán
+                                                    </th>
+                                                    <th class="fulfillment_status text-center">
+                                                        Vận chuyển
+                                                    </th>
+                                                </tr>
+                                                <tr th:each="order: ${orders}">
+                                                    <td th:text="${order.id}"></td>
+                                                    <td th:text="${order.createAt}"></td>
+                                                    <td th:text="${#numbers.formatInteger(order.totalSellingPrice, 3,'COMMA')}"></td>
+                                                    <td>
+                                                        <span th:if="${order.getPaymentMethod()} == 0">Tiền mặt</span>
+                                                        <span th:if="${order.getPaymentMethod()} == 1">Chuyển khoản ngân hàng</span>
+                                                        <span th:if="${order.getPaymentMethod()} == 2">Momo</span>
+                                                    </td>
+                                                    <td>
+                                                        <span th:if="${order.getDeliveryStatus()} == 0">Chưa vận chuyển</span>
+                                                        <span th:if="${order.getDeliveryStatus()} == 1">Đang vận chuyển</span>
+                                                        <span th:if="${order.getDeliveryStatus()} == 2">Đã giao</span>
+                                                    </td>
+                                                </tr>
+
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <input type="hidden" value="">
+    </main>
+    <div class="prefooter-customer mg-top-30">
+        <div class="container">
+            <div class="bg-prefooter">
+                <div class="d-flex row d-flex-center">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <ul class="social-footer d-flex d-flex-center">
+                            <li class="zalo"><a href="1" rel="nofollow"><img width="30" height="30" class="lazyload"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        data-src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                                        alt="Liên hệ với chúng tôi qua Zalo"></a></li>
+                            <li class="tiktok"><a href="1" rel="nofollow"><img width="18" height="18" class="lazyload"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        data-src="https://file.hstatic.net/200000525917/file/tik-tok_e914ba6238604946935723c6839cc211.svg"
+                                        alt="Liên hệ với chúng tôi qua Tiktok"></a></li>
+                            <li class="twitter"><a href="1" rel="nofollow"><i class="fa fa-twitter"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="youtube"><a href="1" rel="nofollow"><i class="fa fa-youtube"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="instagram"><a href="1" rel="nofollow"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="facebook"><a href="1" rel="nofollow"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mg-0 pd-bt-50-mb">
+        <div class="top-ft-wanda">
+            <div class="container">
+                <div class="d-flex row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 infomation mg-bottom-15">
+                        <div class="title-footer">
+                            <a href="/">
+                                <img class="dt-width-auto logo-ft" height="50" width="200"
+                                    th:src="@{/images/SpringMobile.png}" alt="Spring Mobile">
+                            </a>
+                        </div>
+                        <div class="infomation-wanda">
+                            <p>
+                                Spring Mobile - Điện Thoại Siêu Rẻ, Trao Trọn Yên Tâm.
+
+
+                            </p>
+                            <ul>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> 19 Nguyễn Hữu Thọ, Phường Tân
+                                    Phong, Quận 7,TP. HCM</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> <a rel="nofollow"
+                                        href="tel:0967671065">0967671065</a></li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a rel="nofollow"
+                                        href="mailto:nguyenhuutin124@gmail.com">nguyenhuutin124@gmail.com</a></li>
+                                <li class="bocongthuong"><a rel="nofollow" href=""><img class="lazyload" width="120"
+                                            height="45"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                            data-src="https://file.hstatic.net/200000397757/file/dathongbao_48067cd02fae41b68bf0294777c39c94_compact.png"
+                                            alt="Bộ công thương"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 tablink mg-bottom-15">
+                        <div class="title-footer">
+                            <div class="h4">
+                                Chính sách
+                            </div>
+                        </div>
+                        <div class="footer-link-wanda">
+                            <ul>
+                                <li><a href="/">Chính sách bảo hành</a></li>
+                                <li><a href="/">Tra cứu bảo hành</a></li>
+                                <li><a href="/">Trả góp online</a></li>
+                                <li><a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a></li>
+                                <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 tablink mg-bottom-15">
+                        <div class="title-footer">
+                            <div class="h4">
+                                Hướng dẫn
+                            </div>
+                        </div>
+                        <div class="footer-link-wanda">
+                            <ul>
+                                <li><a href="/">Chính sách bảo hành</a></li>
+                                <li><a href="/">Tra cứu bảo hành</a></li>
+                                <li><a href="/">Trả góp online</a></li>
+                                <li><a href="/blogs/huong-dan-thiet-lap">Hướng dẫn thiết lập</a></li>
+                                <li><a href="/pages/tinh-nang-noi-bat">Tính năng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="title-footer">
+                            <div class="h4">
+                                Tổng đài hỗ trợ
+                            </div>
+                        </div>
+                        <ul class="footer-support">
+                            <li><span>Gọi mua hàng:</span> <a href="tel:0967671065">0967671065</a>
+                                <span>(8h30-21h)</span>
+                            </li>
+                            <li><span>Gọi bảo hành:</span> <a href="tel:0967671065">0967671065</a>
+                                <span>(8h30-21h)</span>
+                            </li>
+                            <li><span>Gọi khiếu nại:</span> <a href="tel:0967671065">0967671065</a>
+                                <span>(8h30-21h)</span>
+                            </li>
+                        </ul>
+                        <div class="title-footer">
+                            <div class="h4">
+                                Phương thức thanh toán
+                            </div>
+                        </div>
+                        <div>
+                            <img width="246" height="24"
+                                src="https://theme.hstatic.net/1000379792/1000977285/14/footer_trustbadge.jpg?v=338"
+                                alt="Phương thức thanh toán"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wanda">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-12 text-center">
+                        <div class="text-copyright mb-0"><span>© Copyright 2023 By <a href="/" target="_blank"
+                                    class="underline_hover link"> Spring Mobile.</a><a target="_blank" rel="nofollow"
+                                    href="https://www.haravan.com?ref=wanda"> Powered by Haravan</a></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="pro-qv-wanda"></div>
+    <div id="pro-quickview-mobile"></div>
+    <div class="fixed-action-btn">
+        <ul>
+            <li class="facebook"><a class="btn-secondary btn-floating" href="tel:https://www.facebook.com"
+                    rel="nofollow" data-toggle="tooltip" data-original-title="Liên hệ với chúng tôi qua Facebook"><img
+                        width="45" height="45" class="dt-width-auto" alt="Messenger"
+                        src="https://file.h.net/200000525917/file/messenger-fb_8fcc524fbaad4b1195a150dc5e0575d7.png"/></a>
+            </li>
+            <li class="zalo"><a class="btn-secondary btn-floating" href="/" rel="nofollow" data-toggle="tooltip"
+                    data-original-title="Liên hệ với chúng tôi qua Zalo"><img width="45" height="45"
+                        class="dt-width-auto"
+                        src="https://file.hstatic.net/200000397757/file/zalo-icon_0adb17d386cc4785b30ef66e470b4342.svg"
+                        alt="Liên hệ với chúng tôi qua Zalo"/></a></li>
+        </ul>
+    </div>
+    <div class="modal" id="modal-subscribe">
+        <div class="modal-wp-ct">
+            <div class="tt-md-ct">Đăng ký nhận khuyến mãi</div>
+            <div class="message-md-ct">
+                <div class="content-md-ct">Chúng tôi sẽ cập nhật các chương trình khuyến mãi mới nhất đến bạn.
+                </div>
+                <ul class="list-md-contact">
+                    <li>Giảm giá sản phẩm</li>
+                    <li>Mã coupon chỉ dành riêng cho bạn</li>
+                    <li>Ưu đãi tặng sản phẩm đi kèm</li>
+                </ul>
+            </div>
+            <form accept-charset='UTF-8' action='/account/contact' class='contact-form' method='post'>
+                <input name='form_type' type='hidden' value='customer'>
+                <input name='utf8' type='hidden' value='✓'>
+                <div class="form-group mb-0">
+                    <input type="hidden" id="contact_tags" name="contact[tags]"
+                        value="khách hàng tiềm năng-https://wd-smart.myharavan.com/account" />
+                    <input type="email" required="required" name="contact[email]" id="contact_email"
+                        placeholder="Email" />
+                </div>
+                <button class="btn" type="submit">Đăng ký</button>
+
+                <input id='df6c12663ba44bcc94a797f88a456761' name='g-recaptcha-response'
+                    type='hidden'/><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('df6c12663ba44bcc94a797f88a456761').value = token;});});</script>-->
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="success-subcribe-wanda">
+        <div class="row">
+            <div class="modal-content">
+                <div class="modal-icon sweet-alert">
+                    <div class="sa-icon sa-success animate"> <span class="sa-line sa-tip animateSuccessTip"></span>
+                        <span class="sa-line sa-long animateSuccessLong"></span>
+                        <div class="sa-placeholder"></div>
+                        <div class="sa-fix"></div>
+                    </div>
+                </div>
+                <p class="modal-body text-center">
+                    <p class="modal-title">Đăng ký thành công.</p>Thông báo sẽ tự động tắt sau 2 giây</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="success-add-cart-mobile">
+        <div class="head-group">
+            <div class="modal-title d-flex d-flex-center">
+                <img alt="Success" width="16" height="16"
+                    src="https://file.hstatic.net/200000525917/file/check_fed1ae0ce277470eb827c4d6f3ac8ddf.png"/>
+                <span>Thêm vào giỏ hàng thành công</span>
+            </div>
+            <button type="button" class="close-success"><span>×</span></button>
+        </div>
+        <div class="row">
+            <div id="form-ss" class="d-flex col-xs-12 col-sm-12">
+                <div class="top-body">
+
+                </div>
+                <div class="ft-body col-xs-12">
+                    <div class="d-flex js-between total-cart-mb">
+                        <a href="/cart"> Giỏ hàng:</a>
+                        <div class="text-right">
+                            <span class="price"></span>
+                            <div class="count">
+                                (<span class="cart-popup-count"></span>) sản phẩm
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-btn d-flex js-between">
+                        <a href="/cart" class="btn btn-cart">Xem giỏ hàng</a>
+                        <a href="/checkout" class="btn btn-checkout">Thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <button class="back-to-top" type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"
+            enable-background="new 0 0 64 64" xml:space="preserve">
+            <g>
+                <polyline fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10"
+                    points="15,40 32,23 49,40 	" />
+            </g>
+        </svg>
+        back to top</button>
+    <div class="modal-backdrop fade js-backdrop"></div>
+    <div class="suggest-notify anislideOutDown sales_animated"></div><!-- Đây là suggest sale popup -->
+    <div class="navigation-mobile visible-xs visible-sm">
+        <ul class="d-flex">
+            <li class="item">
+                <a class="d-flex item-link " href="/">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/home_027cdf38e9384ddb81f453ba516c2500.png"
+                            alt="Trang chủ"/>
+                        <img class="after-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/home-active_7501f572b3324f58afa2f885c97b8701.png"
+                            alt="Trang chủ"/>
+                    </span>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li class="item navigation-event">
+                <a class="d-flex" href="javascript:void(0)">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/category_074fc86572ed4d389692f7bc5fb8d32f.png"
+                            alt="Danh mục"/>
+                        <img class="after-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/category-active_3573358a277b44f0ae626afddf4633f0.png"
+                            alt="Danh mục"/>
+                    </span>
+                    <span>Danh mục</span>
+                </a>
+            </li>
+            <li class="item">
+                <a class="d-flex item-link " href="/pages/he-thong-cua-hang">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/location_7e8df8606c6647e9a0da6b893875d98e.png"
+                            alt="Cửa hàng"/>
+                        <img class="after-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/location-acitve_71d06ddc84ea4e4c92843319f186ab63.png"
+                            alt="Cửa hàng"/>
+                    </span>
+                    <span>Cửa hàng</span>
+                </a>
+            </li>
+            <li class="item">
+                <a class="d-flex item-link" href="tel:0967671065">
+                    <span>
+                        <img class="first-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/phone-call_f39d577fa5d249269096ffa4ae42aea3.png"
+                            alt="Hotline"/>
+                        <img class="after-change" width="24" height="24"
+                            src="https://file.hstatic.net/200000713019/file/phone-call-active_eba163bb67564d139050bfd7ea6578c5.png"
+                            alt="Hotline"/>
+                    </span>
+                    <span>Hotline</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="navigation-mobile" class="visible-xs visible-sm">
+        <nav class="category-mobie">
+
+        </nav>
+    </div>
+    <script type="text/javascript" src="//theme.hstatic.net/200000713019/1001049223/14/pluginscript.js?v=1496"
+        defer></script>
+    <script type="text/javascript" src="//theme.hstatic.net/200000713019/1001049223/14/main-scripts.js?v=1496"
+        defer></script>
+    <script type="text/javascript" defer src="//hstatic.net/0/0/global/haravan_common.js"></script>
+    <script type="text/javascript" defer src="//hstatic.net/0/0/global/customer_area.js"></script>
+    <script type="text/javascript" defer
+        src="//theme.hstatic.net/200000713019/1001049223/14/combo-app.js?v=1496"></script>
+    <script defer>
+        const asyncload = {
+            init: function () {
+                this.loadasyncdefer();
+            },
+            loadasyncdefer: () => {
+                try {
+                    !function (a, c, d) { var b, e = a.getElementsByTagName(c)[0]; a.getElementById(d) || ((b = a.createElement(c)).id = d, b.src = "//connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.0", e.parentNode.insertBefore(b, e)) }(document, "script", "facebook-jssdk")
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+        }
+        $(window).on('load', function () {
+            if (navigator[_0x2c0xa[2]][_0x2c0xa[1]](_0x2c0xa[0]) == -1 && checklh == false) {
+                setTimeout(() => { asyncload.init(); }, 1500)
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+<header class="site-header" id="header" th:fragment="header">
+    <div class="header-top" id="site-header-center">
+        <div class="container">
+            <div class="row-left-list d-flex d-flex-center row-mb">
+                <div class="logo col-md-3 col-xs-3 col-sm-3 pd-right-0">
+                    <a href="/">
+                        <img alt="Spring Mobile" class="dt-width-auto logo-shop" height="50"
+                             th:src="@{/images/SpringMobile.png}"
+                             width="200">
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-7 col-sm-6 pd-right-0">
+                    <div class="site_search search-desktop">
+                        <form action="/phone/search" method="post">
+                            <div class="search-inner">
+                                <input
+                                        name="phone-search"
+                                        class="phone-search"
+                                        type="text"
+                                        size="20"
+                                        placeholder="Bạn đang tìm gì..."
+                                        aria-label="Search"
+                                />
+                            </div>
+                            <button
+                                    type="submit"
+                            >
+                                <img
+                                        width="24"
+                                        height="24"
+                                        src="//theme.hstatic.net/200000713019/1001049223/14/search-icon.svg?v=1496"
+                                        alt="Tìm kiếm"
+                                />
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-md-5 group-icon-header col-xs-2 col-sm-3 pd-right-0 pd-0-mb">
+                    <div class="cart-login-search align-items-center">
+                        <ul class="list-inline list-unstyled mb-0 d-flex header-group-icon d-flex-center">
+                            <li class="list-inline-item mr-0 hidden-xs hidden-sm header-hotline">
+                                <a class="group-icon-item d-flex d-flex-center" href="tel:0967671065">
+                                        <span class="box-icon">
+                                            <img alt="Hotline" height="24"
+                                                 src="https://file.hstatic.net/200000713019/file/phone-call_e079526c31434e4bb169132325cc2600.png"
+                                                 width="24"/>
+                                        </span>
+                                    <span class="box-text">
+                                            Hotline
+                                            <span class="small-text">0967671065</span>
+                                        </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-0 hidden-xs hidden-sm header-store">
+                                <div class="list-inline-item-text">
+                                    <button class="group-icon-item d-flex d-flex-center">
+                                            <span class="box-icon">
+                                                <img alt="Hệ thống cửa hàng" height="24"
+                                                     src="//theme.hstatic.net/200000713019/1001049223/14/location.svg?v=1496"
+                                                     width="24"/>
+                                            </span>
+                                        <span class="box-text">
+                                                Hệ thống
+                                                <span class="small-text">cửa hàng<i aria-hidden="true"
+                                                                                    class="fa fa-angle-down"></i></span>
+                                            </span>
+                                        <span class="box-arrow">
+                                                <svg role="presentation" viewBox="0 0 20 9">
+                                                    <path
+                                                            d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                                            fill="#ffffff"></path>
+                                                </svg>
+                                            </span>
+                                    </button>
+                                    <div class="header-action_dropdown bg-grey-opacity">
+                                        <div class="header-dropdown_content">
+                                            <div class="overflow-hidden relative-position">
+                                                <div class="account_header text-center">
+                                                    <div class="account_title heading h2">
+                                                        Tìm cửa hàng gần bạn
+                                                    </div>
+                                                </div>
+                                                <div class="group-store-header mg-top-15">
+                                                    <div class="d-flex header-select-store">
+                                                        <div class="form-group">
+                                                            <select class="change-tinh" name="change-tinh">
+                                                                <option selected value="all">
+                                                                    Chọn tỉnh/thành phố
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="select-quan" name="select-quan">
+                                                                <option value="all">Chọn Quận/huyện</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="address-count mg-top-15">
+                                                        <div class="address-detail">
+                                                            <ul class="address-link"></ul>
+                                                            <p class="no-store hidden">
+                                                                Hiện chưa có cửa hàng
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item mr-0 header-account">
+                                <div class="list-inline-item-text">
+                                    <button class="group-icon-item d-flex d-flex-center">
+                                            <span class="box-icon">
+                                                <img alt="Tài khoản" height="24"
+                                                     src="//theme.hstatic.net/200000713019/1001049223/14/user-account.svg?v=1496"
+                                                     width="24">
+                                            </span>
+                                        <span class="box-text hidden-xs" th:if="${user != null}">
+                                                Tài khoản<span class="small-text">của bạn<i aria-hidden="true"
+                                                                                            class="fa fa-angle-down"></i></span>
+                                            </span>
+                                        <span class="box-text hidden-xs" th:unless="${user != null}">
+                                                Đăng nhập
+                                                <span class="small-text">Đăng ký<i aria-hidden="true"
+                                                                                   class="fa fa-angle-down"></i></span>
+                                            </span>
+                                        <span class="box-arrow">
+                                                <svg role="presentation" viewBox="0 0 20 9">
+                                                    <path
+                                                            d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                                            fill="#ffffff"></path>
+                                                </svg>
+                                            </span>
+                                    </button>
+                                    <div class="header-action_dropdown">
+                                        <div class="header-dropdown_content">
+                                            <div th:if="${user != null}" class="overflow-hidden relative-position">
+                                                <div id="header-login-toggle-1"
+                                                     class="site_account_modal translate-left active">
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title heading h2">
+                                                            Thông tin tài khoản
+                                                        </div>
+                                                        <p class="account_legend mg-0">
+                                                            <label>Tên: </label><strong
+                                                                th:text="${user.name}"></strong>
+                                                        </p>
+                                                        <p class="account_legend mg-0">
+                                                            <label>Email: </label><strong
+                                                                th:text="${user.email}"></strong>
+                                                        </p>
+                                                        <p class="account_legend mg-0">
+                                                            <label>Số điện thoại: </label><strong
+                                                                th:text="${user.phone}"></strong>
+                                                        </p>
+                                                        <p class="account_legend mg-0"></p>
+                                                        <div class="account-bottom d-flex" style="justify-content: center">
+                                                            <div class="item" style="margin-bottom: 2px">
+                                                                <a href="/account/see_detail">Xem chi tiết</a>
+                                                            </div>
+                                                            <div class="item" style="margin-bottom: 2px">
+                                                                <a href="/account/logout">Đăng xuất</a>
+                                                            </div>
+                                                            <div th:if="${admin != null}" class="item" style="margin-bottom: 2px">
+                                                                <a href="/Admin">Admin</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div th:unless="${user != null}"
+                                                 class="overflow-hidden relative-position">
+                                                <div id="header-login-toggle"
+                                                     class="site_account_modal translate-left active">
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title heading h2">
+                                                            Đăng nhập tài khoản
+                                                        </div>
+                                                        <p class="account_legend">
+                                                            Nhập email và mật khẩu của bạn:
+                                                        </p>
+                                                    </div>
+                                                    <div class="site_account_container">
+                                                        <form accept-charset="UTF-8" action="/account/login"
+                                                              id="customer_login" method="post">
+                                                            <input name="form_type" type="hidden"
+                                                                   value="customer_login" />
+                                                            <input name="utf8" type="hidden" value="✓" />
+                                                            <div class="form-control">
+                                                                <input type="email" placeholder="Email"
+                                                                       name="customer[email]" autocomplete="on"
+                                                                       required="required" />
+                                                            </div>
+                                                            <div class="form-control">
+                                                                <input type="password" placeholder="Mật khẩu"
+                                                                       name="customer[password]" autocomplete="on"
+                                                                       required="required" />
+                                                            </div>
+                                                            <div class="form-control">
+                                                                <button type="submit" class="btn-submit"
+                                                                        id="form_submit-login">
+                                                                    Đăng nhập
+                                                                </button>
+                                                            </div>
+
+                                                            <input id="e5a8d1f349964c7eb3dc0e27d86bff80"
+                                                                   name="g-recaptcha-response" type="hidden"
+                                                                   value="03AAYGu2SLK1nzfx7T9OJnVKj7xeWRmqQvYwVOa6dnDHe5NIIvFbd2HjcOxmrT_qhRtCW9ZqvTBcJxr470EvYtnVupkzSkvvQrdlI70WBM1WDrS33eVc8PAugG-iMjjOn2uXRh9Q0u41r3o3hS0JCtsrrDOgsozBesCLkU0ZJ9XkL-qyHFiSqD38V7I8h5Cb4uiTumctTisuiME-to7_RtcZpoDW-i4v8bTukZIge_0uAVaGyTQP1wRZwFpyEctvKdxPt1n71s0z3pVuC5845NeSj8H6SrczXT7ezesp6sjKlP7lpCHNn_NwvqHeQBtSQJQufCV9RFk3d5ies0YEKiKbIK8qVlwW-KO6tv_fZbgEhfBrf9ZKoQjeE-0mUP5fS79lHYllCYE59LcLaFXGz_89CBMuAFrhCiMCKGF16ZjVatflQEAFSsxuICC44vMsluPuf_MjgFYNTvO0CN6f5-_728899SXyHL4Lki8TZQkgw0dDogUyNqdAYw20Vwi-2gynp9Mp25pg70TqKzN0MzUMcN4LzNGmLlbQ" /><!--<script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script>--><!--<script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('e5a8d1f349964c7eb3dc0e27d86bff80').value = token;});});</script>-->
+                                                        </form>
+                                                        <div class="site_account_secondary-action">
+                                                            <p>
+                                                                Khách hàng mới?
+                                                                <a class="link" href="/account/register">Tạo tài
+                                                                    khoản</a>
+                                                            </p>
+                                                            <p>
+                                                                Quên mật khẩu?
+                                                                <button aria-controls="header-recover-panel"
+                                                                        class="js-link link">
+                                                                    Khôi phục mật khẩu
+                                                                </button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="header-recovery-toggle"
+                                                     class="site_account_modal translate-right">
+                                                    <div class="account_header text-center">
+                                                        <div class="account_title heading h2">
+                                                            Khôi phục mật khẩu
+                                                        </div>
+                                                        <p class="account_legend">
+                                                            Nhập email của bạn:
+                                                        </p>
+                                                    </div>
+                                                    <div class="site_account_inner">
+                                                        <form accept-charset="UTF-8" action="/account/recover" method="get">
+                                                            <input name="form_type" type="hidden"
+                                                                   value="recover_customer_password" />
+                                                            <input name="utf8" type="hidden" value="✓" />
+                                                            <div class="form-control">
+                                                                <input type="email" placeholder="Email" name="email"
+                                                                       autocomplete="on" required="required" />
+                                                            </div>
+                                                            <div class="form-control">
+                                                                <button type="submit" class="btn-submit"
+                                                                        id="form_submit-recover">
+                                                                    Đổi mật khẩu
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                        <div class="site_account_secondary-action">
+                                                            <button aria-controls="header-login-panel"
+                                                                    class="js-link link">
+                                                                <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+                                                                Trở về đăng nhập
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item mr-0 header-cart">
+                                <div class="list-inline-item-text">
+                                    <button class="group-icon-item d-flex d-flex-center">
+                                            <span class="box-icon">
+                                                <img alt="Hệ thống cửa hàng" height="24"
+                                                     src="//theme.hstatic.net/200000713019/1001049223/14/shopping-cart.svg?v=1496"
+                                                     width="24"/>
+                                                <span id="header-cart-quantity" class="js-number-cart number-cart" th:text="${session?.cart != null ? session.cart.size() : 0}">
+                                                0</span>
+                                            </span>
+                                        <span class="box-text visible-lg"> Giỏ hàng </span>
+                                        <span class="box-arrow">
+                                                <svg role="presentation" viewBox="0 0 20 9">
+                                                    <path
+                                                            d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                                                            fill="#ffffff"></path>
+                                                </svg>
+                                            </span>
+                                    </button>
+                                    <div class="header-action_dropdown">
+                                        <div class="header-dropdown_content">
+                                            <div class="overflow-hidden relative-position">
+                                                <div class="account_header text-center">
+                                                    <div class="account_title h2 heading">
+                                                        Giỏ hàng
+                                                    </div>
+                                                </div>
+                                                <div class="cart-content" id="cart-mini-wanda">
+                                                    <div class="cart-view clearfix">
+                                                        <div class="cart-scroll">
+                                                            <table id="cart-view" th:if="${session?.cart != null ? session.cart.isEmpty() : false}">
+                                                                <tbody>
+                                                                <tr >
+                                                                    <td class="mini_cart_header text-center"
+                                                                        style="padding-right: 0">
+                                                                        <img height="60"
+                                                                             src="https://file.hstatic.net/200000525917/file/no-cart_c1e41f3edf5c45b18eb6c64306d881c8_small.png"
+                                                                             width="60"/>
+                                                                        <p>Hiện chưa có sản phẩm</p>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                            <table id="cart-view" th:unless="${session?.cart != null ? session.cart.isEmpty() : false}">
+                                                                <tbody id="header-cart-body" th:each="cartItem : ${session.cart}">
+                                                                    <tr class="list-item" th:data-phone-id="${cartItem.value.getPhoneId()}">
+                                                                        <td class="img">
+                                                                            <a th:href="@{/phone/{phoneId}(phoneId=${cartItem.value.getPhoneId()})}"
+                                                                               th:title="${cartItem.value.getName()}">
+                                                                                <img th:alt="${cartItem.value.getName()}"
+                                                                                     th:src="${cartItem.value.getImg()}"/>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td class="item">
+                                                                            <a class="pro-title-view"
+                                                                               th:href="@{/phone/{phoneId}(phoneId=${cartItem.value.getPhoneId()})}"
+                                                                               th:text="${cartItem.value.getName()}"></a>
+                                                                            <span th:text="${cartItem.value.getColor().getName()}"></span> /
+                                                                            <span th:text="${cartItem.value.getCapacity().getSizeInGB()}"></span> /
+                                                                            <span>Chính hãng VNA</span>
+                                                                            <div class="quantity-area-cartmini d-flex d-flex-center">
+                                                                                <input class="quantity-mini" min="1"
+                                                                                       name="quantity_minicart" type="text"
+                                                                                       th:value="${cartItem.value.getQuantity()}">
+                                                                                <span class="pro-price-view" th:text="${cartItem.value.getTotalPrice()}">21,582,500₫</span>
+                                                                            </div>
+                                                                            <span class="remove_link remove-cart">
+                                                                                <a href="javascript:void(0);">
+                                                                                    <i class="fa fa-times"></i>
+                                                                                </a>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <span class="line"></span>
+                                                        <table class="table-total">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td class="text-left title-total">
+                                                                    TỔNG TIỀN:
+                                                                </td>
+                                                                <td class="text-right" id="total-view-cart"
+                                                                    th:text="${#numbers.formatDecimal(session.finalTotalPrice, 1, 0) + ' VND'}">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="wanda-cart-url btn"
+                                                                       th:href="@{/cart}">Xem giỏ
+                                                                        hàng</a>
+                                                                </td>
+                                                                <td>
+                                                                    <a class="wanda-checkout-url btn"
+                                                                       th:href="@{/payment/checkout}">Thanh
+                                                                        toán</a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom hidden-sm hidden-xs">
+        <div class="container">
+            <div class="d-flex  d-flex-center row-left-list">
+                <div class="navigation-category col-md-3 pd-right-0 other-tp">
+                    <div class="head-title">
+                        <div class="icon">
+                            <img width="24" height="24" alt="Danh mục sản phẩm"
+                                 src="https://file.hstatic.net/200000713019/file/category_cc0fade29df84dbdbce905c303557980.png">
+                        </div>
+                        <span>Danh mục sản phẩm</span>
+                    </div>
+                    <div class="group-fixed-nav">
+                        <nav class="nav-group">
+                            <ul class="navigation list-menu-nav scroll">
+                                <li class="mn-item activve-nav has-child" th:each="phones: ${phonesByBrand}">
+                                    <a href="/phone" class="menu-item__link item-link"
+                                       th:title="${phones.getKey().getName()}">
+                                        <img width="24" height="24"
+                                             src="https://file.hstatic.net/1000379792/file/menu_icon_3_18fcbcc806f6438888c40d93fc67ae06.svg"
+                                             th:alt="${phones.getKey().getName()}">
+                                        <span ><b th:text="${phones.getKey().getName()}"></b></span>
+                                        <i class="float-right arrow-right"></i>
+                                    </a>
+                                    <div class="submenu scroll">
+                                        <div class="view-all visible-xs visible-sm">
+                                            <a href="/phone">Xem tất cả »</a>
+                                        </div>
+                                        <ul class="submenu__list">
+                                            <li class="item-lv1 ">
+                                                <!--                                                <a href="/phone" class=" item-link">iPhone</a>-->
+                                                <ul class="subnav">
+                                                    <li class="item-lv2" th:each="phone: ${phones.getValue()}">
+                                                        <a th:href="'/phone/' + ${phone.getId()}"
+                                                           class=" item-link">
+                                                            <b th:text="${phone.getName()}"></b>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="sticky-overlay"></div>
+                <nav class="site-nav-menu col-md-9 pd-right-0">
+                    <ul class="d-flex">
+                        <li class="">
+                            <a href="/"><span class="icon"><img width="25" height="25"
+                                                                src="//file.hstatic.net/200000713019/file/policy_header_image_2_cb4464b7e9af47fb83942bf7e20548ec_icon.png"
+                                                                alt="Chính sách bảo hành"></span>Chính sách bảo hành</a>
+                        </li>
+                        <li class="">
+                            <a href="/"><span class="icon"><img width="25" height="25"
+                                                                src="//file.hstatic.net/200000713019/file/policy_header_image_3_4d4c94de9c514e37ae4414e4de773c06_icon.png"
+                                                                alt="Tra cứu bảo hành"></span>Tra cứu bảo hành</a>
+                        </li>
+                        <li class="">
+                            <a href="/"><span class="icon"><img width="25" height="25"
+                                                                src="//file.hstatic.net/200000713019/file/shipped_10ad7e72d69a4ab592eed20122801f83_icon.png"
+                                                                alt="Trả góp online"></span>Trả góp online</a>
+                        </li>
+                        <li class="">
+                            <a href="/"><span class="icon"><img width="25" height="25"
+                                                                src="//file.hstatic.net/200000713019/file/instruction_8ea7e6a2f6804d51b724e50d2c97f33b_icon.png"
+                                                                alt="Hướng dẫn thiết lập"></span>Hướng dẫn thiết lập</a>
+                        </li>
+                        <li class="">
+                            <a href="/"><span class="icon"><img width="25" height="25"
+                                                                src="//file.hstatic.net/200000713019/file/feature-blackk_01bc8b5f22f143c8a87b5dcdffedcb0c_icon.png"
+                                                                alt="Tính năng"></span>Tính năng</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

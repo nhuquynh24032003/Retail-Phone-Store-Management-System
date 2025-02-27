@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Capacity Manage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/formAdminManage/css/style.css}"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Phone Update Form</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+
+                                <div id="form-message-warning" class="mb-4"></div>
+
+                                <form action="#" method="POST" id="contactForm" name="contactForm" class="contactForm" th:action="@{/updatePhone}">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!--                                            <div class="form-group">-->
+                                            <!--                                                <input type="text" hidden th:field="*{phone.id}" class="form-control" name="id" placeholder="ID">-->
+                                            <!--                                            </div>-->
+                                        </div>
+                                        <input type="hidden" name="phoneId" th:value="${p.id}">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Name phone</label>
+                                                <input type="text" th:field="*{p.name}" class="form-control" name="name" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Description</label>
+                                                <input type="text" th:field="*{p.description}" class="form-control" name="description" id="description" placeholder="Description">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Brand</label>
+                                                <select name="brandId" class="form-control">
+                                                    <option value="">Select a brand</option>
+                                                    <option style="color: #0b0b0c" th:each="brand : ${brands}" th:value="${brand.id}" th:text="${brand.name}" th:selected="${brand == selectedBrand}"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Color</label>
+                                                <select name="colorId" class="form-control">
+                                                    <option value="">Select a color</option>
+                                                    <option style="color: #0b0b0c" th:each="color : ${colors}" th:value="${color.id}" th:text="${color.name}" th:selected="${color == selectedColor}"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Capacity</label>
+                                                <select name="capacityId" class="form-control">
+                                                    <option value="">Select a capacity</option>
+                                                    <option style="color: #0b0b0c" th:each="capacity : ${capacities}" th:value="${capacity.id}" th:text="${capacity.sizeInGB}" th:selected="${capacity == selectedCapacity}"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Quantity</label>
+                                                <input type="number" th:field="*{phone.quantity}" name="quantity" class="form-control" placeholder="Quantity">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Price</label>
+                                                <input type="number" th:field="*{phone.price}" name="price" class="form-control" placeholder="Price">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label style="color: yellow">Image</label>
+                                                <input type="text" th:field="*{phone.img}" name="img" class="form-control-file" id="imageUpload">
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            function updateBrandId(selectedBrandId) {
+                                                // Gắn giá trị brand.id vào trường dữ liệu brandId
+                                                document.getElementById("brandId").value = selectedBrandId;
+
+                                            }
+                                        </script>
+                                    </div>
+
+
+
+                                    <div class="col-md-6 d-flex align-items-stretch">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+
+                                                    <input type="text" hidden th:field="*{specification.id}" class="form-control" name="id" id="id" placeholder="ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">Battery Life</label>
+                                                    <input type="text" th:field="*{specification.batteryLife}" class="form-control" name="batteryLife" id="batteryLife" placeholder="Battery Life">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">Camera</label>
+                                                    <input type="text" th:field="*{specification.camera}" class="form-control" name="camera" id="camera" placeholder="Camera">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">Connection</label>
+                                                    <input type="text" th:field="*{specification.connection}" class="form-control" name="connection" id="connection" placeholder="Connection">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">CPU</label>
+                                                    <input type="text" th:field="*{specification.cpu}" class="form-control" name="cpu" id="cpu" placeholder="CPU">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">Display</label>
+                                                    <input type="text" th:field="*{specification.display}" class="form-control" name="display" id="display" placeholder="Display">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">OS</label>
+                                                    <input type="text" th:field="*{specification.os}" class="form-control" name="os" id="os" placeholder="OS">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color: yellow">RAM</label>
+                                                    <input type="text" th:field="*{specification.ram}" class="form-control" name="ram" id="ram" placeholder="RAM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                    <a th:href="@{/PhoneManage}">Return</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
+                                <h3>Contact information</h3>
+
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-globe"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<script src="ProductForm/js/jquery.min.js"></script>
+<script src="ProductForm/js/popper.js"></script>
+<script src="ProductForm/js/bootstrap.min.js"></script>
+<script src="ProductForm/js/jquery.validate.min.js"></script>
+<script src="ProductForm/js/main.js"></script>
+-->
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="AdminManage/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="AdminManage/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="AdminManage/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="AdminManage/css/style.css">
+
+    <title>Brand Manage</title>
+</head>
+<body>
+<div class="header_top_section">
+    <div class="container">
+        <div class="header_main">
+            <div class="location_text"><img src="indexAdmin/images/map-icon.png"><span class="padding_left_10"><a
+                    href="#">Mobile</a></span></div>
+            <div class="location_text center"><img src="indexAdmin/images/call-icon.png"><span class="padding_left_10"><a href="#">Call
+              01 1234567890</a></span></div>
+            <div class="location_text right"><img src="indexAdmin/images/mail-icon.png"><span class="padding_left_10"><a
+                    href="#">demo@gmail.com</a></span></div>
+        </div>
+    </div>
+</div>
+<div class="header_section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="/Admin"><img src="indexAdmin/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/UserManage">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ProductManage">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/OrderManage">Order</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h2 class="mb-5">MANAGE BRAND</h2>
+            <a th:href="@{/addBrand}">Add Brand</a>
+
+            <div class="table-responsive">
+
+                <table class="table table-striped custom-table">
+                    <thead>
+                    <tr>
+
+
+                        <th scope="col">Name</th>
+
+                        <th scope="col">Section</th>
+                        <th scope="col">Section</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr scope="row" th:each="brand : ${listBrands}">
+
+                        <td th:text="${brand.getId()}" hidden></td>
+
+                        <td th:text="${brand.getName}"></td>
+
+                        <td><a class="more" th:href="@{BrandManage/deleteBrand/{id}(id=${brand.getId})}">Delete</a>
+                        </td>
+                        <td><a class="more" th:href="@{updateBrand/{id}(id=${brand.getId})}">Update</a>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="AdminManage/js/jquery-3.3.1.min.js"></script>
+    <script src="AdminManage/js/popper.min.js"></script>
+    <script src="AdminManage/js/bootstrap.min.js"></script>
+    <script src="AdminManage/js/main.js"></script>
+</div>
+</body>
+</html>

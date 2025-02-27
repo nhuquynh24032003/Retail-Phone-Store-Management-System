@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Manage</title>
+    <link rel="stylesheet" href="AdminManage/css/bootstrap.min.css">
+    <link rel="stylesheet" href="AdminManage/css/style.css">
+</head>
+<body>
+<div class="header_top_section">
+    <div class="container">
+        <div class="header_main">
+            <div class="location_text"><img src="indexAdmin/images/map-icon.png"><span class="padding_left_10"><a
+                    href="#">Mobile</a></span></div>
+            <div class="location_text center"><img src="indexAdmin/images/call-icon.png"><span class="padding_left_10"><a href="#">Call
+              01 1234567890</a></span></div>
+            <div class="location_text right"><img src="indexAdmin/images/mail-icon.png"><span class="padding_left_10"><a
+                    href="#">demo@gmail.com</a></span></div>
+        </div>
+    </div>
+</div>
+<div class="header_section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="/Admin"><img src="indexAdmin/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/UserManage">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ProductManage">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/OrderManage">Order</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="search_icon"><a href="#"><img src="indexAdmin/images/search-icon.png"></a></div>
+                </form>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="content">
+    <div class="container">
+        <h2 class="mb-5">MANAGE ODER</h2>
+
+
+        <div class="table-responsive">
+
+            <table class="table table-striped custom-table">
+                <thead>
+                <tr>
+
+
+                    <th scope="col">Date Create</th>
+
+                    <th scope="col">Total Selling Price</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Amount Paid</th>
+                    <th scope="col">Payment method</th>
+                    <th scope="col">Note</th>
+                    <th scope="col">Delivery Status</th>
+                    <th></th>
+                    <th></th>
+                    <th>Section</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="order : ${listOrders}">
+
+                    <td hidden th:text="${order.getId()}"></td>
+                    <td th:text="${order.getCreateAt()}"></td>
+                    <td th:text="${#numbers.formatInteger(order.getTotalSellingPrice(), 3,'COMMA')}"></td>
+                    <td>
+                        <span th:if="${order.getStatus()} == 0">Chưa thanh toán</span>
+                        <span th:if="${order.getStatus()} == 1">Đã thanh toán</span>
+
+                    </td>
+                    <td th:text="${#numbers.formatInteger(order.getAmountPaid(), 3,'COMMA')}"></td>
+                    <td>
+                        <span th:if="${order.getPaymentMethod()} == 0">Tiền mặt</span>
+                        <span th:if="${order.getPaymentMethod()} == 1">Chuyển khoản ngân hàng</span>
+                        <span th:if="${order.getPaymentMethod()} == 2">Momo</span>
+                    </td>
+                    <td th:text="${order.getNote()}"></td>
+                    <td>
+                        <span th:if="${order.getDeliveryStatus()} == 0">Chưa vận chuyển</span>
+                        <span th:if="${order.getDeliveryStatus()} == 1">Đang vận chuyển</span>
+                        <span th:if="${order.getDeliveryStatus()} == 2">Đã giao</span>
+                    </td>                    <td>
+                        <form th:action="@{/OrderManage/updateDeliveryStatus/{orderId}(orderId=${order.getId()})}" method="post">
+                            <button type="submit">Update Delivery Status</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form th:action="@{/OrderManage/updateStatus/{orderId}(orderId=${order.getId()})}" method="post">
+                            <button type="submit">Update Status</button>
+                        </form>
+                    </td>
+                    <td><a class="more" th:href="@{/OrderManage/OrderDetailManage/{orderId}(orderId=${order.getId()})}">Detail</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="ProductManage/js/jquery.min.js"></script>
+<script src="ProductManage/js/popper.js"></script>
+<script src="ProductManage/js/bootstrap.min.js"></script>
+<script src="ProductManage/js/main.js"></script>
+</body>
+</html>

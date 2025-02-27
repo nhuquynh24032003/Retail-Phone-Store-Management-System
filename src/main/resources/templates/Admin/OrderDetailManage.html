@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Manage</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/AdminManage/css/style.css}"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header_top_section">
+    <div class="container">
+        <div class="header_main">
+            <div class="location_text"><img src="/indexAdmin/images/map-icon.png"><span class="padding_left_10"><a
+                    href="#">Mobile</a></span></div>
+            <div class="location_text center"><img src="/indexAdmin/images/call-icon.png"><span class="padding_left_10"><a href="#">Call
+              01 1234567890</a></span></div>
+            <div class="location_text right"><img src="/indexAdmin/images/mail-icon.png"><span class="padding_left_10"><a
+                    href="#">demo@gmail.com</a></span></div>
+        </div>
+    </div>
+</div>
+<div class="header_section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="/Admin"><img src="/indexAdmin/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/UserManage">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ProductManage">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/OrderManage">Order</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="search_icon"><a href="#"><img src="/indexAdmin/images/search-icon.png"></a></div>
+                </form>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="content">
+    <div class="container">
+        <h2 class="mb-5">MANAGE ORDER DETAIL</h2>
+
+
+        <div class="table-responsive">
+
+            <table class="table table-striped custom-table">
+                <thead>
+                <tr>
+
+                    <th scope="col">Order id</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Capacity</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Quantity</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr scope="row" th:each="orderdetail : ${listOrderDetails}">
+
+                    <td th:text="${orderdetail.order.id}"></td>
+
+                    <td th:text="${orderdetail.color.name}"></td>
+
+                    <td th:text="${orderdetail.capacity.getSizeInGB()}"></td>
+
+                    <td th:text="${orderdetail.phone.name}"></td>
+
+                    <td th:text="${orderdetail.quantity}"></td>
+
+
+
+
+                </tr>
+                <a th:href="@{/OrderManage}">Return</a>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="ProductManage/js/jquery.min.js"></script>
+<script src="ProductManage/js/popper.js"></script>
+<script src="ProductManage/js/bootstrap.min.js"></script>
+<script src="ProductManage/js/main.js"></script>
+</body>
+</html>
